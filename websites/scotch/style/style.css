@@ -121,7 +121,7 @@ nav ul li {
 }
 
 
-/*Feature -- Join*/
+/*Feature -- Our Story*/
 
 #feature {
     width: 100%;
@@ -141,6 +141,7 @@ nav ul li {
     position: relative;
     z-index: 1;
     display: inline-block;
+    color: var(--secondary-color);
 }
 
 .title-text p::after {
@@ -213,6 +214,53 @@ nav ul li {
     text-align: initial;
 }
 
+
+/*Service -- */
+
+#service {
+    width: 100%;
+    padding: 70px 0;
+    background: var(--primary-color);
+}
+
+#service .title-text h2 {
+    color: var(--tertiary-color);
+}
+
+#service .title-text p {
+    color: var(--secondary-color);
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.service-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.single-service img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
 @media screen and (max-width: 770px) {
     .banner-text h1 {
         font-size: 50px;
@@ -220,5 +268,17 @@ nav ul li {
     .banner-btn a {
         display: block;
         margin: 20px auto;
+    }
+    .title-text h1 {
+        font-size: 35px;
+    }
+    .features {
+        flex-basis: 100%;
+    }
+    .features-img {
+        flex-basis: 100%;
+    }
+    .features-img img {
+        width: 100%;
     }
 }
