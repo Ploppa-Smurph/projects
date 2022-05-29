@@ -274,7 +274,7 @@ nav ul li {
     opacity: 1;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1200px) {
     .banner-text h1 {
         font-size: 50px;
     }
@@ -285,6 +285,7 @@ nav ul li {
     .title-text h1 {
         font-size: 35px;
     }
+    /*Feature -- 2nd part of the @media*/
     .features {
         flex-basis: 100%;
     }
@@ -293,5 +294,9 @@ nav ul li {
     }
     .features-img img {
         width: 100%;
+    }
+    .service-box .overlay {
+        left: -2px;
+        ;
     }
 }
