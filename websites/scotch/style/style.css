@@ -257,6 +257,9 @@ nav ul li {
     border-radius: 12px;
 }
 
+
+/* need to work on OVERLAY as screen adjusts */
+
 .overlay {
     width: 502px;
     height: 500px;
@@ -274,7 +277,34 @@ nav ul li {
     opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
+.service-desc {
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: .8s;
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 50%;
+}
+
+.service-desc p {
+    font-size: 14px;
+}
+
+.single-service:hover .service-desc {
+    bottom: 33%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 777px) {
     .banner-text h1 {
         font-size: 50px;
     }
@@ -298,5 +328,20 @@ nav ul li {
     .service-box .overlay {
         left: -2px;
         ;
+    }
+    /*Service -- 2nd part of the @media*/
+    .single-service {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .service-desc p {
+        font-size: 12px;
+    }
+    .overlay {}
+    hr {
+        margin: 5px auto;
+    }
+    .single-service:hover .service-desc {
+        bottom: 20% !important;
     }
 }
