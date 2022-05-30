@@ -1,3 +1,5 @@
+// https://github.com/cferdinandi/smooth-scroll -- using 'Smooth Scroll'
+
 var menuBtn = document.getElementById("menuBtn");
 var sideNav = document.getElementById("sideNav");
 var menu = document.getElementById("menu");
@@ -13,3 +15,9 @@ menuBtn.onclick = function() {
         //menu.src = "img/bars.png";
     }
 }
+
+// All animations will take exactly 800ms
+var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 800,
+    speedAsDuration: true
+});
