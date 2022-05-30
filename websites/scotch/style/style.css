@@ -263,7 +263,6 @@ nav ul li {
 .overlay {
     width: 502px;
     height: 500px;
-    left: 80px;
     position: absolute;
     top: 0;
     border-radius: 12px;
@@ -304,6 +303,66 @@ hr {
     opacity: 1;
 }
 
+
+/* -- Testimonial -- */
+
+#testimonial {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.testimonial-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.testimonial-col {
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial-col p {
+    font-size: 14px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img {
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.user-info .fa-brands {
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+
+.user-info small {
+    color: var(--tertiary-color);
+}
+
+.testimonial-col:hover {
+    transform: translateY(-5px);
+}
+
+
+/*-- Media --*/
+
 @media screen and (max-width: 777px) {
     .banner-text h1 {
         font-size: 50px;
@@ -337,11 +396,13 @@ hr {
     .service-desc p {
         font-size: 12px;
     }
-    .overlay {}
     hr {
         margin: 5px auto;
     }
     .single-service:hover .service-desc {
         bottom: 20% !important;
+    }
+    .testimonial-col {
+        flex-basis: 100%;
     }
 }
