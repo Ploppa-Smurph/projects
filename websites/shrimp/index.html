@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Heebo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css">
-    <title>Shrimp & Snail Friends'</title>
+    <title>Shrimp & Snail Friends</title>
     <link rel="icon" href="img/s&sf_logo_bg.png" type="image/png">
 </head>
 
@@ -20,24 +20,87 @@
     <header>
         <nav>
             <a href="index.html"><img src="img/s&sf_logo.png" alt="Shrimp & Snail Friends' Logo" class="logo"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
-                    <li><a href="">COURSE</a></li>
                     <li><a href="">BLOG</a></li>
+                    <li><a href="">MERCH</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
-            <h1>Shrimp and Snail Friends Own this Place</h1>
+            <h1>Shrimp and Snail Friends</h1>
             <p>Enjoy an Aquatic World of Shrimp and Snails</p>
-            <a href "" class="learn-more">Click to Learn More</a>
+            <p>The site exclusively for Shrimp and Snails and their amazing friendship.</p>
+            <a href "" class="hero-btn">Learn More</a>
         </div>
     </header>
 
+    <!--- Course Section-->
 
+    <section class="course">
+        <h1>Tales of Shrimp & Snail</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero delectus sed necessitatibus dicta dolore at.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>F*d Up Looking Snail Egg Catches</h3>
+                <p>Look out Below! This pod is gonna DROP!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quasi magni adipisci officia fuga ab autem excepturi quas quam sunt.</p>
+            </div>
+            <div class="course-col">
+                <h3>Piggyback Rides</h3>
+                <p>Piggyback rides are always available. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam officiis obcaecati excepturi voluptatibus ut, consectetur cupiditate harum error laborum labore tempora aspernatur adipisci vel perferendis
+                    aperiam nobis alias libero in?</p>
+            </div>
+            <div class="course-col">
+                <h3>Berried Mom Grabs a Bite to Eat</h3>
+                <p>Soon-to-be Mom seen out at a local hot spot. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus eos dolore ea. Iste rerum illum nemo totam doloribus, iusto fuga inventore labore. Facere dicta, possimus natus velit accusamus
+                    soluta dolorem!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Campus section -->
+    <section class="campus">
+        <h1>the Shrimp & Snail</h1>
+        <p>If you are in town you can check out their world for yourself.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="img/shrimps.jpg" alt="ShrimpS">
+                <div class="layer">
+                    <h3>Syrupsport, LA</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+
+                <img src="img/cherryShrimps.jpg" alt="Red Shrimp">
+                <div class="layer">
+                    <h3>South Highlands</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="img/redShrimp.jpg" alt="Red Bolt">
+                <div class="layer">
+                    <h3>Tree House</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="script/script.js"></script>
 </body>
 
 </html>
