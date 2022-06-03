@@ -1,0 +1,69 @@
+<!--React freeCodeCamp Tutorial from Bob Ziroll (Scrimba) -- YouTube: https://www.youtube.com/watch?v=bMknfKXIFA8 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React 2022 freeCodeCamp Tutorial from Bob Ziroll (Scrimba)</title>
+</head>
+
+<body>
+    <h1>React 2022 freeCodeCamp Tutorial from Bob Ziroll (Scrimba)</h1>
+    this is going to be a long course and testing
+    <br>re-watch lessons and redo challenges
+    <br><a href="https://www.youtube.com/watch?v=bMknfKXIFA8">React Tutorial 2022 freeCodeCamp Tutorial from Bob Ziroll (Scrimba)</a>
+    <h2>01 we will work on making static web pages with react -- the basics</h2>
+    learning basic syntax and vocabulary of React. Declartive vs Imparitive programming.
+    <br> JSX, custom components, css styling
+    <br>project: <i>reactInfo</i>
+    <pre>
+    <br><br><b><pre><code>ReactDOM.render(&ltp&gtwords&ltp&gt, getElementById("root"))</code></pre></b>
+        learned about ReactDOM.render
+    <h2>part04: reactInfo app beginning</h2>
+<a href="https://youtu.be/bMknfKXIFA8?t=1035">link to part04 of video</a>
+<br> Beginning of <i>reactInfo</i> app (app ex01)
+<br> why use React -- we can write 'composable' code. --which means: we are making small maintainable and flexible parts to build the whole
+<br> -- not just building the entire website as static.
+<br><br> React uses className instead of class in the 'HTML' code -- ex: <b>&ltnav className="navbar navbar-expand-lg navbar-light bg-light"&gt</b>
+<br>In React you create functions and you must <b>return()</b> the data == this creates the component -- it is the data contained in the named function. 
+<br>ex:
+<br><pre>
+    function MainContent() {
+        return (
+            &lth1&gt React is awesome! &lt/h1&gt
+        )
+    }
+
+
+    ReactDOM.render(
+        &ltdiv&gt
+            &ltMainContent /&gt
+        &lt/div&gt,
+        document.getElementById("root")
+    )
+</pre>
+<h4>React is "Declarative"</h4>
+React is a declarative language- We program React with what we want to get done. 
+<br>with Imperative programming we must program every step along the way.
+ex Imperative:
+<pre>
+    const h1 = document.createElement("h1")
+    h1.textContent = "This is an Imperative way to program"
+    h1.className = "header"
+    document.getElementById("root").append(h1)
+</pre>
+ex Declarative:
+<pre>
+    ReactDOM.render(&lth1 className="header"&gtThis is a Declarative way to program&lth1&gt, getElementById("root"))
+</pre>
+<h2>Buidling a React info site -- JSX</h2>
+<a href="https://youtu.be/bMknfKXIFA8?t=1840">this point in Video</a>
+<br>When using JavaScript vs React there are some differences -- console log shows that jsx creates: JSON like JavaScript Objects.
+<h2>getting React info site project setup</h2>
+
+
+
+</body>
+
+</html>
