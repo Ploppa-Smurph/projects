@@ -1,15 +1,24 @@
+// normally you must import ReactDOM from 'react-dom' each time, but i'm using the cdn currently and don't have to
+/* import React from 'react';
+import ReactDOM from 'react-dom'; */
 
 const nav = (
-    <nav>
-    <a href="https://flyclipart.com/react-logo-import-io-react-logo-png-221727" title="React Logo Import Io - React Logo PNG"><img src="https://flyclipart.com/thumb2/react-logo-import-io-221727.png" width="350" /></a>
+    <nav className="navbar">
+    <img className="nav-logo" src="s&sf_logo.png"/>
+    <div className="nav-row">
+    <div className="nav-col">
         <h1>Shrimp & Snail Friends</h1>
-        <p>your place for shrimp & snails friends</p>
-        <ul>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Merchandise</li>
-            <li>Contact</li>
+        <p>Your place for Shrimp & Snail friends</p>
+        <div className="nav-col">
+                <ul className="nav-list">
+            <li className="nav-item">About</li>
+            <li className="nav-item">Blog</li>
+            <li className="nav-item">Merchandise</li>
+            <li className="nav-item">Contact</li>
         </ul>
+        </div>
+        </div>
+    </div>
     </nav>
 )
 //-- creates JSON objects -- not working HTML
