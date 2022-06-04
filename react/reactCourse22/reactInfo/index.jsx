@@ -2,12 +2,11 @@
 /* import React from 'react';
 import ReactDOM from 'react-dom'; */
 
+
 function Header() {
-    return(
-        <div>
+    return (
     <header>
     <nav className="navbar">
-    
     <div className="nav-row">
     <div className="nav-col">
     <img className="nav-logo" src="s&sf_logo.png"/>
@@ -27,15 +26,35 @@ function Header() {
        </div>
     </nav>
     </header>
+     )
+    }
+
+function Body() {
+    return (
     <body>
-        <h1>Shrimp & Snail Friends Live Here</h1>
+        <h1>Shrimps and Snails and Friends live</h1>
     </body>
+        )
+    }
+
+function Footer() {
+    return (
     <footer>
         <p>&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
     </footer>
+        )
+    }
+
+function Page() {
+    return(
+    <div>
+        <Header />
+        <Body />
+        <Footer />
     </div>
     )}
+    
 //-- creates JSON objects -- not working HTML
 //document.getElementById("root").append(JSON.stringify(page)) 
 
-ReactDOM.render(<Header />, document.getElementById("root"))
+ReactDOM.render(<Page />, document.getElementById("root"))
