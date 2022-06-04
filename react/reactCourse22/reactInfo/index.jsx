@@ -2,13 +2,20 @@
 /* import React from 'react';
 import ReactDOM from 'react-dom'; */
 
-const nav = (
+function Header() {
+    return(
+        <div>
+    <header>
     <nav className="navbar">
-    <img className="nav-logo" src="s&sf_logo.png"/>
+    
     <div className="nav-row">
+    <div className="nav-col">
+    <img className="nav-logo" src="s&sf_logo.png"/>
+    </div>
     <div className="nav-col">
         <h1>Shrimp & Snail Friends</h1>
         <p>Your place for Shrimp & Snail friends</p>
+        </div>
         <div className="nav-col">
                 <ul className="nav-list">
             <li className="nav-item">About</li>
@@ -17,11 +24,18 @@ const nav = (
             <li className="nav-item">Contact</li>
         </ul>
         </div>
-        </div>
-    </div>
+       </div>
     </nav>
-)
+    </header>
+    <body>
+        <h1>Shrimp & Snail Friends Live Here</h1>
+    </body>
+    <footer>
+        <p>&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
+    </footer>
+    </div>
+    )}
 //-- creates JSON objects -- not working HTML
 //document.getElementById("root").append(JSON.stringify(page)) 
 
-ReactDOM.render(nav, document.getElementById("root"))
+ReactDOM.render(<Header />, document.getElementById("root"))
