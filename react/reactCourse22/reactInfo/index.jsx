@@ -31,7 +31,7 @@ function Header() {
 function MainContent() {
     return (
     <body>
-        <h1>Shrimp & Snail and Friends</h1>
+        <h1>Shrimp & Snail Friends</h1>
     </body>
         )
     }
