@@ -1,10 +1,10 @@
 // normally you must import ReactDOM from 'react-dom' each time, but i'm using the cdn currently and don't have to
 /*import React from 'react';
 import ReactDOM from 'react-dom';*/
-/* import Header from "./Header";
-import MainContent from "./MainContent";
-import Footer from "./Footer"; */
-
+/* import Header from "reactInfo/Header.jsx";
+import MainContent from "./MainContent.jsx";
+import Footer from "../Footer.jsx";
+ */
 function Header() {
     return (
     <header>
@@ -46,7 +46,7 @@ function MainContent() {
         )
     }
 
-function Page() {
+function App() {
     return(
     <div>
         <Header />
@@ -59,4 +59,4 @@ function Page() {
 //-- creates JSON objects -- not working HTML
 //document.getElementById("root").append(JSON.stringify(page)) 
 
-ReactDOM.render(<Page />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById("root"))

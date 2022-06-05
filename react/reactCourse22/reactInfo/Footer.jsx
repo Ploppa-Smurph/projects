@@ -1,11 +1,9 @@
 //import React from 'react';
 
-function Footer() {
+export default function Footer() {
     return (
     <footer className="footer">
         <p className="indicia">&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
     </footer>
         )
     }
-    
-export default Footer

@@ -1,7 +1,7 @@
 // must import React in order for JSX to work
-import React from 'react';
+//import React from 'react';
 
-function Header() {
+export default function Header() {
     return (
     <header>
     <nav className="navbar">
@@ -25,5 +25,3 @@ function Header() {
     </header>
     )
 }
-
-export default Header

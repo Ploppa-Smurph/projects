@@ -75,11 +75,17 @@ a function that returns React elements is what we are looking at -- ex: <i><b>fu
 When we create the <i><b>function Page()</b></i> we are creating a Parent component which then contains the children: <i><b>Header, MainContent, Footer</b></i>
 <h2>Organize Components (React)</h2>
 <a href="https://youtu.be/bMknfKXIFA8?t=5125">start of Organize Components</a>
-
-
-
-
-
+<br><br>When moving your components into their own .jsx file
+<br> I'm unable to work with components in my 1st project, it may be due to the fact that I am working from the React CDN and not an actual project build
+<br><br>You export the functions from their own files. ex: <b></b><i>export default function Header() {return(----jsx code written here---)}</i></b> would be saved as 'Header.jsx'
+<br> In the index.jsx you then import the component: <b><i>import Header from "./Header"</i></b> (if the Header.jsx component file is in the same folder as the index.jsx file)
+<br> Each separate .jsx component file needs to <b><i>import React from "react"</i></b> in order for them to be .jsx compatible.
+<h2>Using Create React App</h2>
+<a href="https://youtu.be/bMknfKXIFA8?t=5594">Create React App video points</a>
+Babel and Webpack -- makes sense of your code and makes React work in browsers.
+<br><b>Create-React-App</b> is a tool that bundles the Babel and Webpack together to make it easy to work with on your desktop.
+<br> *** Must have Node & NPM installed *** -- go into a working folder and type: <b><i>npx create-react-app app-name</i></b>
+<br> The app will then be created in a new folder that named 'app-name'.  ** to create the app in the current folder type: '<b><i>npx create-react-app .</i></b>'
 
 
 
