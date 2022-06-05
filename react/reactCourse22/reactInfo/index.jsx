@@ -30,9 +30,9 @@ function Header() {
 
 function MainContent() {
     return (
-    <body>
-        <h1>Shrimp & Snail Friends</h1>
-    </body>
+    <div className="main-content">
+        <h1 className="main-title">Shrimp & Snail Friends</h1>
+    </div>
         )
     }
 
