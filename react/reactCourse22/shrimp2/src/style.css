@@ -80,10 +80,9 @@ nav {
 .main-content {
     display: flex;
     flex-direction: column;
-    background-image: url(./img/shrimps.jpg);
-    background-repeat: no-repeat;
+    background-color: var(--secondary-color);
+    /*background-image: url(./img/shrimps.jpg);*/
     background-size: cover;
-    height: 80%;
     align-items: center;
     justify-content: center;
 }
@@ -94,7 +93,6 @@ nav {
     padding: 50px 30px;
     text-align: center;
     font-size: 4em; 
-
 }
 
 footer {
