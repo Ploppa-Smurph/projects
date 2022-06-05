@@ -10,6 +10,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Nova Round', cursive;
 }
 nav {
     display: flex;
@@ -24,10 +25,11 @@ nav {
 }
 
 .nav-logo img {
-    width: 175px;
+    width: 200px;
     }
 
 .nav-title h1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     color: var(--light-color);
     font-size: 3.25em;
     font-weight: bold;
@@ -47,6 +49,7 @@ nav {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 30px;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .nav-list  {
@@ -77,16 +80,21 @@ nav {
 .main-content {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/shrimps.jpg);
+    background-image: url(./img/shrimps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
     align-items: center;
     justify-content: center;
 }
 
 .main-content .main-title {
+    font-family: 'Exo 2', sans-serif;
     color: var(--dark-color);
     padding: 50px 30px;
     text-align: center;
     font-size: 4em; 
+
 }
 
 footer {
