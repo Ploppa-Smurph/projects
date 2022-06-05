@@ -13,14 +13,13 @@
 nav {
     display: flex;
     background-color: var(--primary-color);
-    box-shadow: 0 0 6px 0 var(--dark-color, 0.8), 0 0 6px 0 var(--light-color, 0.2);
-    padding: 5px 10px;
+    box-shadow: 0 0 6px var(--dark-color, 0.8), 0 0 6px var(--light-color, 0.2);
     background: cover;
-
     background-position: center;
     position: relative;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-logo img {
@@ -101,15 +100,14 @@ footer {
     position: absolute;
     bottom: 0;
     background-color: var(--dark-color);
-    background: cover;
-    width:100%;
-    padding: 35px;
+    width: 100%;
+    height: 30px;
+
 }
 
 .footer .indicia {
+    padding-top: 15px;
     font-size: 12px;
-    text-align: right;
-    padding: 0 40px;
-    margin: 15px;
+    text-align: center;
     color: var(--primary-color);
 }
