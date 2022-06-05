@@ -7,40 +7,39 @@ function Header() {
     return (
     <header>
     <nav className="navbar">
-    <div className="nav-row">
-    <div className="nav-col">
-    <img className="nav-logo" src="s&sf_logo.png"/>
+    <div className="nav-logo">
+    <img src="s&sf_logo.png"/>
     </div>
-    <div className="nav-col">
+    <div className="nav-title">
         <h1>Shrimp & Snail Friends</h1>
         <p>Your place for Shrimp & Snail friends</p>
-        </div>
-        <div className="nav-col">
-                <ul className="nav-list">
-            <li className="nav-item">About</li>
-            <li className="nav-item">Blog</li>
-            <li className="nav-item">Merchandise</li>
-            <li className="nav-item">Contact</li>
+    </div>    
+    <div className="nav-links">
+        <ul className="nav-list">
+            <li>About</li>
+            <li>Blog</li>
+            <li>Merchandise</li>
+            <li>Contact</li>
         </ul>
-        </div>
-       </div>
+    </div>    
+   
     </nav>
     </header>
-     )
+    )
     }
 
-function Body() {
+function MainContent() {
     return (
     <body>
-        <h1>Shrimps and Snails and Friends live</h1>
+        <h1>Shrimp & Snail and Friends</h1>
     </body>
         )
     }
 
 function Footer() {
     return (
-    <footer>
-        <p>&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
+    <footer className="footer">
+        <p className="indicia">&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
     </footer>
         )
     }
@@ -49,7 +48,7 @@ function Page() {
     return(
     <div>
         <Header />
-        <Body />
+        <MainContent />
         <Footer />
     </div>
     )}

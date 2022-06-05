@@ -11,53 +11,87 @@
     padding: 0;
 }
 nav {
-    
+    display: flex;
     background-color: var(--primary-color);
     padding: 5px 10px;
-    background-size: cover;
+    background: cover;
+
     background-position: center;
     position: relative;
-    
-}
-
-.nav-col {
-    display: flex;
-    
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.navbar img {
+.nav-logo img {
     width: 160px;
     }
 
-.navbar h1 {
+.nav-title h1 {
     color: var(--light-color);
-    font-size: 52px;
+    font-size: 3em;
     font-weight: bold;
     padding-bottom: 0;
     margin-bottom: 0;
+   
     }
 
-.navbar p {
+.nav-title p {
     color: var(--dark-color);
-    font-size: 18px;
+    font-size: 1.25em;
     font-style: italic;
     text-align: center;
     margin-top: 0;
     padding-top: 0;
+    padding-bottom: 30px;
+  
      
 }
 
-.nav-list ul {
+.nav-list  {
     color: var(--light-color);
-    list-style: none;
+    
     padding: 5px;
     display: inline-block;
     position: relative;
+   display: flex;
 }
 
-.nav-item {
+.nav-list > li {
+    list-style: none;
     color: var(--light-color);
     text-align: right;
+    padding: 12px;
+    
+}
+
+.nav-list > li:hover {
+    color: var(--dark-color);
+    cursor: pointer;
+    
+    transition: .25s;
+}
+
+body {
+    
+    
+}
+
+body h1 {
+    padding: 50px 30px;
+    text-align: center;
+    font-size: 4em; 
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--light-color);
+    background: cover;
+    width:100%;
+    padding: 35px;
+}
+
+.footer .indicia {
+    text-align: center;
+    
 }
