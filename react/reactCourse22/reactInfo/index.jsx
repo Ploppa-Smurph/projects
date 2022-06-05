@@ -1,7 +1,9 @@
 // normally you must import ReactDOM from 'react-dom' each time, but i'm using the cdn currently and don't have to
-/* import React from 'react';
-import ReactDOM from 'react-dom'; */
-
+/*import React from 'react';
+import ReactDOM from 'react-dom';*/
+/* import Header from "./Header";
+import MainContent from "./MainContent";
+import Footer from "./Footer"; */
 
 function Header() {
     return (
@@ -26,21 +28,21 @@ function Header() {
     </nav>
     </header>
     )
-    }
-
-function MainContent() {
-    return (
-    <div className="main-content">
-        <h1 className="main-title">Shrimp & Snail Friends</h1>
-    </div>
-        )
-    }
+}
 
 function Footer() {
     return (
     <footer className="footer">
         <p className="indicia">&copy; 2022 Shrimp & Snail Friends / Walley Works. All rights reserved.</p>
     </footer>
+        )
+}
+
+function MainContent() {
+    return (
+    <div className="main-content">
+        <h1 className="main-title">Shrimp & Snail Friends</h1>
+    </div>
         )
     }
 
@@ -51,8 +53,9 @@ function Page() {
         <MainContent />
         <Footer />
     </div>
-    )}
-    
+    )
+}
+   
 //-- creates JSON objects -- not working HTML
 //document.getElementById("root").append(JSON.stringify(page)) 
 
