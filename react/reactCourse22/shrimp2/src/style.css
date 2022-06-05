@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: rgba(149,161,241);
     --secondary-color: rgba(247,121,250);
@@ -76,6 +77,7 @@ nav {
 .main-content {
     display: flex;
     flex-direction: column;
+    background-image: url(../img/shrimps.jpg);
     align-items: center;
     justify-content: center;
 }

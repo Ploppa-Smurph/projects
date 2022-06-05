@@ -1,13 +1,13 @@
 // must import React in order for JSX to work
 import React from 'react';
-import logo from "../img/s&sf_logo.png";
+import shrimpLogo from "../img/s&sf_logo.png";
 
 export default function Header() {
     return (
     <header>
     <nav className="navbar">
     <div className="nav-logo">
-    <img src={logo} alt="Shrimp & Snail Friends"/>
+    <img src={shrimpLogo} alt="Shrimp & Snail Friends" className="img-logo" />
     </div>
     <div className="nav-title">
         <h1>Shrimp & Snail Friends</h1>
