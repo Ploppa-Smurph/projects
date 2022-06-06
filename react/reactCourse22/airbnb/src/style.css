@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-container .gallery-img {
-    height: 50%;
+    height: 20%;
     background-position: center;
 }
 
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer {
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: var(--cat-dark-color);
     width: 100%;
