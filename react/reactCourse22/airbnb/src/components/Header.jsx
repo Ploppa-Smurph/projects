@@ -8,12 +8,12 @@ export default function Header() {
     
     <div className="logo-container">
     <img src={wwLogo} alt="Walley Works Logo" className="nav-logo" />
-    </div>
-    <div className="nav-title">
+  </div>
+        <div className="nav-title">
         <h1>WALLEY WORKS</h1>
         <p>IT & WEB DESIGN</p>
-    </div>    
-   
+       
+   </div>
     </header>
     )
 }
