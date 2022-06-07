@@ -1,11 +1,11 @@
 import React from 'react';
 
-import "./style.css";  // must import style.css in order for CSS to work
-import Header from "./components/Header.jsx";
-import Gallery from "./components/Gallery.jsx";
-import MainContent from "./components/MainContent.jsx";
-import Data from "./components/Data.jsx";
-import Footer from "./components/Footer.jsx";
+//import "../src/style.css";  // must import style.css in order for CSS to work
+import Header from "./Header.jsx";
+import Gallery from "./Gallery.jsx";
+import MainContent from "./MainContent.jsx";
+import Data from "./Data.jsx";
+import Footer from "./Footer.jsx";
 
 export default function App() {
     return(
