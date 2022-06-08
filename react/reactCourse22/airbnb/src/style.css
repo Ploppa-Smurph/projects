@@ -68,15 +68,21 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     text-align: right;
+    margin-right: 20px;
     }
 
 .main-title {    
     font-size: 3em;
     font-weight: bold;
+    right: 20px;
+    bottom: 0;
+    
     }
 
 .main-text {
-    margin-top: 0;
+    top: 0;
+    right: 25px;
+    
 }
 
 .data-card {
@@ -114,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     position: relative;
     bottom: 0;
-    background-color: var(--light-color);
+    background-color: var(--cat-dark-color);
     width: 100%;
     padding: 2em 0;
     box-shadow: 12px 0 0 0 var(--light-color, 0.7);  
