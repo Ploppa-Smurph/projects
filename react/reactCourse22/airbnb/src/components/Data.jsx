@@ -12,7 +12,7 @@ export default function Data() {
             <span className="text-muted">USA</span>
         </div>
             <p>life lessons with Ra</p>
-            <p><span className="bold">From $125</span> / person</p>
+            <p><span className="bold">From $125&nbsp;</span>/ person</p>
     </div>
     )
 }

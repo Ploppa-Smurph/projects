@@ -1,7 +1,7 @@
 import React from "react";
 import galLogo from "../img/wwCirLogo.png"
 import galLogo2 from "../img/wwCatLight.png"
-import galLogo3 from "../img/wwLogo.png"
+import galLogo3 from "../img/wwLogoBG.png"
 
 export default function Gallery() {
     return (
