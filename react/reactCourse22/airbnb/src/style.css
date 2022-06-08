@@ -16,9 +16,18 @@
     font-size: 1em;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Varela Round', sans-serif;
     font-size: 4em;
+    font-weight: bold;
+}
+
+.text-muted {
+    color: var(--secondary-color, 0.8);
+}
+
+.bold {
     font-weight: bold;
 }
 
@@ -28,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    box-shadow: 0 0 6px var(--dark-color, 0.8), 0 0 6px var(--light-color, 0.2);
+    box-shadow: 0 0 12px 0 var(--dark-color, 0.8);
 }
 
 .header p {
@@ -39,52 +48,66 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px;
     height: auto;
 }
-.nav-title {
-    padding: 10px 20px;
-    
-}
 
 .gallery-container {
     height: 500px;
     display: flex;
     position: relative;
+    justify-content: space-between;
 }
 
 .gallery-img {
-    padding: 15px 20px;
+    padding: 50px 20px;
     background-position: center;
     width: 400px;
 }
 
 .main-content {
-    
     position: relative;
-    align-items: left;
+    align-items: right;
     
 }
+
 .main-title {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     font-size: 3em;
     font-weight: bold;
-    align-items: left; 
-}
+    }
+
 .main-text {
     margin-top: 0;
+    padding: 0px 20px 20px 20px;
 }
 
+.data-card {
+    padding: 5px 15px;
+    width: 175px;
+    font-size: 12px;
+}
 
-.data-container {
+.data-img {
+    border-radius: 9px;
+    width: 100%;
+}
+
+.fa-star {
+    height: 13px;
+    color: var(--primary-color, 0.7);
+}
+
+.data-stats {
+    margin-top: 2px;
+    margin-left: 10px;
     display: flex;
-    position: relative;
-    
-    padding: 25px 20px;
+    align-items: center;
 }
 
-.data-container .data-img {
-    background-size: cover;
-    background-position: center;
+.data-card p {
+    margin-top: 2px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
-
 
 .footer {
     display: flex;
@@ -93,11 +116,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--cat-dark-color);
     width: 100%;
     padding: 2em 0;
-    text-align: bottom right;
+    
 }
-
 
 .indicia {
     font-size: .75em;
     color: var(--cat-light-color);
+    align-items: right;
 }
