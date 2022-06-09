@@ -8,10 +8,10 @@ export default function Data() {
         <div className="data-stats">
             <i class="fa-solid fa-star"></i>
             <span>5.0</span>
-            <span className="text-muted">(6) </span>
-            <span className="text-muted">USA</span>
+            <span className="text-muted">(26) </span>
+            <span className="text-muted">&nbsp;USA</span>
         </div>
-            <p>life lessons with Ra</p>
+            <p>Felting lessons with Ra</p>
             <p><span className="bold">From $125&nbsp;</span>/ person</p>
     </div>
     )
