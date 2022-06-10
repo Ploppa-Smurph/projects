@@ -1,0 +1,32 @@
+/* Variables */
+:root {
+  --primary-color: rgba(255,255,255);
+  --secondary-color: rgba(0,0,0);
+  --tertiary-color: rgba(182,38,114);
+  --dark-color: rgba();
+  --light-color: rgba();
+}
+
+/* Basic App Styling */ 
+
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styling */
+
+/* Main-Content Styling */
+
+/* Joke Styling */
+.joke-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Footer Styling */
