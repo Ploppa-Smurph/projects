@@ -108,6 +108,39 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+/* Contact Styling */
+.contact-card {
+    padding: 30px 0;
+    width: 175px;
+    font-size: 12px;
+}
+
+.contact img {
+    border-radius: 9px;
+    width: 100%;
+}
+
+.fa-phone, .fa-envelope {
+    height: 13px;
+    color: var(--tertiary-color, 0.7);
+    margin-left: 15px;
+}
+
+.info-group {
+    top: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card p {
+    top: 0;
+    padding: 3px 10px 2px 0;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
 .footer {
     display: flex;
     position: relative;

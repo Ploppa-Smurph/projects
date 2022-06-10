@@ -105,14 +105,41 @@ working on using dynamic data to propagate the data field in the app.
 <br> about to Start 'Props' in React to learn to input data into our code to create reusable template components?? 
 <h2>Props in React - Start of Props</h2>
 <a href="https://youtu.be/bMknfKXIFA8?t=10350">start of Props with Bob Ziroll</a>
+Props are similar to adding parameters to a function -- it allows the code to be a template that can dynamically change.
+<br><br>Youtube search page, Amazon search pages and landing pages are full of reused components. 
+<br>Tile / Card holds Thumbnail, Under that is a Title, the uploader is under that, and then views and when uploaded. 
+<h4>overview</h4>
+remember that in React we are working with JSX, not HTML. 
+<br> to work with constants / variables in JSX remember to surround them in Curly Braces {} -- as I did with the images in the project - ex: called with {wwLogo}
+<br>ex: <b>&lth1&gtHello {firstName}!&lt/h1&gt</b>
+<br><br> ANYTHING that you put within curly braces in JSX will be run as JavaScript code.
+<br><br> ex: <b>function App() {</b>
+    <br><b>const date = new Date()</b>
+    <br><b>return ( &gth1&ltIt is currently about {date.getHours() % 12} o'colock.&gt/h1&lt</b>
+<br><b>ReactDOM.render(&gtApp /&lt, document.getElementById("root"))</b>
+<br><br>you can simply do the JavaScript outside of the {} as a constant or variable
+<br>ex: <b>const hours = date.getHours() % 12</b>
+<br> then return <b><i>&gth1&ltIt is currently about {hours} o'clock.&gt/h1&lt</i></b>
+<br> that way you seperate the logic from the display you can use recursive statements in the logic area (if-else statments and more)
+<br> in order to bring the Properties (props) / parameters into the JSX we must add 'props' to the function parameter (props in this case, it can be any word you choose)
+<br> if we have added properties to our imported Contact in the App.jsx (see ex: image, name, phone, email in App.jsx Contact section) 
+<br><br> if we 'console.log(props)' in our Contact function then it displays (JSON format the img, name, phone, and email properties that we added to the App.jsx Contacts)
+<br>cannot get web images to appear -- still must import images and src={wwLogo} and such for now -- not very helpful for dynamic coding 
 
+<h3>Prop Quiz</h3>
+1: what do props help accomplish?
+<br><i>pass dynamic data to a static component -- like parameters for a function the props pass data to the React component. keep code as DRY as possible</i>
+<br><br>2: How do you pass a prop into a component?
+<br><i>ex: &ltCustomComponent name="Trelvyn" /&gt</i> etc... -- you add parameters to it's component in the App.jsx
+<br><br>3: Can I pass a custom prop to a native DOM element? why or why not?
+<br><i></i>No -- React turns the jsx elements into real DOM elements, we cannot add custom parameters to native dom elements... that is a benefit of React
+<br><br>4: How do I receive props in a component?
+<br><i></i> add the 'props' parameter / attribute to the custom function. ex: export default function Custom(props) {}
+<br><br>5: What data type is 'props' when the component receives it?
+<br><i>it is an Object and we can use .syntax to access it's properties</i>
 
-
-
-
-
-
-
+<h2>Object Destructuring</h2>
+Bob prefers to use the 'props' object and 'dot syntax'
 
 
 
