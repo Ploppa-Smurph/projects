@@ -1,0 +1,139 @@
+/* Variables */
+:root {
+    --primary-color: rgba(023,076,079);
+    --secondary-color: rgba(032,113,120);
+    --tertiary-color: rgba(255,150,102);
+    --dark-color: rgba(48,53,77);
+    --light-color: rgba(252, 252, 247);
+    --cat-dark-color: rgba(42,39,37);
+    --cat-light-color: rgba(255,225,132);
+}
+
+/* Basic Styling */
+* { 
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+}
+
+.text-muted {
+    color: var(--secondary-color, 0.8);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 12px 0 var(--dark-color, 0.7);
+}
+
+.header p {
+    text-align: center;
+    margin-top: 0;
+}
+
+.nav-logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Main-Content Styling */
+
+/* Data-Card Styling */
+.data-card {
+    padding: 30px 0;
+    width: 225px;
+    font-size: 12px;
+}
+
+.data-img {
+    border-radius: 9px;
+    width: 100%;
+    height: 400px;
+    padding: 2px;
+}
+
+.fa-star {
+    height: 13px;
+    color: var(--tertiary-color, 0.7);
+    margin-left: 15px;
+}
+
+.data-stats {
+    top: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.data-card p {
+    top: 0;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+/* Contact Styling */
+.contact-card {
+    padding: 30px 0;
+    width: 175px;
+    font-size: 12px;
+}
+
+.contact img {
+    border-radius: 9px;
+    width: 100%;
+}
+
+.fa-phone, .fa-envelope {
+    height: 13px;
+    color: var(--tertiary-color, 0.7);
+    margin-left: 15px;
+}
+
+.info-group {
+    top: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card p {
+    top: 0;
+    padding: 3px 10px 2px 0;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    background-color: var(--cat-dark-color);
+    width: 100%;
+    padding: 2em 0;  
+    justify-content: right;    
+}
+
+.footer p {
+    margin-right: 20px;    
+    font-size: .75em;
+    color: var(--cat-light-color);
+    
+}
