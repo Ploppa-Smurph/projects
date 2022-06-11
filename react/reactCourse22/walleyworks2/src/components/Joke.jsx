@@ -5,6 +5,7 @@ export default function Joke(props) {
     console.log(props.upvotes)
     console.log(props.downvotes)
     console.log(props.comments)
+    console.log(props.comments.title) // showing up as 'undefined'
     return (
         <div className="joke-container">
             <div className="joke">
