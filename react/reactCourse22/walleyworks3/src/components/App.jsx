@@ -20,6 +20,27 @@ export default function App() {
               title={'Felting Lessons with Ra'}
               price={125}
         />
+        <Card img={dataLogo}
+              rating={4.8}
+              reviewCount={61}
+              country={'US'}
+              title={'Felting Lessons with Ra'}
+              price={125}
+        />
+        <Card img={dataLogo}
+              rating={4.8}
+              reviewCount={61}
+              country={'US'}
+              title={'Felting Lessons with Ra'}
+              price={125}
+        />
+        <Card img={dataLogo}
+              rating={4.8}
+              reviewCount={61}
+              country={'US'}
+              title={'Felting Lessons with Ra'}
+              price={125}
+        />
         <Footer />
         </div>
     )
