@@ -12,7 +12,7 @@ export default function Card(props) {
             <span className="text-muted">&#8226;{props.country}</span>
         </div>
             <p>{props.title}</p>
-            <p><span className="bold">${props.price}&nbsp;</span>/ person</p>
+            <p><span className="bold">From ${props.price}&nbsp;</span>/ person</p>
     </div>
     )
 }

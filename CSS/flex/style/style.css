@@ -1,0 +1,22 @@
+:root {
+    --primary-color: hotpink;
+    --seconday-color: aquamarine;
+    --tertiary-color: darkgrey;
+    --dark-color: midnightblue;
+    --light-color: springgreen;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: var(--dark-color);
+}
+
+.header-title {
+    color: var(--seconday-color);
+    background-color: var(--primary-color);
+}
