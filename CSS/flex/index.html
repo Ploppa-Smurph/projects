@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style/style.css" rel="stylesheet" type="text/css">
-    <title>CSS Flex Tutorial -- learn this all again for React</title>
+    <title>Traversy CSS Flex Tutorial -- learn this all again for React</title>
 </head>
 <body>
-   <h1>CSS Flex Tutorial - </h1>
+   <h1>Traversy Media CSS Flex Tutorial - </h1>
    <a href="">Link to video</a><hr />
    <br><br> 
    <section class="header-container">
    <header class="header">
-    <div class="logo">
+    <div class="header-logo">
         <img src="https://picsum.photos/125/125" alt="placeholder">
     </div>
     <div class="header-title">
@@ -21,10 +21,10 @@
     </div>
     <div class="nav-container">
         <ul>
-            <li>About</li>
-            <li>Join Us</li>
-            <li>Merchandise</li>
-            <li>Contact</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">Join Us</li>
+            <li class="nav-item">Merchandise</li>
+            <li class="nav-item">Contact</li>
         </ul>
     </div>
    </header>
@@ -38,20 +38,56 @@
             <h1>Hero Title</h1>
         </div>
         <div class="hero-text">
-            <p>hero flavor text, can you taste it??</p>
+            <p>The Flexible Box Model - replaces floats and tables.</p>
+            <p>CSS Grid is a great option for layout, also. Good to know both.</p>
+            <p>If you give the <b><i>.hero-container</i></b> parent a <b>'display: flex'</b> then all children under will also be flex.</p>
+            <br>
+            <ul>Flex Container Properties:
+                <li>flex-direction</li>
+                <li>flex-wrap</li>
+                <li>flex-flow</li>
+                <li>justify-content</li>
+                <li>align-items</li>
+                <li>align-content</li>
+            </ul>
+            <br>
+            <ul>Flex Item Properties:
+                <li>order</li>
+                <li>flex-grow</li>
+                <li>flex-shrink</li>
+                <li>flex-basis</li>
+                <li>align-self</li>
+            </ul>
         </div>
         </div>
 </section>
-<section class="main-content-container">
-    <div class="main-content">
-        <h1>Main Content is Here</h1>
-        <p>this is the flavor for the main content and it will stay here with it forever because they love each other and are in the same div</p>
+<section>
+   <!-- <div class="main-content-container">
+         <h1>Main Content is Here</h1>
+        <p>this is the flavor for the main content and it will stay here with it forever because they love each other and are in the same div</p> -->
+      
+    <div class="main-display-container">
+            <div class="display">Display 1</div>
+            <div class="display">Display 2</div>
+            <div class="display">Display 3</div>
     </div>
+<!-- </div>  -->
+<div class="main-display-container02">
+    <div class="display02">Display02 1</div>
+    <div class="display02">Display02 2</div>
+    <div class="display02">Display02 3</div>
+    <div class="display02">Display02 4</div>
+    <div class="display02">Display02 5</div>
+    <div class="display02">Display02 6</div>
+    <div class="display02">Display02 7</div>
+    <div class="display02">Display02 8</div>
+    <div class="display02">Display02 9</div>
+</div>
 </section>
 <section class="bottom-container">
     <div class="bottom-content">
-        <h3>Here we are at the bottom</h3>
-        <p>what could be bellow?</p>
+        <h3 class="bottom-title">flex-basis: 300px</h3>
+        <p class="bottom-flavor">Flex Basis bg 100px</p>
     </div>
 </section>
 <section class="footer-container">
