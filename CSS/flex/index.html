@@ -67,27 +67,41 @@
         <p>this is the flavor for the main content and it will stay here with it forever because they love each other and are in the same div</p> -->
       
     <div class="main-display-container">
-            <div class="display">Display 1</div>
-            <div class="display">Display 2</div>
-            <div class="display">Display 3</div>
+            <div class="display">flex-grow: 1; justify: center; align: center</div>
+            <div class="display">flex-grow: 2; justify: center; align: center</div>
+            <div class="display">flex-grow: 3; justify: center; align: center</div>
     </div>
 <!-- </div>  -->
 <div class="main-display-container02">
-    <div class="display02">Display02 1</div>
-    <div class="display02">Display02 2</div>
-    <div class="display02">Display02 3</div>
-    <div class="display02">Display02 4</div>
-    <div class="display02">Display02 5</div>
-    <div class="display02">Display02 6</div>
-    <div class="display02">Display02 7</div>
-    <div class="display02">Display02 8</div>
-    <div class="display02">Display02 9</div>
+    <div class="display02">justify-content: flex-start;
+        align-items: flex-start;</div>
+    <div class="display02">justify-content: center;
+        align-items: center;</div>
+    <div class="display02">justify-content: flex-end;
+        align-items: flex-end;</div>
+    <div class="display02">justify-content: center;
+        align-items: flex-start;</div>
+    <div class="display02">justify-content: center;
+        align-items: flex-end;</div>
+    <div class="display02">justify-content: flex-start;
+        align-items: center;</div>
+    <div class="display02">justify-content: flex-end;
+        align-items: center;</div>
+    <div class="display02">justify-content: center;
+        align-items: center;</div>
+    <div class="display02">flex-end; align-end</div>
 </div>
 </section>
 <section class="bottom-container">
     <div class="bottom-content">
         <h3 class="bottom-title">flex-basis: 300px</h3>
         <p class="bottom-flavor">Flex Basis bg 100px</p>
+    </div>
+    <div class="bottom-display"> <!-- flex: 1; is a shorthand for the bellow with a standard 0 for the basis-->
+        <div class="bottom-display-item">flex: 1 0 100px;</div> <!-- this is the same as declaring: flex-grow, flex-shrink, and flex-basis -->
+        <div class="bottom-display-item">flex: 2 1 200px;</div>
+        <div class="bottom-display-item">flex: 3 2 300px;</div>
+        <div class="bottom-display-item">flex: 4 3 400px;</div>
     </div>
 </section>
 <section class="footer-container">

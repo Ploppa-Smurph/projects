@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Refresher course from 'Free Course' on YouTube</h1>
+    refresher course for arrow functions and other new javascript that is important for React.
+    <br><a href="">link to the course</a>
+    <h2>Let & Const</h2>
+    <a href="https://www.youtube.com/watch?v=XeMOy-pmu5o&list=PL297V5i-lbcOnjOFzQ8FZh6wqlXw1lrM_&index=11">link to refresher</a>
+    <br>use 'let' and 'const' instead of 'var'.
+    <br>Use <b>'let'</b> instead of var (for values that will change)
+    <br>If a value is not going to change use <b>'const'</b>
+    <br> ex: in <i>script.js</i> -- in the console we see 'Trelvyn'
+    <br>if I were to use 'const' with a value that does change you will get an error. 
+<h2>Arrow Functions</h2>
+a javascript function is written: 
+<pre><b>function myFunc() {
+        ...
+    }</b></pre>
+In ES6 arrow functions were introduced. An Arrow function looks like: 
+<br> <pre><b>const myFunc = () => {
+        ...
+    }</b></pre>
+<br> One advantage of the 'Arrow Function' is it works wells with the <b>this</b> keyword.
+<br> If the Arrow Function recieves only one arguement, you can remit the "()" parens from either side: 
+<br> ex: <b>const myFunc = name => {...}</b>
+<br><br>If your code only returns 1 item in your code you can omit the '{}' curly braces from the code body.
+<br> ex: <b>const myFunc = name => console.log('...') </b> -- (if you 'return', you MUST omit the 'return' keyword with this shortcut)
+<h2>Export and Import</h2>
+ex: <pre><b>
+    const person = {
+        name: 'Flan'
+    }
+    export default person
+</b></pre>
+in another component/module we can 'import' person from './person.js' -- it will default to .js file 
+<br><br> another way to import is ex: <b>import { baseData } from './utility.js'</b>
+<br>Additionally you can have a 'named export' ex: <b>import { smth as Smth } from './utility.js'</b> 
+<h2>Classes</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
