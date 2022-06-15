@@ -32,3 +32,31 @@ console.log(myAgeNextYear(46))
 
 /* Export and Import (modules / components) */
 /* see examples in index.html */
+
+/* Classes in javascript */
+class Human {
+    constructor() {
+        this.age = 41;
+    }
+
+    printAge() {
+        console.log(this.age);
+    }
+}
+
+class Person extends Human {
+    constructor() {
+        super();
+        this.name = 'Ra';
+    }
+    
+    printPersonName() {
+        console.log(this.name);
+    }
+}
+
+const person = new Person();
+person.printPersonName();
+person.printAge();
+
+/* Classes, Properties & Methods */
