@@ -52,11 +52,66 @@ Classes create objects. Classes can contain both 'Properties' and 'Methods'.
 <br>Inheritance is comperable to Prototypes. 
 <h2>Classes, Properties & Methods</h2>
 <a href="https://www.youtube.com/watch?v=H8TMwy1_u5Q&list=PL297V5i-lbcOnjOFzQ8FZh6wqlXw1lrM_&index=15">link to video</a>
+added 'Babel' for the latest example of shortcuts for Classes.
+<h2>Spread & Rest Operators</h2>
+the operator is '...' it is 3 dots and you can use it for 'spread':
+<br><b>Spread</b> is used to split up array elements or object properties
+<br> ex: <i>const newArray = [...oldArray, 1,2]</i> or <i>const newObject = {...oldObject, newProp:5}</i>
+<br><br><b>Rest</b> is used to merge a list of function arguments into an array.
+<br> ex: <i> function sortArgs(...args) { return arg.sort() }</i>
+<br> demonstrated in script.js
+<br><br>It is important to remember that the 'Rest' operator merges the arguments into an ARRAY, so you can use all built in array methods on '...args'
+<h2>Destructuring</h2>
+<a href="">Destructuring video</a>
+<br>You destructure Arrays or Objects to pull an element from them and store it in a variable.
+<br><br>Array Destructuring: 
+<pre><b>
+    [a,b] = ['Hello', 'Trelvyn']
+    console.log(a) // Hello
+    console.log(b) // Trelvyn
+</b></pre>
+Object Destructuring: 
+<pre><b>
+    {name} = {name: 'Max', age:28}
+    console.log(name) // Max
+    console.log(age) // undefined
+</b></pre>
+<h2>Reference & Primitive Types</h2>
+When you set a variable or constant = to an integer value then you are setting a primitive value.
+<br>ex: <b>const number = 1;</b> the constant 'number' is equal to the integer value 1.
+<br>If I then create another constant equal to number
+<br>ex: <b>const num2 = number;</b> then we are creating a COPY of the primitive '1'.
+<br>Numbers, Strings, and Boolean are all 'primitive' types.
+<br><br>Objects and Arrays are 'Reference types':
+<br>ex: <pre><b>const person = {
+    name = 'Jose'
+    };
+    const secondPerson = person;
+    console.log(secondPerson)
+</b></pre>
+When you create a variable that references an object or an array it does not actually copy the item,
+<br>instead it is pointing to a place in volitile memory/RAM where the 1st created object/array is stored.
+<br>therefore if you change the 1st value (person) then 'secondPerson' will also display the new value.
+<br>The reason this happens is because 'secondPerson' is only pointing to/(referencing) the memory unit where the object is stored.
+<br>Use the 'spread'(...) operator to copy the object in an immutable way, that is make an actual copy, not just copy the pointer.
+<br>ex: <pre><b>
+    const secondPerson = {...person};
+</b></pre>
+as we learned earlier that will copy the elements of the object/array and assign them into a new object/array
+<br> We see in our example (in script.js) that when we set a constant as a pointer, the value is changed when the object value is adjusted.
+<br>When we 'spread' the object into a new object then the elements retain their initial value
+<h2>Refreshing Array Functions</h2>
+brief example of .map() function -- i still need to watch a video about .map and DOM
+<h2>Wrap Up of refresher course</h2>
 
 
 
 
 
-    <script src="./script.js" type="text/javascript"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js" type="text/babel"></script>
 </body>
 </html>
