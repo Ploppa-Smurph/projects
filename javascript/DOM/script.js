@@ -22,3 +22,36 @@ heading.style.color = 'blue'; // changes h1 color to blue
 document.querySelector("input").click(); // .click() simulates a mouseclick on an input
 
 /* Ep03 Selecting HTML Elements */
+document.getElementsByTagName("li")[2].style.color = "purple";
+// you can use array properties to retreive info like the length (total # of li's in the HTML)
+console.log(document.getElementsByTagName("li").length)
+
+// getElementsByClassName -- plural -- will return an array of elements
+document.getElementsByClassName("selector-item")[2].style.color = "green"
+
+// getElementById -- singular - only 1 id of that name per HTML (must be unique)
+console.log(document.getElementById("title"))
+
+// querySelector
+console.log(document.querySelector("#ep03title"))
+
+document.querySelector(".selector-item").style.color = "orange"
+
+// set variable to .querySelector to manipulate
+let containerP = document.querySelector(".ep03-container p")
+console.log(containerP)
+containerP.innerHTML = "Is this Test working?"
+
+// querySelectorAll
+console.log(document.querySelectorAll("li"))
+document.querySelectorAll(".selector-item")[5].style.color = "brown"
+
+
+/* Ep04 Manipulating and Changing Styles of HTML Elements */
+
+
+
+
+
+
+
