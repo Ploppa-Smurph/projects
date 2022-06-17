@@ -1,0 +1,16 @@
+:root {
+    --primary-color: blue;
+    --secondary-color: red;
+    --tertiary-color: yellow;
+    --dark-color: black;
+    --light-color: grey;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 30px 50px;
+}

@@ -72,5 +72,20 @@ document.querySelector("#ep05-button").classList.toggle("invisible");
 document.querySelectorAll("li.list-item-ep05")[0].classList.toggle("huge");
 
 /* Ep06 Text Manipulation and the Text Content Property */
+console.log(document.querySelector("#ep06title").innerHTML) // displays and can manipulate the HTML elements 
+document.querySelector("#ep06title").innerHTML = "<em><h4>Ep06 Text Manipulation Shrunk!<h4></em>" // manipulated the title with javascript
+console.log(document.querySelector("#ep06title").textContent) // only displays the text contained in the element
+
+/* Ep07 Attribute Manipulation */
+console.log(document.querySelector("#ep07title").attributes)
+console.log(document.querySelector("#ep07title").getAttribute("id"))
+
+// manipulate the link to a different link and console.log
+console.log(document.querySelector("a").getAttribute("href")) // 'get' the attribute for the 'a' tag -- shows the first link on the page (in this example)
+document.querySelector("a").setAttribute("href", "#") 
+console.log(document.querySelector("a").getAttribute("href")) // 'get' the attribute for the 'a' tag -- shows the first link on the page (in this example)
+// manipulate the link back to the original link and console.log
+document.querySelector("a").setAttribute("href", "https://www.youtube.com/watch?v=ZaQPDgS1xDc")
+console.log(document.querySelector("a").getAttribute("href")) // 'get' the attribute for the 'a' tag -- shows the first link on the page (in this example)
 
 
