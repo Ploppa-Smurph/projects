@@ -1,0 +1,36 @@
+:root {
+    --primary-color: rgba();
+    --secondary-color: rgba();
+    --tertiary-color: rgba();
+    --dark-color: rgba();
+    --light-color: rgba();
+}
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+}
+
+.container {
+    padding: 20px 20px;
+}
+
+/* Lesson-Container */
+.lesson-container {
+    background: var(--primary-color);
+}
+
+/* Ep01-Container */
+.ep01-container {
+    background: var(--secondary-color);
+}
+/* Ep02-Container */
+/* Ep03-Container */
+/* Ep04-Container */
+/* Ep05-Container */
+/* Ep06-Container */
