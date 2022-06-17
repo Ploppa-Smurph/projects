@@ -48,10 +48,29 @@ document.querySelectorAll(".selector-item")[5].style.color = "brown"
 
 
 /* Ep04 Manipulating and Changing Styles of HTML Elements */
+document.querySelector("#ep04title").style.color = "grey"  // the title is grey now!
 
+let another01 = document.querySelectorAll("li.another-list-item")[0]
+console.log(another01)
+another01.innerHTML = "The manipulated item 1"
 
+// hide an element
+document.querySelectorAll("li.another-list-item")[1].style.visibility = "hidden"
 
+// change ep04-button background color
+console.log(document.querySelectorAll("button")[1])
+document.querySelectorAll("button")[1].style.background = "yellow"
 
+/* Ep05 Seperation of Concerns Structure, Style, and Behavior */
+document.querySelector("#ep05-button").classList.add("invisible");
 
+document.querySelector("#ep05-button").classList.remove("invisible");
+
+document.querySelector("#ep05-button").classList.toggle("invisible");
+document.querySelector("#ep05-button").classList.toggle("invisible");
+// make it 'huge'
+document.querySelectorAll("li.list-item-ep05")[0].classList.toggle("huge");
+
+/* Ep06 Text Manipulation and the Text Content Property */
 
 

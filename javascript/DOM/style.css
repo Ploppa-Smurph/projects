@@ -32,5 +32,15 @@ h1 {
 /* Ep02-Container */
 /* Ep03-Container */
 /* Ep04-Container */
+
 /* Ep05-Container */
+.invisible {
+        visibility: hidden;
+    }
+
+.huge {
+    font-size: 5rem;
+}
+
 /* Ep06-Container */
+
