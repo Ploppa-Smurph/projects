@@ -1,10 +1,16 @@
+/* Variables */ 
 :root {
     --primary-color: blue;
     --secondary-color: red;
     --tertiary-color: yellow;
+    --ps-blend-color: purple;
+    --pt-blend-color: green;
+    --st-blend-color: orange;
     --dark-color: black;
     --light-color: grey;
 }
+
+/* Basic Styling */ 
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,3 +20,50 @@
 .container {
     padding: 30px 50px;
 }
+
+/* Notes Styling */
+
+
+/* Project Styling */
+.project-header-container, 
+.project-main-container, 
+.project-footer-container {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+}
+
+/* Project Header */
+.project-header-container {
+    align-items: center;
+    flex-direction: column;
+}
+#project-header-title {
+    font-size: 4rem;
+}
+
+/* Project Main */
+.card-container {
+    width: 200px;
+    height: 200px;
+    padding: 40px 40px;
+    margin: 20px;
+    background: var(--pt-blend-color);
+    color: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+.card {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+}
+
+
+/* Project Footer */
+#project-footer-title {
+    font-size: .8rem;
+}
+
