@@ -21,6 +21,10 @@
     padding: 30px 50px;
 }
 
+.red {
+    color: var(--secondary-color);
+}
+
 /* Notes Styling */
 
 
@@ -41,6 +45,8 @@
 }
 #project-header-title {
     font-size: 4rem;
+    text-shadow: 3px 0 var(--dark-color);
+    
 }
 
 /* Project Main */
@@ -59,6 +65,7 @@
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
+    text-shadow: 3px 0 var(--st-blend-color);
 }
 
 
