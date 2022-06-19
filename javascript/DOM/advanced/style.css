@@ -15,6 +15,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+}
+
+body {
+    font-family: 'Arvo', serif;
 }
 
 .container {
@@ -25,17 +30,15 @@
     color: var(--secondary-color);
 }
 
-/* Notes Styling */
-
-
 /* Project Styling */
 .project-header-container, 
-.project-main-container, 
+.set-container, 
 .project-footer-container {
     background: var(--primary-color);
     color: var(--tertiary-color);
     display: flex;
     justify-content: center;
+
 }
 
 /* Project Header */
@@ -50,27 +53,69 @@
 }
 
 /* Project Main */
-.card-container {
-    width: 200px;
-    height: 200px;
-    padding: 40px 40px;
-    margin: 20px;
-    background: var(--pt-blend-color);
-    color: var(--tertiary-color);
-    border-radius: 10px;
+.w {
+
 }
 
-.card {
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: relative;
-    text-shadow: 3px 0 var(--st-blend-color);
+.a {
+
 }
 
+.s {
+
+}
+
+.d {
+
+}
+
+.j {
+
+}
+
+.k {
+
+}
+
+.l {
+
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: var(--seconday-color);
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 var(--light-color);
+  opacity: 0.5;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid var(--tertiary-color);
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: var(--st-blend-color);
+  text-shadow: 4px 0 var(--pt-blend-color);
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: var(--ps-blend-color);
+}
 
 /* Project Footer */
 #project-footer-title {
     font-size: .8rem;
 }
 
+/* Notes Styling */
