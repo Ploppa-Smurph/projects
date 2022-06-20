@@ -115,7 +115,7 @@ body {
 }
 
 .drum:hover {
-    transform: scale(1, 1.25);
+    transform: scale(1, 1.1);
     background: var(--secondary-color);
     color: var(--pt-blend-color);
     text-shadow: 4px 0 var(--ps-blend-color);
