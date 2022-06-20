@@ -106,11 +106,20 @@ body {
   text-shadow: 4px 0 var(--pt-blend-color);
   border-radius: 15px;
   display: inline-block;
-  width: 150px;
+  width: 130px;
   height: 150px;
   text-align: center;
   margin: 10px;
   background-color: var(--ps-blend-color);
+  transition: .2s;
+}
+
+.drum:hover {
+    transform: scale(1, 1.25);
+    background: var(--secondary-color);
+    color: var(--pt-blend-color);
+    text-shadow: 4px 0 var(--ps-blend-color);
+
 }
 
 /* Project Footer */
