@@ -54,31 +54,32 @@ body {
 
 /* Project Main */
 .w {
-
+    background-image: url("./img/tomDrum.jfif");
+    
 }
 
 .a {
-
+    background-image: url("./img/tomDrum02.jfif");
 }
 
 .s {
-
+    background-image: url("./img/tomDrum03.jfif");
 }
 
 .d {
-
+    background-image: url("./img/kickDrum.jfif");
 }
 
 .j {
-
+    background-image: url("./img/closedHi.jfif");
 }
 
 .k {
-
+    background-image: url("./img/openHi.jfif");
 }
 
 .l {
-
+    background-image: url("./img/snareDrum.jfif");
 }
 
 .set {

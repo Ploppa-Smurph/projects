@@ -15,9 +15,16 @@ function handleClick() {
 /* Event Listener for ALL of the buttons using a 'for' loop */
 //determine the amount of "drum buttons" in the HTML
 let drumButtonNum = document.querySelectorAll(".drum").length; // variable to 'get' length
-for (var i=0; i<drumButtonNum; i++) {   // iterate through the .drum buttons
-document.querySelectorAll(".drum")[i].addEventListener("click", () => alert("I got clicked")); // anonymous arrow function w/ event listener
+for (var i=0; i<drumButtonNum; i++) {    // iterate through the .drum buttons
+/*document.querySelectorAll(".drum")[i].addEventListener("click", () => alert("I got clicked")); // anonymous arrow function w/ event listener
+}
+ */
+// ep03 higher order functions and passing functions
+// find which button triggered the event so that each can call a different sound    
+document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+        console.log(this.innerHTML)
+}); 
 }
 
-// ep03 higher order functions and passing functions
-
+/* let drum = new Audio('./mp3s/tom_plastic_hard.mp3');
+        drum.play() */
