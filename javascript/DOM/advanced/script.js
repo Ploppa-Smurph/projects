@@ -28,3 +28,5 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function() {
 
 /* let drum = new Audio('./mp3s/tom_plastic_hard.mp3');
         drum.play() */
+
+// ep06 Switch functions in javascript

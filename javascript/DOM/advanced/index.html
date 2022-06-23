@@ -62,12 +62,47 @@ we will use the event listeners to play a sound with javascript using the <b>.pl
 <br>when we 'click' on a button the eventListener triggers the function to run (at the moment we are console.log(this.innerHTML)).
 <h2>Ep05 A Deeper Understanding of JavaScript Objects</h2>
 <a href="https://www.youtube.com/watch?v=JxuW9yOFuuY">link to ep05</a>
-
-
-
-
-
-
+<br>in this episode we learn about javascript objects --- 
+<br>ex: Bellboy 1 name=timmy; age=19; hasworkpermit=true; languages=["French","English", "Spanish"]
+<br>ex: we could write code that plugs in each bellboy's name, age, whatever is required. <i>"Hello, my name is " + bellBoy1Name</i>
+<br>JSON = <b><pre>
+    let bellBoy1 = {
+        name: "Timmy",
+        age: 19,
+        hasWorkPermit: true,
+        languages: ["French", "English", "Spanish"]
+    }
+</pre></b>
+the above is the formatting for JSON - javascript object notation
+<br>different objects will and can have different properties
+<pre><b>
+    let houseKeeper1 = {
+        name: "Jane",
+        yearsExp: 12,
+        cleanArea: ["bathroom","lobby","bedroom"]
+    }
+</b></pre>
+now if we console.log(houseKeeper1) -- the properties of the object will be displayed.
+<br>we can call on ("get") object info using .dot notation == houseKeeper1.name will return "Jane"
+<br><br><br><b>JavaScript Factory / Constructor Function</b>
+<br> the JavaScript Factory makes a template to create objects. ex: 
+<pre><b>
+    function BellBoy (name, age, hasWorkPermit, languages) {
+        this.name = name;
+        this.age = age;
+        this.hasWorkPermit = hasWorkPermit;
+        this.languages = languages;
+    }
+</b></pre>
+the 'constructor function' name MUST be capitalized ("BellBoy" in the ex: above)
+<br>the 'inputs/parameters' listed in the BellBoy constructor function match up with the property data contained in the object
+<br><br> to 'Initialize' or create an object we would: 
+<pre><b>
+    let bellBoy1 = new BellBoy("Timmy", 19, true, ["French", "English", "Spanish"]);
+</b></pre>
+this would create an object (bellBoy1) with the properties that are equal to the 'arguements' that we provided in the Initializer. 
+<h2>Ep06 - Switch Statements in JavaScript</h2>
+<a href="https://www.youtube.com/watch?v=ac3gPbromI4">link to ep06</a>
 
 
 
