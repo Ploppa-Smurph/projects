@@ -98,9 +98,8 @@ body {
 .drum {
   outline: none;
   border: 10px solid var(--tertiary-color);
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: 'Arvo', cursive;
-  line-height: 2;
   font-weight: 900;
   color: var(--st-blend-color);
   text-shadow: 4px 0 var(--pt-blend-color);

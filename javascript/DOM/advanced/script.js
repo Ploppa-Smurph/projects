@@ -20,3 +20,4 @@ document.querySelectorAll(".drum")[i].addEventListener("click", () => alert("I g
 }
 
 // ep03 higher order functions and passing functions
+
