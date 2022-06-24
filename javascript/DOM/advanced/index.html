@@ -103,6 +103,54 @@ the 'constructor function' name MUST be capitalized ("BellBoy" in the ex: above)
 this would create an object (bellBoy1) with the properties that are equal to the 'arguements' that we provided in the Initializer. 
 <h2>Ep06 - Switch Statements in JavaScript</h2>
 <a href="https://www.youtube.com/watch?v=ac3gPbromI4">link to ep06</a>
+<h2>Ep07 - Methods</h2>
+<a href="https://www.youtube.com/watch?v=go_PkZN4Zk0">link to ep07</a>
+if we give a function to an object then it is called a 'Method'. ex: 
+<br> if we were to give our BellBoy from an earlier example (ep05), then we could call on that method in the future with .dot notation
+<br> ex:
+<pre><b>
+    let bellBoy1 = {
+        name: "Timmy", 
+        age: 19,
+        hasWorkPermit: true, 
+        languages: ["French", "English", "Spanish"],
+        moveSuitcase: function() {
+            alert("May I take your bag?");
+            pickUpSuitCase();
+            move();
+        }
+    }
+</b></pre>
+to call the method: <b>bellBoy1.moveSuitcase();</b>.  To incorporate that into a constructor function:
+<pre><b>
+    function BellBoy (name, age, hasWorkPermit, language) {
+        this.name = name;
+        this.age = age;
+        this.hasWorkPermit = hasWorkPermit;
+        this.language = language;
+        this.moveSuitcase = function() {
+            alert("May I take your bag?");
+            pickUpSuitCase();
+            move();
+        }
+    }
+</b></pre>
+for our actual project an ex:
+<pre><b>
+    function Audio(fileLocation) {
+        this.fileLocation = fileLocation;
+        this.play = function() {
+            // tap into audio hardware
+            // check fileLocation exists
+            // check that file @ fileLocation is a sound file
+            // play the file at fileLocation
+        }
+    }
+    let tom1 = new Audio("./mp3s/_plastic_hard.mp3");
+    tom1.play();
+</b></pre>
+<h2>Ep08  - Using Keyboard Event Listeners</h2>
+<a href="">link to ep08</a>
 
 
 
