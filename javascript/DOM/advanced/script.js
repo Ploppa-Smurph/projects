@@ -30,10 +30,14 @@ for (var i=0; i<drumButtonNum; i++) {    // iterate through the .drum buttons
         drum.play() */
 
 // ep06 Switch functions in javascript //
+// detect mouse click
 document.querySelectorAll(".drum")[i].addEventListener("click", function() {
     let buttonInnerHTML = this.innerHTML;
+    keyPressDrum(buttonInnerHTML);
+}); 
+}
 
-    switch (buttonInnerHTML) {
+/*     switch (buttonInnerHTML) {
         case "W":
             let tom_hard = new Audio('./mp3s/tom_plastic_hard.mp3');
             tom_hard.play() 
@@ -65,10 +69,52 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function() {
         default: 
             console.log(buttonInnerHTML)
             break;
-    }
-}); 
-}
+    } */
+
+
 
 // Ep08 Using Keyboard Event Listeners //
 
+// detect keyboard press
+document.addEventListener("keypress", function(event) {
+    
+    keyPressDrum(event.key)
+})
 
+function keyPressDrum(key) {
+    switch (key) {
+        case "a":
+            let tom_hard = new Audio('./mp3s/tom_plastic_hard.mp3');
+            tom_hard.play() 
+        break;
+        case "s":
+            let tom_mid = new Audio('./mp3s/tom_mid_low_01.mp3');
+            tom_mid.play()
+        break; 
+        case "d":
+            let tom_high = new Audio('./mp3s/tom_high_01.mp3');
+            tom_high.play() 
+        break;
+        case "f":
+            let kick_drum = new Audio('./mp3s/kickDrum_01.mp3');
+            kick_drum.play() 
+        break;
+        case "j":
+            let hi_closed = new Audio('./mp3s/gamelan_drum_large.mp3');
+            hi_closed.play() 
+        break;
+        case "k":
+            let hi_open = new Audio('./mp3s/beatbox_open_hi_hat.mp3');
+            hi_open.play() 
+        break;
+        case "l":
+            let cymbal_crash = new Audio('./mp3s/cymbal_crash.mp3');
+            cymbal_crash.play() 
+        break;   
+        default: 
+            console.log(buttonInnerHTML)
+            break;
+    }
+}
+
+// ep09 Callbacks and Response in JavaScript
