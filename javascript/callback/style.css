@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button01 {
+    margin: 20px 40px;
+    padding: 5px;
+    background-color: aquamarine;
+    color: purple;
+}
+.altColor {
+    background-color: papayawhip;
+    color: orangered;
+}
