@@ -53,28 +53,28 @@ body {
 }
 
 /* Project Main */
-.w {
+.a {
     background-image: url("./img/tomDrum.jfif");
     background-size: 175%;
     background-repeat: no-repeat;
     background-position: center;   
 }
 
-.a {
+.s {
     background-image: url("./img/tomDrum02.jfif");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.s {
+.d {
     background-image: url("./img/tomDrum03.jfif");
     background-size: 125%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.d {
+.f {
     background-image: url("./img/kickDrum.jfif");
     background-size: 135%;
     background-repeat: no-repeat;
@@ -112,6 +112,9 @@ body {
 }
 
 .pressed {
+  transform: scale(1, 1.1);
+  color: var(--pt-blend-color);
+  text-shadow: 4px 0 var(--secondary-color);
   box-shadow: 0 3px 4px 0 var(--light-color);
   opacity: 0.5;
 }
@@ -134,13 +137,12 @@ body {
   transition: .2s;
 }
 
-.drum:hover {
+/* .drum:hover {
     transform: scale(1, 1.1);
-    /*background: var(--secondary-color);*/
+    /*background: var(--secondary-color);
     color: var(--pt-blend-color);
     text-shadow: 4px 0 var(--secondary-color);
-
-}
+} */
 
 /* Project Footer */
 #project-footer-title {

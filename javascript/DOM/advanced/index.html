@@ -18,10 +18,10 @@
         </div>   
         <div class="set-container"> 
         <div class="set">
-                <button class="w drum">a</button>
-                <button class="a drum">s</button>
-                <button class="s drum">d</button>
-                <button class="d drum">f</button>
+                <button class="a drum">a</button>
+                <button class="s drum">s</button>
+                <button class="d drum">d</button>
+                <button class="f drum">f</button>
                 <button class="j drum">j</button>
                 <button class="k drum">k</button>
                 <button class="l drum">l</button>
@@ -155,8 +155,23 @@ for our actual project an ex:
 <br>When the function is triggered there is an option to pass in a parameter --- (normally 'e' or 'event') 
 <h2>Ep09 - Callback and Resonse in JavaScript</h2>
 <a href="https://www.youtube.com/watch?v=MSkCkODWm0w">link to ep09</a>
-
-
+<br>In JavaScript we are able to create "Higher Order Functions". A 'higher order function' is a function that can accept functions as input.
+<br>in our project the 'addEventListener' is the 'higher order function' because it takes respondToKey(event) as an input. ex:
+<pre><b>
+    document.addEventListener("keypress", respondToKey(event));
+    function respondToKey(event) {
+        console.log('The Key was Pressed.')
+    }
+</b></pre>
+The function, 'respondToKey' in the above example is the <b>'Callback Function'</b>
+<br> the 'callback function' is not called by us, but called by the event, in this case a 'click' in the correct place.
+<br>by adding <i>'event'</i> in the parameter of the 'callback function' then we actually get the event returned.
+<h2>Ep10 - Adding Animation to Websites</h2>
+<a href="https://www.youtube.com/watch?v=IGFr1zk1xWk">link to ep10</a>
+<br> .classList.add() and .classList.remove() used to add animation to mouse-click and key button press. 
+-- project is complete and working correctly.
+<h2>Ep11 -- Additional Notes and Tips</h2>
+<a href="https://www.youtube.com/watch?v=u_APW6yAOfI">link to Angela's tips</a>
 
 
 

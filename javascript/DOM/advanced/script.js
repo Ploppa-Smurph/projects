@@ -34,6 +34,7 @@ for (var i=0; i<drumButtonNum; i++) {    // iterate through the .drum buttons
 document.querySelectorAll(".drum")[i].addEventListener("click", function() {
     let buttonInnerHTML = this.innerHTML;
     keyPressDrum(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
 }); 
 }
 
@@ -77,8 +78,8 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function() {
 
 // detect keyboard press
 document.addEventListener("keypress", function(event) {
-    
     keyPressDrum(event.key)
+    buttonAnimation(event.key)
 })
 
 function keyPressDrum(key) {
@@ -118,3 +119,13 @@ function keyPressDrum(key) {
 }
 
 // ep09 Callbacks and Response in JavaScript
+// explained callbacks and response more -- look into additional information on this subject
+
+// ep10 Adding Animation to website
+function buttonAnimation(currentKey) {
+    console.log(currentKey)
+    let activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(function () {
+        activeButton.classList.remove("pressed"); }, 200);
+   }
