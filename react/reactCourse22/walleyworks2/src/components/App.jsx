@@ -6,13 +6,15 @@ import Footer from './Footer.jsx'
 import jokesData from './jokesData'
 
 export default function App() {
-      console.log(jokesData)
+      const jokeElements = jokesData.map(joke => {
+            return <Joke question={joke.question} punchline={joke.answer}/>
+      })
   return (
     <div className="container">
       <Header />
-      <MainContent />
-      
-      <Footer />
+      <MainContent /> 
+            {jokeElements}
+      <Footer /> 
     </div>
   )
 }
