@@ -3,13 +3,20 @@ import Header from './Header.jsx'
 import MainContent from './MainContent.jsx'
 import Joke from './Joke.jsx'
 import Footer from './Footer.jsx'
+import jokesData from './jokesData'
 
 export default function App() {
+      console.log(jokesData)
   return (
     <div className="container">
       <Header />
       <MainContent />
-      <Joke question="Why don’t pirates take a shower before they walk the plank?"
+      
+      <Footer />
+    </div>
+  )
+}
+{/* <Joke question="Why don’t pirates take a shower before they walk the plank?"
             answer="They just wash up on shore."
             isBarJoke={false} 
             upvotes={409}
@@ -37,8 +44,4 @@ export default function App() {
             isBarJoke={false} 
             upvotes={603}
             downvotes={85}
-            comments={[{author: "", title: "", body: "", time: ""}, {author: "", title: "", body: "", time: ""}]}/>
-      <Footer />
-    </div>
-  )
-}
+            comments={[{author: "", title: "", body: "", time: ""}, {author: "", title: "", body: "", time: ""}]}/> */}
