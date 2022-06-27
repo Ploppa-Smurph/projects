@@ -77,5 +77,18 @@ export default [
   },
   location: 'Undisclosed Island',
   openSpots: 436,
+},
+{
+  id: 7,
+  title: 'Sing from the Soul',
+  description: "We will explore the realms and depths of your soul. A Song is the voice of your inner soul as it speaks to the outer world. A mix of Spiritualisim, Music, and Self-Exploration.",
+  price: 150.00,
+  img: "https://picsum.photos/id/112/250/400",
+  stats: {
+    rating: 4.6,
+    reviewCount: 15387
+  },
+  location: 'Online',
+  openSpots: 22,
 }
 ]

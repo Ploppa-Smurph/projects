@@ -12,16 +12,10 @@ export default function App() {
       /* mapping over the data */
       const cards = data.map(item => {
             return (
-                  <Card
-                        key={item.id}
-                        img={item.img}
-                        rating={item.stats.rating}
-                        reviewCount={item.stats.reviewCount}
-                        location={item.location}
-                        title={item.title}
-                        price={item.price}
-                        description={item.description}
-                  />      
+            <Card      
+               key={item.id}
+               item={item}
+            />      
             )
       })
     return(
