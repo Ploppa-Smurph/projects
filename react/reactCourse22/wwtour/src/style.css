@@ -52,9 +52,11 @@
 
 .indicia {
   padding: 0 20px 15px 20px;
+  font-size: 12px;
   align-self: end;
 }
 
  .footer-logo {
-  margin-right: 30px;
- }
+  margin-top: 10px;
+  margin-right: 50px;
+}
