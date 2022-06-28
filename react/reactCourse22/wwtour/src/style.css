@@ -10,6 +10,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /* Header Styling */ 
@@ -38,6 +39,16 @@
   border-radius: 15px;
   object-fit: cover;
 }
+
+.card-title {
+  padding: 15px;
+  margin: 0 10px 10px 10px;
+}
+
+.card-description {
+  padding: 15px;
+}
+
 
 
 /* Footer Styling */
