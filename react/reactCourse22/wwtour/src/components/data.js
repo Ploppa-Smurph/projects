@@ -64,5 +64,5 @@ export default [
         title: "Dallas, TX",
         description: "Tasset's 'The Eye' in downtown Dallas (curated by the Joule Hotel and the Nasher Sculpture Center).",
         img: "./img/bigeye.jpg",
-    },
+    }
 ]
