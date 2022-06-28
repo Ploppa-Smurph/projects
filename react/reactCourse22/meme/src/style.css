@@ -1,0 +1,28 @@
+:root {
+  --primary-color: rgba(85, 182, 0);
+  --secondary-color: rgba(32, 113, 120);
+  --tertiary-color: rgba(182, 157, 68);
+  --dark-color: rgba(23, 76, 79);
+  --light-color: rgba(255, 225, 132);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+.header {
+  background-color: var(--primary-color);
+}
+
+/* MainContent Styling */
+.maincontent {
+  background-color: var(--light-color);
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--dark-color);
+}
