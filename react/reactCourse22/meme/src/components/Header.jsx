@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
     return (
         <header className="header">
-            <h3>Header</h3>
+            <img className="header-logo" src={"./img/meme_dark_noBG.png"} alt="wwTourLogo" />
         </header>
     )
 } 
