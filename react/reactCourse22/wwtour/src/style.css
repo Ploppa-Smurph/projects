@@ -15,7 +15,8 @@
 
 .app-container {
   display: flex;
-
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header Styling */ 
@@ -51,7 +52,6 @@
 .card-description {
   padding: 15px;
 }
-
 
 
 /* Footer Styling */
