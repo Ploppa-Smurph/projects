@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--light-color);
   text-align: center;
   padding: 40px;
+  color: var(--dark-color);
 }
 
 .meme-form {
@@ -45,10 +46,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .meme-text {
   border-radius: 8px;
+  border: none;
+  text-indent: 10px;
+  font-size: 1rem;
 }
+
+::placeholder {
+  opacity: 65%;
+}
+
 .meme-button {
+  background: linear-gradient(180deg, var(--secondary-color) 1%, var(--primary-color) 100%);
+  color: var(--light-color);
   border-radius: 5px;
   grid-column: 1 / -1;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.fa-image {
+  margin-left: 10px;
+  font-size: 1.5rem;
 }
 
 
