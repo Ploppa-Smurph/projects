@@ -3,14 +3,13 @@ import React from 'react';
 export default function MainContent() {
     return (
         <div className="maincontent-container">
-            <h1>Walley Works & Bob Ziroll present: the Meme Slinger</h1>
-            <input className="top-meme-text" type="text" placeholder="Top Text" />
-            <input className="bottom-meme-text" type="text" placeholder="Bottom Text" />
-            <div className="meme-img-container">
-            <h3 className="meme-title">Sling A New Image</h3>
-            <img className="meme-image" src={"#"} alt="Meme Template" />
-            </div>
-            <button className="meme-button">Save My Sling</button>
+            <h1>Walley Works/Bob Ziroll: the Meme Slinger</h1>
+            <form className="meme-form">
+            <input className="meme-text" type="text" placeholder="Top Text" />
+            <input className="meme-text" type="text" placeholder="Bottom Text" />
+            <button className="meme-button">Sling NEW Meme Image <i class="fa-solid fa-image"></i></button>
+            </form>
+            <img className="meme-image" src={"#"} alt="Meme Template" />            
         </div>
     )
 }

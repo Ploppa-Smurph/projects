@@ -10,39 +10,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Finlandica', sans-serif;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Holtwood One SC', serif;
 }
 
 /* Header Styling */
 .header {
   display: flex;
-  background-color: var(--primary-color);
   justify-content: center;
+  background: linear-gradient(315deg, var(--dark-color) 1%, var(--primary-color) 100%);
+  
 }
 
 .header-logo {
-  height: 400px;
+  height: 200px;
 }
 
 /* MainContent Styling */
 .maincontent-container {
-  display: flex;
-  flex-direction: column;
   background-color: var(--light-color);
-  justify-content: center;
-
+  text-align: center;
+  padding: 40px;
 }
+
+.meme-form {
+  padding: 30px;
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 20px;
+}
+
+.meme-text {
+  border-radius: 8px;
+}
+.meme-button {
+  border-radius: 5px;
+  grid-column: 1 / -1;
+}
+
 
 /* Footer Styling */
 .footer {
   display: flex;
   background-color: var(--dark-color);
-  position: absolute;
-  bottom: 0; 
   width: 100%;
   justify-content: space-between;
 }
@@ -53,4 +66,5 @@
 
 .indicia {
   align-self: end;
+  color: var(--light-color);
 }
