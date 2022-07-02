@@ -171,6 +171,55 @@ ex:<pre><b>
 </ul>
 <h2>ep11 Implementing 'useState'</h2>
 <a href="https://youtu.be/bMknfKXIFA8?t=19934">link to spot in video (about 5:30 / 12)</a>
+We have to be comfortable with 'state' in React (and all programming)
+<br><b>.useState()</b> is a React Hook! ex: <b>React.useState()</b>
+<br>It is very common to see the import Destructure the method. ex:
+<pre><b>
+    import React, {useState} from "react"
+
+    export default function App(
+        useState()
+        return (
+            ...
+        )
+    )
+</b></pre>
+Bob will stick with the 'React.useState()' for this project so it is easier to visualize where the method is coming from 
+<br><b>CHECK THIS OUT!!</b>
+<br>when we use '.useState()' it returns the input we enter in an array, and a function. if we leave the parameter empty it will return '"undefined", f()'
+<br>below we assign the 'result' variable parameter to "Yes" and call it in the return below with {result[0]}
+<pre><b>
+    import React, {useState} from "react"
+
+    export default function App(
+        useState()
+        return (
+            const result = React.useState("Yes")
+            
+            return (
+                &ltdiv className="state"&gt
+                    &lth1 className="state-title"&gtState is IMPORTANT&lth1&gt
+                    &ltdiv className="state-value"&gt
+                        &lth1&gt{result[0]}&lt/h1&gt
+                    &lt/div&gt
+                &lt/div&gt        
+            )
+        )
+    )
+</b></pre>
+this is a clunky way of doing it and we will learn a better way in the next example
+<h4>useState Array Destructuring</h4>
+<a href="https://youtu.be/bMknfKXIFA8?t=20169">link to video</a>
+
+
+
+
+
+
+
+
+
+
 
 
 
