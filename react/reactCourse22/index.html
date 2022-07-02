@@ -74,12 +74,103 @@ My project list in order is:
 <br>the React Documentation has a writeup of all the <b>'onMouse...'</b> events we can listen for in React -- Mouse Events will be 90%+ of the events we listen for in web apps
 <h2>ep07 Updating Variables to Change UI Elements with React</h2>
 <a href="https://youtu.be/bMknfKXIFA8?t=18616">link to video</a>
+mapping over arrays to add elements to the HTML page:
+<pre><b>
+    function App() {
+        const thingsArray = ["Thing 1", "Thing 2"]
 
+        // this maps through and also asigns a unique key to each
+        const thingsElement = thingsArray.map(thing =&gt &ltp key={thing}&gt{thing}&lt/p&gt)
 
+        return (
+            &ltdiv&gt
+            &ltbutton&gt Add Item &lt/button&gt
+            {thingsElement}
+            &lt/div&gt
+        )
+    }
+</b></pre>
+Add an event listener to the button so that it 
+<pre><b>
+    function App() {
+        const thingsArray = ["Thing 1", "Thing 2"]
 
+        // this maps through and also asigns a unique key to each
+        const thingsElement = thingsArray.map(thing =&gt &ltp key={thing}&gt{thing}&lt/p&gt)
 
+        // add item function
+        function addItem() {
+            const newThing = `Thing ${thingsArray.length + 1}`
+            thingsArray.push(newThing)
+        }
 
+        return (
+            &ltdiv&gt
+            &ltbutton onClick={addItem}&gt Add Item &lt/button&gt
+            {thingsElement}
+            &lt/div&gt
+        )
+    }
+</b></pre>
+As our code is written currently it is not auto-updating the elements on the HTML page
+<br>The major benefit of using a 'Declarative' library is that all we need to do is update our data and React will update our UI.
+<br> We Need to access React State.
+<br><br> An example of a change of 'state' in React is liking a photo or product on a website, expanding details on a picture or slide on a website, etc...
+<br> Here is the same code with the 'state' information added so that the app does now function correctly
+<pre><b>
+    function App() {
+        const thingsArray = ["Thing 1", "Thing 2"]
+        const thingsElement = thingsArray.map(thing =&gt &ltp key={thing}&gt{thing}&lt/p&gt)
 
+        // Update the 'State'
+        function addItem() {
+            const newThing = `Thing ${thingsArray.length + 1}`
+            setThings(prevState =&gt [...prevState, newThingText])
+        }
+
+        const thingsElement = things.map(thing =&gt &ltp key={thing}&gt{thing}&lt/p&gt)
+
+        return (
+            &ltdiv&gt
+                &ltbutton onClick={addItem}&gt Add Item &lt/button&gt
+                {thingsElement}
+            &lt/div&gt
+        )
+    }
+</b></pre>
+<br><b>Props vs States</b>
+<br><b><i>Props</i></b> are 'properties' passed into a component in order for it to work correctly. The props received by components are 'immutable'.
+<br><br><b><i>States</i></b> are 'values' managed by the component, similar to variables declared inside a function. 
+<br> Any Time you are changing values that will be displayed/saved, you'll likely be using state.
+ex:<pre><b>
+    function greeting(name) {
+        const date = new Date()
+        const hours = date.getHours()
+
+        let timeOfDay
+        if(hours >= 4 && hours < 12) {
+            timeOfDay = "morning"
+        } else if(hours >= 12 && < 17>) {
+            timeOfDay = "afternoon"
+        } else if(hours >= 17 && hours < 20) {
+            timeOfDay = "evening"
+        } else {
+            timeOfDay = "night"
+        }
+
+        return `Good ${timeOfDay}, ${name}!`
+    }
+
+    console.log(greeting("Jeffy"))
+</b></pre>
+<ul>
+    <li>State is a way for React to remember saved values from within a component.
+    <li>Props are for passing data into a component 
+    <li>State is used to hold values (and 'remember' those values even when React re-renders a component)
+    <li>Imutable items are unchangeable -- Props are immutable, State is mutable
+</ul>
+<h2>ep11 Implementing 'useState'</h2>
+<a href="https://youtu.be/bMknfKXIFA8?t=19934">link to spot in video (about 5:30 / 12)</a>
 
 
 
