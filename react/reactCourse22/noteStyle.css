@@ -1,0 +1,67 @@
+:root {
+    --primary-color: rgba(165, 38, 191);
+    --secondary-color: rgba(191, 165, 38);
+    --tertiary-color: rgba(38, 191, 165);
+    --a-light-color: rgba(191, 38, 140);
+    --a-dark-color: rgba(89, 38, 191);
+    --tet-1-color: rgba(191, 38, 63);
+    --tet-2-color: rgba(63, 191, 38);
+    --dark-color: rgb(37, 34, 38);
+    --light-color: rgba(227,227,227);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--tet-1-color);
+    background-color: var(--secondary-color);
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: var(--a-light-color);
+}
+
+a:active {
+    color: var(--tet-1-color)
+}
+
+b {
+    font-size: 1.25rem;
+    color: var(--tet-2-color);
+}
+
+ul {
+    padding: 25px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+pre {
+	width: 100%;
+	overflow: auto;
+	overflow-y: hidden;
+	font-size: 14px;
+	line-height: 20px;
+	border: 1px solid var(--a-light-color);
+	background: url(lines.png) repeat 0 0;
+    margin: 20px;
+    padding: 20px;
+    color: var(--tertiary-color);
+}
+
+br {
+    
+}
