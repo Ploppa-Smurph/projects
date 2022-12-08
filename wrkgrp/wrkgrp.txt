@@ -2,4 +2,6 @@ started on wrkgrp
  -using planned 13 + connections
    * avengers or justice league?
 
-updated pi400 -> ubuntu 22.10 kinetic kudu
+1 - updated pi400 -> ubuntu 22.10 kinetic kudu
+2 - setup workgroup on lenovo win 11 -> thor? 
+3 - setup workgroup on desktop win 10 pro -> hulk?
