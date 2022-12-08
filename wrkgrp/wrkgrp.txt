@@ -1,0 +1,5 @@
+started on wrkgrp
+ -using planned 13 + connections
+   * avengers or justice league?
+
+updated pi400 -> ubuntu 22.10 kinetic kudu
