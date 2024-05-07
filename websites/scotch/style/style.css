@@ -123,7 +123,6 @@ nav ul li {
     top: 18px;
 }
 
-
 /*Feature -- Our Story*/
 
 #feature {
@@ -219,8 +218,7 @@ nav ul li {
     text-align: initial;
 }
 
-
-/*Service -- */
+/*Service -- EVENTS*/
 
 #service {
     width: 100%;
@@ -238,10 +236,10 @@ nav ul li {
 }
 
 .service-box {
-    width: 80%;
+    width: 54%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
 }
 
