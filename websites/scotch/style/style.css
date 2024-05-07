@@ -18,6 +18,7 @@
 }
 
 .logo {
+    opacity: 0.8;
     background-color: rgba(0, 0, 0, 0);
     width: 125px;
     position: absolute;
@@ -78,6 +79,7 @@
 }
 
 #sideNav {
+    opacity: .8;
     width: 200px;
     height: 100vh;
     position: fixed;
@@ -99,6 +101,7 @@ nav ul li {
 }
 
 #menuBtn {
+    opacity: 0.8;
     width: 25px;
     height: 20px;
     background: var(--primary-color);
@@ -210,6 +213,7 @@ nav ul li {
 }
 
 .feature-text p {
+    text-indent: 25px;
     padding: 0 20px;
     text-align: initial;
 }
