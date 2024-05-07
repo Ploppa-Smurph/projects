@@ -171,6 +171,7 @@ nav ul li {
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    font-size: 13px;
 }
 
 .features {
@@ -183,7 +184,7 @@ nav ul li {
 }
 
 .features-img img {
-    width: 100%;
+    width: 95%;
     border-radius: 7px;
 }
 
@@ -261,20 +262,19 @@ nav ul li {
     border-radius: 12px;
 }
 
-
 /* need to work on OVERLAY as screen adjusts */
 
 .overlay {
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
     position: absolute;
-    top: 0;
+    top: 0px;
     border-radius: 12px;
     cursor: pointer;
     background: linear-gradient(rgba(0, 0, 0, 0.5), var(--secondary-color));
     opacity: 0;
     transition: .8s;
-    background-position: center;
+    position: center;
 }
 
 .single-service:hover .overlay {
