@@ -222,7 +222,7 @@ nav ul li {
 
 #service {
     width: 100%;
-    padding: 70px 0;
+    padding: 50px 20px;
     background: var(--primary-color);
 }
 
@@ -241,6 +241,7 @@ nav ul li {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    gap: 25px;
 }
 
 .single-service {
@@ -263,8 +264,6 @@ nav ul li {
 /* need to work on OVERLAY as screen adjusts */
 
 .overlay {
-    width: 500px;
-    height: 500px;
     position: absolute;
     top: 0px;
     border-radius: 12px;
@@ -278,6 +277,7 @@ nav ul li {
 .single-service:hover .overlay {
     opacity: 1;
     height: 100%;
+    width: 100%
 }
 
 .service-desc {
@@ -497,11 +497,15 @@ hr {
     }
     /*Service -- 2nd part of the @media*/
     .single-service {
-        flex-basis: 100%;
-        margin-bottom: 30px;
+        justify-self: center;
     }
+
+    .single-service img .overlay {
+        width: 50%;
+    }
+
     .service-desc p {
-        font-size: 12px;
+        font-size: 10px;
     }
     hr {
         margin: 5px auto;
@@ -509,6 +513,9 @@ hr {
     .single-service:hover .service-desc {
         bottom: 20% !important;
     }
+
+    /*Testimonial -- @media querry */
+
     .testimonial-col {
         flex-basis: 100%;
     }
