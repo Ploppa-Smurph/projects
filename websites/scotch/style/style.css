@@ -251,6 +251,7 @@ nav ul li {
     margin-bottom: 20px;
     color: #fff;
     position: relative;
+    max-width: 500px;
 }
 
 .single-service img {
@@ -467,10 +468,9 @@ hr {
     color: var(--tertiary-color);
 }
 
-
 /*-- Media --*/
 
-@media screen and (max-width: 777px) {
+@media screen and (max-width: 830px) {
     .banner-text h1 {
         font-size: 50px;
     }
@@ -491,26 +491,27 @@ hr {
     .features-img img {
         width: 100%;
     }
-    .service-box .overlay {
-        left: -2px;
-        ;
-    }
+   
     /*Service -- 2nd part of the @media*/
     .single-service {
         justify-self: center;
     }
 
-    .single-service img .overlay {
-        width: 50%;
+    .single-service .single-service-img {
+        width: 350px;
+        height: 350px;
     }
 
     .service-desc p {
         font-size: 10px;
     }
+    
     hr {
         margin: 5px auto;
     }
-    .single-service:hover .service-desc {
+
+    .single-service:hover .single-service-img
+    .service-desc {
         bottom: 20% !important;
     }
 
