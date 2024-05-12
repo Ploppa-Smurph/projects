@@ -222,7 +222,7 @@ nav ul li {
 
 #service {
     width: 100%;
-    padding: 50px 20px;
+    padding: 70px 0px;
     background: var(--primary-color);
 }
 
@@ -236,12 +236,11 @@ nav ul li {
 }
 
 .service-box {
-    width: 54%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
-    gap: 25px;
 }
 
 .single-service {
@@ -251,11 +250,12 @@ nav ul li {
     margin-bottom: 20px;
     color: #fff;
     position: relative;
+    max-height: 500px;
     max-width: 500px;
 }
 
-.single-service img {
-    width: 500px;
+.single-service-img {
+    width: 100%;
     height: 500px;
     /*makes the image fit the container to scale*/
     object-fit: cover;
@@ -265,20 +265,19 @@ nav ul li {
 /* need to work on OVERLAY as screen adjusts */
 
 .overlay {
+    width: 100%; 
+    height: 100%;
     position: absolute;
     top: 0px;
     border-radius: 12px;
     cursor: pointer;
     background: linear-gradient(rgba(0, 0, 0, 0.5), var(--secondary-color));
     opacity: 0;
-    transition: .8s;
-    position: center;
+    transition: .6s;
 }
 
 .single-service:hover .overlay {
-    opacity: 1;
-    height: 100%;
-    width: 100%
+    opacity: .8;
 }
 
 .service-desc {
@@ -288,7 +287,7 @@ nav ul li {
     left: 50%;
     opacity: 0;
     transform: translateX(-50%);
-    transition: .8s;
+    transition: .6s;
 }
 
 hr {
@@ -494,7 +493,8 @@ hr {
    
     /*Service -- 2nd part of the @media*/
     .single-service {
-        justify-self: center;
+        flex-basis: 100%;
+        margin-bottom: 25px;
     }
 
     .single-service .single-service-img {
