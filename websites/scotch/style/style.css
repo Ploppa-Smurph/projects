@@ -14,7 +14,11 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), var(--secondary-color)), url("../img/Scotches.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    width: 100;
+}
+
+#section {
+    padding: 5%;
 }
 
 .logo {
@@ -30,7 +34,7 @@
 .banner-text {
     text-align: center;
     color: #fff;
-    padding: 180px;
+    padding: 180px 180px;
 }
 
 .banner-text h1 {
@@ -132,12 +136,12 @@ nav ul li {
 
 .title-text {
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
 }
 
 .title-text p {
     margin: auto;
-    font-size: 20px;
+    font-size: 3vh;
     color: var(--tertiary-color);
     font-weight: bold;
     position: relative;
@@ -160,37 +164,38 @@ nav ul li {
 }
 
 .title-text h2 {
-    font-size: 50px;
+    font-size: 6vh;
 }
 
 .feature-box {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    font-size: 13px;
+    font-size: 1.25vh;
 }
 
 .features {
-    flex-basis: 50%;
+    flex-basis: 40%;
 }
 
 .features-img {
-    flex-basis: 50%;
+    flex-basis: 60%;
     margin: auto;
 }
 
 .features-img img {
     width: 95%;
+    height: auto;
     border-radius: 7px;
 }
 
 .features h1 {
-    text-align: left;
+    text-align: start;
     margin-bottom: 10px;
-    font-weight: 100;
+    font-weight: 600;
     color: var(--tertiary-color);
 }
 
@@ -473,22 +478,32 @@ hr {
     .banner-text h1 {
         font-size: 50px;
     }
+
     .banner-btn a {
+        width: 90px;
         display: block;
-        margin: 20px auto;
+        margin: 10px auto;
     }
-    .title-text h1 {
-        font-size: 35px;
+
+    .logo {
+        width: 90px; 
     }
+  
     /*Feature -- 2nd part of the @media*/
+    .title-text h2 {
+        font-size: 35px;
+        margin-right: 20px;
+    }
+    
     .features {
         flex-basis: 100%;
     }
+
     .features-img {
         flex-basis: 100%;
     }
     .features-img img {
-        width: 100%;
+        width: 400px;
     }
    
     /*Service -- 2nd part of the @media*/
@@ -497,10 +512,6 @@ hr {
         margin-bottom: 25px;
     }
 
-    .single-service .single-service-img {
-        width: 350px;
-        height: 350px;
-    }
 
     .service-desc p {
         font-size: 10px;
@@ -520,12 +531,12 @@ hr {
     .testimonial-col {
         flex-basis: 100%;
     }
+
     .footer-left,
     .footer-right {
-        flex-basis: 100%;
         font-size: 12px;
     }
     .footer-img {
-        top: 25%;
+        top: 23%;
     }
 }
