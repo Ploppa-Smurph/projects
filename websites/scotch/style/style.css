@@ -5,6 +5,7 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Marcellus', serif;
@@ -14,11 +15,8 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), var(--secondary-color)), url("../img/Scotches.jpg");
     background-size: cover;
     background-position: center;
-    width: 100;
-}
-
-#section {
-    padding: 5%;
+    width: 100%;
+    height: 100vh;
 }
 
 .logo {
@@ -34,7 +32,7 @@
 .banner-text {
     text-align: center;
     color: #fff;
-    padding: 180px 180px;
+    padding: 180px;
 }
 
 .banner-text h1 {
@@ -54,7 +52,6 @@
     width: 150px;
     text-decoration: none;
     display: inline-block;
-    margin: 0 10px;
     padding: 12px 0;
     color: #fff;
     border: .5px solid #fff;
@@ -187,7 +184,8 @@ nav ul li {
 }
 
 .features-img img {
-    width: 95%;
+    max-width: 95%;
+    width: 100%;
     height: auto;
     border-radius: 7px;
 }
@@ -435,6 +433,7 @@ hr {
 
 .footer-img {
     max-width: 450px;
+    width: 100%;
     opacity: 0.1;
     position: absolute;
     left: 49.5%;
@@ -502,9 +501,6 @@ hr {
     .features-img {
         flex-basis: 100%;
     }
-    .features-img img {
-        width: 400px;
-    }
    
     /*Service -- 2nd part of the @media*/
     .single-service {
@@ -532,11 +528,17 @@ hr {
         flex-basis: 100%;
     }
 
+    .title-text p {
+        font-size: 20px;
+    }
+
     .footer-left,
     .footer-right {
         font-size: 12px;
     }
     .footer-img {
+        max-width: 300px;
+        width: 100%;
         top: 23%;
     }
 }
