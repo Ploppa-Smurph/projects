@@ -85,7 +85,7 @@ nav img {
 }
 
 .text-box h1 {
-    font-size: 62px;
+    font-size: 100px;
 }
 
 .text-box p {
@@ -138,21 +138,26 @@ nav .fa-solid {
 /* Course */
 
 .course {
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    padding: 40px;
 }
 
 .course h1 {
     color: var(--primary-color);
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 600;
+}
+
+.course h2 {
+    font-size: 60px;
 }
 
 p {
     color: var(--secondary-color);
-    font-size: 14px;
+    font-size: 35px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
@@ -180,14 +185,84 @@ h3 {
     margin: 10px 0;
 }
 
+.course-col h3 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
 .course-col p {
     color: var(--light-color);
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+.course-col h4 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.course-col li {
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    list-style: none;
 }
 
 .course-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+/* Blog */
+#blog {
+    background-color: var(--primary-color);
+    padding: 30px;
+}
+
+.blog h1 {
+    font-size: 80px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.blog h3 {
+    font-size: 45px;
+    margin-top: -10px;
+}
+
+.course-col h2 {
+    font-size: 40px;
+    text-align: left;
+    line-height: 1;
+}
+
+.course-col h3 {
+    font-size: 22px;
+    text-align: left;
+    padding: 10px 0 0;
+}
+
+.course-col h5 {
+    font-size: 13px;
+    text-align: left;
+}
+
+.course-col p {
+    font-size: 12px;
+    padding-left: 0;
+    text-align: left;
+}
+
+/* Merch */
+#merch {
+    height: 1200px;
+    width: 100%;
+    background-image: url('../img/blueShrimp.jpg');
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Campus */
 
@@ -237,7 +312,11 @@ h3 {
 
 /* Media Queries */
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
+    #nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .text-box {
         font-size: 25px;
     }
