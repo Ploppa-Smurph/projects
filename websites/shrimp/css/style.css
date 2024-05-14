@@ -17,7 +17,7 @@
     font-family: 'Heebo', sans-serif;
 }
 
-#more {display: none;}
+#more, #more2, #more3 {display: none;}
 
 h1 {
     font-family: 'Acme', sans-serif;
@@ -162,7 +162,7 @@ nav .fa-solid {
     font-size: 60px;
 }
 
-p {
+.course p {
     color: var(--secondary-color);
     font-size: 35px;
     font-weight: 300;
@@ -170,13 +170,13 @@ p {
     padding: 10px;
 }
 
-.row {
+.shrimp-row, .snail-row {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
 }
 
-.course-col {
+.shrimp-col, .snail-col {
     flex-basis: 31%;
     background:  #fffef0;
     border-radius: 10px;
@@ -184,29 +184,25 @@ p {
     padding: 20px 12px;
     box-sizing: border-box;
     transition: .5s;
-    column-count: 2;
-    column-rule: 1px solid black;
-    column-gap: 20px;
-    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
 }
 
-h3 {
+.shrimp-col, .snail-col {
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 }
 
-.course-col h3 {
+.shrimp-col h3, .snail-col h3 {
     font-size: 40px;
     margin-bottom: 0px;
 }
-.course-col p {
+.shrimp-col p, .snail-col p {
     color: var(--light-color);
     font-size: 18px;
     padding-top: 2px; 
 }
 
-.course-col h4 {
+.shrimp-col h4, .snail-col h4 {
     text-transform: uppercase;
     text-align: left;
     font-size: 15px;
@@ -214,14 +210,14 @@ h3 {
     margin-top: 10px;
 }
 
-.course-col li {
+.shrimp-col li, .snail-col li {
     font-size: 12px;
     text-align: left;
     padding: 10px;
-    list-style: none;
+    list-style: inline;
 }
 
-.course-col:hover {
+.shrimp-col:hover, .snail-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -230,6 +226,19 @@ h3 {
     background-color: var(--primary-color);
     padding: 30px;
 }
+
+.blog-row {
+
+}
+
+.blog-col {
+    background:  #fffef0;
+    column-count: 2;
+    column-rule: 1px solid black;
+    column-gap: 20px;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+}
+
 
 .blog h1 {
     font-size: 80px;
@@ -243,7 +252,7 @@ h3 {
     color: var(--tertiary-color);
 }
 
-.course-col h2 {
+.blog-col h2 {
     font-family: "Dailymirror.ttf";
     font-weight: 400;
     font-size: 40px;
@@ -251,7 +260,7 @@ h3 {
     line-height: 1;
 }
 
-.course-col h3 {
+.blog-col h3 {
     font-family: "Dailymirror.ttf";
     font-weight: 400;
     font-size: 22px;
@@ -260,14 +269,14 @@ h3 {
     color: #000000;
 }
 
-.course-col h5 {
+.blog-col h5 {
     font-family: "Dailymirror.ttf";
     font-weight: 400;
     font-size: 13px;
     text-align: left;
 }
 
-.course-col p {
+.blog-col p {
     font-family: "Dailymirror.ttf";
     font-weight: 400;
     font-size: 12px;
@@ -295,7 +304,7 @@ h3 {
     justify-content: center;
 }
 
-.row .campus-col {
+.campus-row  {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
@@ -314,7 +323,7 @@ h3 {
     border-radius: 10px;
 }
 
-.layer {
+.campus-layer {
     border-radius: 10px;
     background: transparent;
     height: 80%;
