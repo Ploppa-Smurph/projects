@@ -5,12 +5,19 @@
     --light-color: #f5f5f5;
 }
 
+@font-face {
+    font-family: "Dailymirror.ttf";
+    src: url("../img/Dailymirror.ttf") format("truetype");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Heebo', sans-serif;
 }
+
+#more {display: none;}
 
 h1 {
     font-family: 'Acme', sans-serif;
@@ -171,12 +178,16 @@ p {
 
 .course-col {
     flex-basis: 31%;
-    background: var(--tertiary-color);
+    background:  #fffef0;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: .5s;
+    column-count: 2;
+    column-rule: 1px solid black;
+    column-gap: 20px;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
 }
 
 h3 {
@@ -192,7 +203,7 @@ h3 {
 .course-col p {
     color: var(--light-color);
     font-size: 18px;
-    padding-top: 2px;
+    padding-top: 2px; 
 }
 
 .course-col h4 {
@@ -229,29 +240,40 @@ h3 {
 .blog h3 {
     font-size: 45px;
     margin-top: -10px;
+    color: var(--tertiary-color);
 }
 
 .course-col h2 {
+    font-family: "Dailymirror.ttf";
+    font-weight: 400;
     font-size: 40px;
-    text-align: left;
+    text-align: center;
     line-height: 1;
 }
 
 .course-col h3 {
+    font-family: "Dailymirror.ttf";
+    font-weight: 400;
     font-size: 22px;
-    text-align: left;
+    text-align: justify;
     padding: 10px 0 0;
+    color: #000000;
 }
 
 .course-col h5 {
+    font-family: "Dailymirror.ttf";
+    font-weight: 400;
     font-size: 13px;
     text-align: left;
 }
 
 .course-col p {
+    font-family: "Dailymirror.ttf";
+    font-weight: 400;
     font-size: 12px;
     padding-left: 0;
-    text-align: left;
+    text-align: justify;
+    color: #000000;
 }
 
 /* Merch */
@@ -312,7 +334,7 @@ h3 {
 
 /* Media Queries */
 
-@media (max-width: 770px) {
+@media (max-width: 830px) {
     #nav {
         display: flex;
         flex-wrap: wrap;
