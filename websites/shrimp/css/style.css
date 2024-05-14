@@ -50,6 +50,7 @@ nav img {
 .nav-links {
     flex: 1;
     text-align: right;
+    opacity: 0.8;
 }
 
 .nav-links ul li {
@@ -100,7 +101,6 @@ nav img {
     font-size: 14px;
     color: var(--light-color);
 }
-
 
 /* twitchy button css effect*/
 
@@ -162,14 +162,6 @@ nav .fa-solid {
     font-size: 60px;
 }
 
-.course p {
-    color: var(--secondary-color);
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-
 .shrimp-row, .snail-row {
     margin-top: 5%;
     display: flex;
@@ -228,17 +220,47 @@ nav .fa-solid {
 }
 
 .blog-row {
-
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .blog-col {
+    flex-wrap: wrap;
+    max-width: 90%;
     background:  #fffef0;
-    column-count: 2;
+    column-count: 4;
     column-rule: 1px solid black;
     column-gap: 20px;
     box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 6px;
 }
 
+#myBtn, #myBtn2, #myBtn3 {
+    background-color:var(--light-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 4px 6px;
+    margin: 10px;
+    text-align: center;
+}
+
+#myBtn:hover, #myBtn2:hover, #myBtn3:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition-duration: 0.4s;
+}
+
+#myBtn:active, #myBtn2:active, #myBtn3:active {
+    background-color: var(--tertiary-color);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 .blog h1 {
     font-size: 80px;
@@ -376,7 +398,16 @@ nav .fa-solid {
     .nav-links ul {
         padding: 20px;
     }
-    .row {
+    .shrimp-row, .snail-row, .blog-row,
+    .merch-row, .campus-row  {
         flex-direction: column;
+    }
+
+    .blog h1 {
+        font-size: 40px;
+    }
+
+    .blog h3 {
+        font-size: 20px;
     }
 }
