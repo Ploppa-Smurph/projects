@@ -1,4 +1,56 @@
 /* Utilities */
+/* Create CSS Variables */
+    
+:root {
+    --primary-color: #79b6fa;
+    --secondary-color: #047aed;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
 
 .container {
     display: flex;
@@ -6,7 +58,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: auto;
-    padding: 0 40px;
+    padding: 0 15px;
 }
 
 .card {
@@ -14,8 +66,8 @@
     color: #333;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;
+    padding: 1vh;
+    margin: 1vh;
 }
 
 .btn {
