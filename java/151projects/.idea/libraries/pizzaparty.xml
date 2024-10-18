@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pizzaparty">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03_pizzaParty/src/pizzaparty.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

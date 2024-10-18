@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="palindromDetector">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03_palindromeDetector/src/palindromDetector.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

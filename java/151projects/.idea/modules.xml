@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/03_pizzaParty/03_pizzaParty.iml" filepath="$PROJECT_DIR$/03_pizzaParty/03_pizzaParty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/151projects.iml" filepath="$PROJECT_DIR$/151projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FXHelloWorld/FXHelloWorld.iml" filepath="$PROJECT_DIR$/FXHelloWorld/FXHelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proj01_aboutMe/Proj01_aboutMe.iml" filepath="$PROJECT_DIR$/Proj01_aboutMe/Proj01_aboutMe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proj02_budget/proj02_budget.iml" filepath="$PROJECT_DIR$/proj02_budget/proj02_budget.iml" />
+    </modules>
+  </component>
+</project>

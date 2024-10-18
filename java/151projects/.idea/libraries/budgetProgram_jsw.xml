@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="budgetProgram_jsw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/proj02_budget/src/budgetProgram_jsw.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
