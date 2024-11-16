@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class HidingSpots implements Serializable {
     private Map<String, List<String>> rooms;
 
@@ -14,7 +13,6 @@ public class HidingSpots implements Serializable {
     }
 
     private void initializeRooms() {
-        // Add rooms and their corresponding hiding spots
         rooms.put("bedroom", List.of("under the bed", "in the closet", "on the windowsill"));
         rooms.put("kitchen", List.of("on the counter", "in the sink", "under the table"));
         rooms.put("bathroom", List.of("in the sink", "in the bathtub", "behind the shower curtain"));

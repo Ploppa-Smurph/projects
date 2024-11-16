@@ -13,11 +13,13 @@ public class RoomService {
         this.scanner = scanner;
     }
 
-    public void inputRoomData() {
+    public void inputRoomData() throws CustomException {
         System.out.print("Enter the number of rooms: ");
         int numRooms = scanner.nextInt();
         scanner.nextLine(); // consume newline
-
+        if (numRooms <= 0) {
+            throw new CustomException("The number of rooms must be positive.");
+        }
         for (int i = 0; i < numRooms; i++) {
             System.out.print("Enter the name of room " + (i + 1) + ": ");
             String roomName = scanner.nextLine();
@@ -44,7 +46,11 @@ public class RoomService {
         String choice = scanner.nextLine();
         switch (choice.toLowerCase()) {
             case "add":
-                inputRoomData();
+                try {
+                    inputRoomData();
+                } catch (CustomException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "edit":
                 editRoomData();
@@ -73,6 +79,10 @@ public class RoomService {
     private void removeRoomData() {
         System.out.print("Enter the name of the room you want to remove: ");
         String name = scanner.nextLine();
-        hidingSpots.getRooms().remove(name);
+        if (hidingSpots.getRooms().containsKey(name)) {
+            hidingSpots.getRooms().remove(name);
+        } else {
+            System.out.println("Room not found.");
+        }
     }
-}
+    }

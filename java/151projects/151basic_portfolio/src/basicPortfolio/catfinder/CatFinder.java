@@ -23,8 +23,12 @@ public class CatFinder {
         if (loadOption.equalsIgnoreCase("yes")) {
             loadFromFile();
         } else {
-            catService.inputCatData();
-            roomService.inputRoomData();
+            try {
+                catService.inputCatData();
+                roomService.inputRoomData();
+            } catch (CustomException e) {
+                System.err.println(e.getMessage());
+            }
         }
 
         guessCatLocations();
@@ -64,7 +68,7 @@ public class CatFinder {
     }
 
     private static void saveToFile() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("catsAndRooms.txt"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("catsAndRooms.dat"))) {
             oos.writeObject(cats);
             oos.writeObject(hidingSpots);
             System.out.println("Session saved.");
@@ -74,17 +78,20 @@ public class CatFinder {
     }
 
     private static void loadFromFile() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("catsAndRooms.txt"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("catsAndRooms.dat"))) {
             cats = (List<Cat>) ois.readObject();
             hidingSpots = (HidingSpots) ois.readObject();
-            // Re-initialize services with loaded data
             catService = new CatService(cats, scanner);
             roomService = new RoomService(hidingSpots, scanner);
             System.out.println("Session loaded.");
         } catch (IOException | ClassNotFoundException e) {
             System.err.println("Error loading session: " + e.getMessage());
-            catService.inputCatData();
-            roomService.inputRoomData();
+            try {
+                catService.inputCatData();
+                roomService.inputRoomData();
+            } catch (CustomException ex) {
+                System.err.println(ex.getMessage());
+            }
         }
     }
 }

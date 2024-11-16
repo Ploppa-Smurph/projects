@@ -28,7 +28,8 @@ public class BasicPortfolio {
             System.out.println("4) Ch04, Ch05, & Ch08: Custom Class, Encapsulation, Utilize 'if/else' structure, Complex Boolean statement, Proper use of 'for/while' loop, Read data from Scanner, and Utilizing Array/ArrayList");
             System.out.println("5) Ch05: Read Data from File Using Scanner.");
             System.out.println("6) Ch06 & Ch07: Proper use of Switch statement, Create useful interface and at least 1 class that implements that interface, Create useful class with 1 overloaded method");
-            System.out.println("7) Quit");
+            System.out.println("7) Ch08, Ch09, Ch10, Ch11, Ch12: ");
+            System.out.println("8) Quit");
 
             System.out.print("Enter your choice: ");
             String input = scanner.nextLine();
@@ -67,6 +68,10 @@ public class BasicPortfolio {
                     ch05.start();
                     break;
                 case 7:
+                    CatFinder aCatFinder = new CatFinder();
+                    aCatFinder.run();
+                    break;
+                case 8:
                     quit = true;
                     break;
                 default:

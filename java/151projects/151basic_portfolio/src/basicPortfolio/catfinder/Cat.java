@@ -2,7 +2,7 @@ package basicPortfolio.catfinder;
 
 import java.io.Serializable;
 
-public class Cat implements Serializable {
+public class Cat implements Serializable, Comparable<Cat> {
     private String name;
 
     public Cat(String name) {
@@ -15,5 +15,10 @@ public class Cat implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Cat other) {
+        return this.name.compareTo(other.name);
     }
 }

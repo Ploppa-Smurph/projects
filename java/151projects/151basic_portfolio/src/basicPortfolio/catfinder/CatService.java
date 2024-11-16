@@ -12,10 +12,14 @@ public class CatService {
         this.scanner = scanner;
     }
 
-    public void inputCatData() {
+    public void inputCatData() throws CustomException {
         System.out.print("Enter the number of cats: ");
         int numCats = scanner.nextInt();
         scanner.nextLine(); // consume newline
+
+        if (numCats <= 0) {
+            throw new CustomException("The number of cats must be positive.");
+        }
 
         for (int i = 0; i < numCats; i++) {
             System.out.print("Enter the name of cat " + (i + 1) + ": ");
@@ -29,7 +33,11 @@ public class CatService {
         String choice = scanner.nextLine();
         switch (choice.toLowerCase()) {
             case "add":
-                inputCatData();
+                try {
+                    inputCatData();
+                } catch (CustomException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "edit":
                 editCatData();
@@ -61,3 +69,4 @@ public class CatService {
         cats.removeIf(cat -> cat.getName().equalsIgnoreCase(name));
     }
 }
+
