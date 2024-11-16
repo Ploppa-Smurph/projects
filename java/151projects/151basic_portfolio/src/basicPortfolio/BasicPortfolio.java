@@ -1,6 +1,8 @@
 package basicPortfolio;
+
 import basicPortfolio.ch04.MovieCollection;
 import basicPortfolio.ch05.RoboWarriorExtreme;
+import basicPortfolio.catfinder.CatFinder;
 
 import java.util.Scanner;
 
@@ -24,11 +26,20 @@ public class BasicPortfolio {
             System.out.println("2) Ch02: Mathematical operations");
             System.out.println("3) Ch03: Parsing, Importing methods, & Utilizing enums");
             System.out.println("4) Ch04, Ch05, & Ch08: Custom Class, Encapsulation, Utilize 'if/else' structure, Complex Boolean statement, Proper use of 'for/while' loop, Read data from Scanner, and Utilizing Array/ArrayList");
-            System.out.println("5) Ch06 & Ch07: Proper use of Switch statement, Create useful interface and at least 1 class that implements that interface, Create useful class with 1 overloaded method");
-            System.out.println("6) Quit");
+            System.out.println("5) Ch05: Read Data from File Using Scanner.");
+            System.out.println("6) Ch06 & Ch07: Proper use of Switch statement, Create useful interface and at least 1 class that implements that interface, Create useful class with 1 overloaded method");
+            System.out.println("7) Quit");
 
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
+            String input = scanner.nextLine();
+
+            int choice;
+            try {
+                choice = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number or 'quit' to exit.");
+                continue;
+            }
 
             switch (choice) {
                 case 1:
@@ -48,16 +59,21 @@ public class BasicPortfolio {
                     ch04.addMoviesLoop();
                     break;
                 case 5:
+                    CatFinder catFinder = new CatFinder();
+                    catFinder.run();
+                    break;
+                case 6:
                     RoboWarriorExtreme ch05 = new RoboWarriorExtreme();
                     ch05.start();
                     break;
-                case 6:
+                case 7:
                     quit = true;
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+
         System.out.println();
         System.out.println("Exiting portfolio. Goodbye!");
     }
