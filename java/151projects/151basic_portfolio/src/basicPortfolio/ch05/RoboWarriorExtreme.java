@@ -27,6 +27,7 @@ public class RoboWarriorExtreme implements RoboWarriorType {
     }
 
     public void start() {
+        System.out.println("Ch06 & Ch07: Proper use of Switch statement, Create useful interface and at least 1 class that implements that interface, Create useful class with 1 overloaded method \n");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose your RoboWarrior Class ('Ninja', 'Priest', 'Berserker', or 'Mystic'): ");
         String select = scanner.nextLine();

@@ -3,13 +3,9 @@ package basicPortfolio;
 import basicPortfolio.ch04.MovieCollection;
 import basicPortfolio.ch05.RoboWarriorExtreme;
 import basicPortfolio.catfinder.CatFinder;
+import basicPortfolio.ecomapp.order.OrderSite;
 
 import java.util.Scanner;
-
-/*
--- Jeffrey Walley | CTEC151: Java Portfolio -- very basic version | 10/11/2024
-  ** I have added to the Portfolio project to include projects for Ch04 - 08 **
- */
 
 public class BasicPortfolio {
 
@@ -25,57 +21,61 @@ public class BasicPortfolio {
             System.out.println("1) Ch01: Print to console");
             System.out.println("2) Ch02: Mathematical operations");
             System.out.println("3) Ch03: Parsing, Importing methods, & Utilizing enums");
-            System.out.println("4) Ch04, Ch05, & Ch08: Custom Class, Encapsulation, Utilize 'if/else' structure, Complex Boolean statement, Proper use of 'for/while' loop, Read data from Scanner, and Utilizing Array/ArrayList");
-            System.out.println("5) Ch05: Read Data from File Using Scanner.");
-            System.out.println("6) Ch06 & Ch07: Proper use of Switch statement, Create useful interface and at least 1 class that implements that interface, Create useful class with 1 overloaded method");
-            System.out.println("7) Ch08, Ch09, Ch10, Ch11, Ch12: ");
+            System.out.println("4) Movie Collection App");
+            System.out.println("5) Cat Finder App");
+            System.out.println("6) RoboWarriors");
+            System.out.println("7) Order Site & Shipping App");
             System.out.println("8) Quit");
 
             System.out.print("Enter your choice: ");
-            String input = scanner.nextLine();
+            if (scanner.hasNextLine()) { // Check if there is a line to read
+                String input = scanner.nextLine();
 
-            int choice;
-            try {
-                choice = Integer.parseInt(input);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number or 'quit' to exit.");
-                continue;
-            }
+                int choice;
+                try {
+                    choice = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a number or 'quit' to exit.");
+                    continue;
+                }
 
-            switch (choice) {
-                case 1:
-                    Ch01 ch01 = new Ch01();
-                    ch01.ch01();
-                    break;
-                case 2:
-                    Ch02 ch02 = new Ch02();
-                    ch02.ch02();
-                    break;
-                case 3:
-                    Ch03 ch03 = new Ch03();
-                    ch03.ch03();
-                    break;
-                case 4:
-                    MovieCollection ch04 = new MovieCollection();
-                    ch04.addMoviesLoop();
-                    break;
-                case 5:
-                    CatFinder catFinder = new CatFinder();
-                    catFinder.run();
-                    break;
-                case 6:
-                    RoboWarriorExtreme ch05 = new RoboWarriorExtreme();
-                    ch05.start();
-                    break;
-                case 7:
-                    CatFinder aCatFinder = new CatFinder();
-                    aCatFinder.run();
-                    break;
-                case 8:
-                    quit = true;
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                switch (choice) {
+                    case 1:
+                        Ch01 ch01 = new Ch01();
+                        ch01.ch01();
+                        break;
+                    case 2:
+                        Ch02 ch02 = new Ch02();
+                        ch02.ch02();
+                        break;
+                    case 3:
+                        Ch03 ch03 = new Ch03();
+                        ch03.ch03();
+                        break;
+                    case 4:
+                        MovieCollection ch04 = new MovieCollection();
+                        ch04.addMoviesLoop();
+                        break;
+                    case 5:
+                        CatFinder catFinder = new CatFinder();
+                        catFinder.run();
+                        break;
+                    case 6:
+                        RoboWarriorExtreme ch05 = new RoboWarriorExtreme();
+                        ch05.start();
+                        break;
+                    case 7: OrderSite orderSite = new OrderSite();
+                        orderSite.run(scanner);
+                        break;
+                    case 8:
+                        quit = true;
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            } else {
+                System.out.println("No input line available. Exiting.");
+                quit = true;
             }
         }
 

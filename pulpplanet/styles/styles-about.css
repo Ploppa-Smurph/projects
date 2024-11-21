@@ -1,0 +1,99 @@
+:root {
+    --color-dark: #2A2A2A;         /* A darker, charcoal tone for text */
+    --color-mid: #1F5F5B;          /* A medium, muted emerald for accents */
+    --color-light: #E8F5E9;        /* A light, emerald-tinted background */
+    --color-primary: #0D5C63;      /* A rich, deep emerald green */
+    --color-secondary: #2B7A78;    /* A softer, oceanic green */
+    --color-tertiary: #61C0BF;     /* A bright, refreshing teal */
+    --color-overlay: rgba(13, 92, 99, 0.7);   /* A semi-transparent overlay for an emerald effect */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.navbar-container {
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+.navbar-main {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-main li {
+    margin: 0;
+}
+
+.navbar-main a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar-main a:hover {
+    background-color: var(--color-secondary);
+}
+
+#pulpplanet-h1 {
+    text-align: center;
+    color: var(--color-primary);
+    padding-top: 20px;
+    font-size: 2.5rem;
+}
+
+#pulpplanet-sub {
+    text-align: center;
+    color: var(--color-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.pulpplanet-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pulpplanet-logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('../assets/img/pulpplanet.png');
+    background-size: cover;
+    border: 5px solid var(--color-primary);
+    border-radius: 35%;
+    box-shadow: 0 0 15px var(--color-dark);
+}
+
+#pulpplanet-tag {
+    text-align: center;
+    color: var(--color-dark);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    background-color: var(--color-overlay);
+    margin-bottom: 20px;
+}
+
+.pulpplanet-about-container {
+    background-color: var(--color-light);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-mid);
+}
+
+.pulpplanet-about p {
+    margin: 15px 0;
+    color: var(--color-dark);
+}

@@ -2,6 +2,7 @@ package basicPortfolio;
 
 public class Ch02 {
     public void ch02() {
+        System.out.println("Ch02: Mathematical Operations \n");
 
         // Portfolio Ch2 - Perform Mathematical equations using variables
         // ints are primative data types. they hold the actual data in memory. ints cannot be decimals

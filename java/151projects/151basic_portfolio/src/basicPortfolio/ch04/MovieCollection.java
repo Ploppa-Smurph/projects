@@ -12,6 +12,7 @@ public class MovieCollection {
 
     public void addMovie() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ch04, Ch05, & Ch08: Custom Class, Encapsulation, Utilize 'if/else' structure, Complex Boolean statement, Proper use of 'for/while' loop, Read data from Scanner, and Utilizing Array/ArrayList \n");
 
         System.out.println("\n" + "*".repeat(20));
         System.out.println("MOVIE COLLECTION APP");

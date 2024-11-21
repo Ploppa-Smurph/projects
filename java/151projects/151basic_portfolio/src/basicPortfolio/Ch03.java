@@ -7,6 +7,7 @@ import static java.lang.Math.pow;
 
 public class Ch03 {
     public void ch03() {
+        System.out.println("Ch03: Parsing, Importing methods, & Utilizing Enums \n");
 
         // Portfolio Ch03 - Parse string into integer
         // use the Integer.parseInt method

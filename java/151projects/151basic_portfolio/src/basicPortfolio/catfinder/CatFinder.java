@@ -16,8 +16,9 @@ public class CatFinder {
         cats = new ArrayList<>();
         catService = new CatService(cats, scanner);
         roomService = new RoomService(hidingSpots, scanner);
+        System.out.println("Ch05: Read Data from File Using Scanner \n");
 
-        System.out.println("Do you want to load the previous session? (yes/no)");
+        System.out.println("\n Do you want to load the previous session? (yes/no)");
         String loadOption = scanner.nextLine();
 
         if (loadOption.equalsIgnoreCase("yes")) {

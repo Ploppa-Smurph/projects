@@ -1,0 +1,86 @@
+:root {
+    --color-dark: #3B3B3B;        /* A dark, charcoal tone for text */
+    --color-mid: #A67C52;         /* A medium, sepia tone for accents */
+    --color-light: #F4ECD8;       /* A light, parchment-like background */
+    --color-primary: #D4A373;     /* A warm, vintage tan color */
+    --color-secondary: #C89F74;   /* A soft, aged brown */
+    --color-tertiary: #8C6A48;    /* A rich, deep brown */
+    --color-overlay: rgba(245, 244, 233, 0.7); /* A semi-transparent overlay for a yellowed effect */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.navbar-container {
+    background-color: var(--color-tertiary);
+    padding: 10px;
+}
+
+.navbar-main {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-main li {
+    margin: 0;
+}
+
+.navbar-main a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar-main a:hover {
+    background-color: var(--color-secondary);
+}
+
+#pulpplanet-h1 {
+    text-align: center;
+    color: var(--color-primary);
+    padding-top: 20px;
+    font-size: 2.5rem;
+}
+
+#pulpplanet-sub {
+    text-align: center;
+    color: var(--color-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.pulpplanet-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pulpplanet-logo {
+    width: 900px;
+    height: 900px;
+    background-image: url('../assets/img/pulpplanet.png');
+    background-size: cover;
+    border: 5px solid var(--color-primary);
+    border-radius: 35%;
+    box-shadow: 0 0 15px var(--color-dark);
+}
+
+#pulpplanet-tag {
+    text-align: center;
+    color: var(--color-dark);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    background-color: var(--color-overlay);
+    margin-bottom: 20px;
+}
