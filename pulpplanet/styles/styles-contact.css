@@ -1,18 +1,26 @@
 :root {
-    --color-dark: #3B3B3B;       /* A dark, charcoal tone for text */
-    --color-mid: #A67C52;        /* A medium, sepia tone for accents */
-    --color-light: #F4ECD8;      /* A light, parchment-like background */
-    --color-primary: #D4A373;    /* A warm, vintage tan color */
-    --color-secondary: #C89F74;  /* A soft, aged brown */
-    --color-tertiary: #8C6A48;   /* A rich, deep brown */
-    --color-overlay: rgba(245, 244, 233, 0.7);   /* A semi-transparent overlay for a yellowed effect */
-    --color-emerald: #053B44;    /* A rich emerald green accent color */ 
+    --color-dark: #602020;         /* A dark, rich burgundy for text */
+    --color-mid: #A83D3D;          /* A medium, muted red for accents */
+    --color-light: #F8E8E8;        /* A light, parchment-like pinkish background */
+    --color-primary: #D45C5C;      /* A warm, vintage red color */
+    --color-secondary: #C47979;    /* A soft, aged red */
+    --color-tertiary: #8C4646;     /* A rich, deep crimson */
+    --color-overlay: rgba(244, 220, 220, 0.7);   /* A semi-transparent overlay for a pinkish effect */
+    --color-emerald: #053B44;      /* A rich emerald green accent color */
 }
 
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
 
 .navbar-container {
     background-color: var(--color-tertiary);
-    padding: 10px;
+    padding: 5px; /* Match collection padding */
 }
 
 .navbar-main {
@@ -31,7 +39,7 @@
     color: var(--color-light);
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px; /* Match collection padding */
 }
 
 .navbar-main a:hover {
@@ -41,30 +49,30 @@
 #pulpplanet-h1 {
     text-align: center;
     color: var(--color-primary);
-    padding-top: 20px;
-    font-size: 2.5rem;
+    padding-top: 10px; /* Match collection padding */
+    font-size: 2rem; /* Match collection font size */
 }
 
 #pulpplanet-sub {
     text-align: center;
     color: var(--color-secondary);
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Match collection margin */
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Match collection margin */
 }
 
 .pulpplanet-logo {
     width: 150px;
     height: 150px;
-    background-image: url('../assets/img/pulpplanet.png'); 
+    background-image: url('../assets/img/pulpplanet.png');
     background-size: cover;
     border: 5px solid var(--color-primary);
-    border-radius: 40%;
+    border-radius: 40%; /* Match collection border radius */
     box-shadow: 0 0 15px var(--color-dark);
 }
 
@@ -72,8 +80,44 @@
     text-align: center;
     color: var(--color-dark);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px; /* Match collection padding */
     font-size: 1.2rem;
     background-color: var(--color-overlay);
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Match collection margin */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-map button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-map button:hover {
+    background-color: var(--color-secondary);
 }

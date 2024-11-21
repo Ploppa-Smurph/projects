@@ -19,7 +19,7 @@ body {
 
 .navbar-container {
     background-color: var(--color-tertiary);
-    padding: 10px;
+    padding: 5px; /* Match collection padding */
 }
 
 .navbar-main {
@@ -38,7 +38,7 @@ body {
     color: var(--color-light);
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px; /* Match collection padding */
 }
 
 .navbar-main a:hover {
@@ -48,30 +48,31 @@ body {
 #pulpplanet-h1 {
     text-align: center;
     color: var(--color-primary);
-    padding-top: 20px;
-    font-size: 2.5rem;
+    padding-top: 10px; /* Match collection padding */
+    font-size: 3rem; /* Increased font size */
 }
 
 #pulpplanet-sub {
     text-align: center;
     color: var(--color-secondary);
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 2rem; /* Increased font size */
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Match collection margin */
 }
 
 .pulpplanet-logo {
-    width: 900px;
-    height: 900px;
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
     background-image: url('../assets/img/pulpplanet.png');
     background-size: cover;
     border: 5px solid var(--color-primary);
-    border-radius: 35%;
+    border-radius: 40%; /* Match collection border radius */
     box-shadow: 0 0 15px var(--color-dark);
 }
 
@@ -79,8 +80,21 @@ body {
     text-align: center;
     color: var(--color-dark);
     padding-top: 10px;
-    padding-bottom: 20px;
-    font-size: 1.2rem;
+    padding-bottom: 10px; /* Match collection padding */
+    font-size: 1rem; /* Smaller font size */
     background-color: var(--color-overlay);
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Match collection margin */
+}
+
+.pulpplanet-about-container {
+    background-color: var(--color-light);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-mid);
+}
+
+.pulpplanet-about p {
+    margin: 15px 0;
+    color: var(--color-dark);
 }
