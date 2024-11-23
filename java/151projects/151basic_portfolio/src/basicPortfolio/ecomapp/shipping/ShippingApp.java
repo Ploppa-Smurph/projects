@@ -13,6 +13,7 @@ public class ShippingApp {
     public static void runShipping(boolean isInternational, Scanner scanner) {
         System.out.println("\n");
         System.out.println("***********************************");
+        System.out.println("*    PULP PLANET ONLINE ORDERS    *");
         System.out.println("*SHIPPING FACILITY INCOMING ORDERS*");
         System.out.println("***********************************");
         System.out.println("\n");
@@ -96,10 +97,9 @@ public class ShippingApp {
             shipProcessing.loadOrdersFromFile("shipping_orders.txt");
 
             // Display orders broken into US and international categories
-            System.out.println("\n");
-            System.out.println("*********************");
-            System.out.println("  * US SHIPPING *");
-            System.out.println("*********************");
+            System.out.println(" *********************");
+            System.out.println("   * US SHIPPING *");
+            System.out.println(" *********************");
             System.out.println("\n");
             for (Shipping order : usOrders) {
                 System.out.println(order);
@@ -108,8 +108,7 @@ public class ShippingApp {
             System.out.println("\n");
             System.out.println(" ************************");
             System.out.println("* INTERNATIONAL SHIPPING *");
-            System.out.println(" ************************");
-            System.out.println("\n");
+            System.out.println(" ************************");;
             for (Shipping order : internationalOrders) {
                 System.out.println(order);
             }
@@ -117,7 +116,7 @@ public class ShippingApp {
             // Display total order value
             System.out.println("\n");
             System.out.println("**********************");
-            System.out.println("  - Total Order Amount $" + totalOrderValue);
+            System.out.printf(" * Total Order Amount *  =   $%.2f%n", totalOrderValue);
             System.out.println("**********************");
 
             // Do not close the scanner here to avoid affecting the BasicPortfolio app

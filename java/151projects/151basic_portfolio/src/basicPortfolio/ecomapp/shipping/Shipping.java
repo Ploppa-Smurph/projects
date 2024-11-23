@@ -50,6 +50,8 @@ public class Shipping implements Comparable<Shipping>, Serializable {
         return "OrderId = " + orderId +
                 "\n Date placed: " + orderDate +
                 "\n Details: " + Arrays.deepToString(orderDetails) +
-                "\n Amount: " + calculateTotalAmount();
+                "\n Amount: " + calculateTotalAmount() +
+                "\n";
+
     }
 }

@@ -47,9 +47,14 @@ public class OrderSite {
 
         try {
             System.out.println("\n Ch08, Ch09, Ch10, Ch11, Ch12: CH8 - Properly utilize a 2-Dimensional array; Properly Override a method in a subclass; Properly utilize super() in a subclass constructor; Properly implement the Comparable interface on a class; Create a custom exception; Properly implement a try/catch statement; Properly write data to file via code; Display an understanding of how a recursive algorithm of your choice is implemented in detail \n");
+            System.out.println("Welcome To");
+            System.out.println("** PULP PLANET'S ONLINE **");
+            System.out.println("Catalog \n");
+
             // Ask if the order is from the United States or international
             System.out.println("Is this a United States (US) order or International (INT) order?");
             String orderType = scanner.nextLine();
+
             if (!orderType.equalsIgnoreCase("US") && !orderType.equalsIgnoreCase("INT")) {
                 throw new InvalidOrderTypeException("Invalid order type. Please enter 'US' or 'INT'.");
             }
@@ -72,16 +77,15 @@ public class OrderSite {
                 int quantity = scanner.nextInt();
                 scanner.nextLine();  // consume newline
 
-                System.out.println("Select type (1 for Basic - $" + item.getBasicCost() + ", 2 for Premium - $" + item.getPremiumCost() + "):");
+                System.out.printf("Select type (1 for Basic - $%.2f, 2 for Premium - $%.2f):%n", item.getBasicCost(), item.getPremiumCost());
                 int type = scanner.nextInt();
                 scanner.nextLine();  // consume newline
 
                 double itemCost = (type == 1) ? item.getBasicCost() : item.getPremiumCost();
-
-                System.out.println("Adding to order: " + quantity + " x " + item.getName() + " at $" + itemCost + " each.");
+                System.out.printf("Adding to order: %d x %s at $%.2f each.%n", quantity, item.getName(), itemCost);
                 order.addItem(item.getName(), quantity, itemCost);
 
-                System.out.println("Subtotal: $" + order.getTotalCost());
+                System.out.printf("Subtotal: $%.2f%n", order.getTotalCost());
                 System.out.println("Would you like to add another item? (yes/y for yes, any other key for no)");
                 String response = scanner.nextLine();
 
@@ -109,7 +113,7 @@ public class OrderSite {
                     for (String item : order.getItems()) {
                         writer.write(item + "\n");
                     }
-                    writer.write("Total Cost: $" + order.getTotalCost() + "\n");
+                    writer.write(String.format("Total Cost: $%.2f%n", order.getTotalCost()));
                     writer.write("\n");  // Add a blank line for readability
                 } catch (IOException e) {
                     System.err.println("Error saving order: " + e.getMessage());

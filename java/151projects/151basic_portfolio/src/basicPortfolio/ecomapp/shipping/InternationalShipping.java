@@ -18,12 +18,13 @@ public class InternationalShipping extends Shipping {
 
     @Override
     public String toString() {
-        return "International Orders" +
+        return "## International Order ##" +
                 "\n Shipping Number = " + getOrderId() +
                 "\n Date: " + getOrderDate() +
                 "\n Details: " + Arrays.deepToString(getOrderDetails()) +
                 "\n Shipping: "  + shippingCost +
-                "\n \n Amount: " + calculateTotalAmount();
+                "\n \n Amount: " + calculateTotalAmount() +
+                "\n";
 
     }
 }

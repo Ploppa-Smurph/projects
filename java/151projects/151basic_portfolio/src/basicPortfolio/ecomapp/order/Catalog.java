@@ -8,18 +8,16 @@ public class Catalog {
 
     public Catalog() {
         items = new HashMap<>();
-        items.put(1, new Item("Desktop", 500.0));
-        items.put(2, new Item("Laptop", 700.0));
-        items.put(3, new Item("Tablet", 300.0));
-        items.put(4, new Item("VoIP Device", 150.0));
-        items.put(5, new Item("Printer", 200.0));
-        items.put(6, new Item("Monitor", 250.0));
-        items.put(7, new Item("Keyboard", 50.0));
-        items.put(8, new Item("Mouse", 25.0));
+        items.put(1, new Item("Pulp Planet T-Shirt", 19.99));
+        items.put(2, new Item("Pulp Planet Mouse Pad", 9.99));
+        items.put(3, new Item("Pulp Planet Stickers", 4.99));
+        items.put(4, new Item("Pulp Planet Coffee Mug", 12.99));
+        items.put(5, new Item("Pulp Planet Bookmark", 2.99));
+        items.put(6, new Item("Pulp Planet Hat", 14.99));
     }
 
     public void listCatalogSimple() {
-        System.out.println("=== Catalog ===");
+        System.out.println("=== Pulp Planet Order Catalog ===");
         for (Map.Entry<Integer, Item> entry : items.entrySet()) {
             System.out.println(entry.getKey() + ". " + entry.getValue().getName());
         }

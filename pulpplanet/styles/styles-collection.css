@@ -14,7 +14,6 @@
     --color-overlay: rgba(13, 92, 99, 0.7);
     /* A semi-transparent overlay for an emerald effect */
 }
-
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -22,20 +21,13 @@ body {
     background-color: var(--color-light);
     color: var(--color-dark);
     line-height: 1.6;
-    overflow-y: scroll;
-    /* Allow vertical scrolling */
+    overflow-y: scroll; /* Allow vertical scrolling */
 }
 
 .navbar-container {
     background-color: var(--color-primary);
     padding: 5px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    /* Ensure it stays on top */
+    /* Match collection padding */
 }
 
 .navbar-main {
@@ -55,6 +47,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 5px;
+    /* Match collection padding */
 }
 
 .navbar-main a:hover {
@@ -64,9 +57,10 @@ body {
 #pulpplanet-h1 {
     text-align: center;
     color: var(--color-primary);
-    padding-top: 50px;
-    /* Add padding to account for fixed navbar */
+    padding-top: 10px;
+    /* Match collection padding */
     font-size: 2rem;
+    /* Match collection font size */
 }
 
 #pulpplanet-sub {
@@ -74,12 +68,14 @@ body {
     color: var(--color-secondary);
     font-style: italic;
     margin-bottom: 10px;
+    /* Match collection margin */
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    /* Match collection margin */
 }
 
 .pulpplanet-logo {
@@ -89,6 +85,7 @@ body {
     background-size: cover;
     border: 5px solid var(--color-primary);
     border-radius: 40%;
+    /* Match collection border radius */
     box-shadow: 0 0 15px var(--color-dark);
 }
 
@@ -97,9 +94,11 @@ body {
     color: var(--color-dark);
     padding-top: 10px;
     padding-bottom: 10px;
+    /* Match collection padding */
     font-size: 1.2rem;
     background-color: var(--color-overlay);
     margin-bottom: 10px;
+    /* Match collection margin */
 }
 
 .featured-author-banner {
@@ -107,17 +106,14 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-mid);
-    padding: 10px;
-    margin: 10px;
+    padding: 10px; /* Match collection padding */
+    margin: 10px; /* Match collection margin */
     border-radius: 10px;
     color: var(--color-light);
     box-shadow: 0 0 10px var(--color-dark);
     background-image: url("../lamour/img/firstfastdraw.jpg");
-    /* Ensure the entire image is contained */
-    background-repeat: no-repeat;
-    /* Prevent the image from repeating */
-    background-position: center;
-    /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
 }
 
 .featured-author-image {
@@ -137,15 +133,12 @@ body {
     padding: 20px;
     color: var(--color-light);
     text-shadow: 2px 2px var(--color-dark);
-
 }
 
 .pulpplanet-collection {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    /* Ensure 7 items per row */
-    gap: 20px;
-    /* Space between items */
+    grid-template-columns: repeat(7, 1fr); /* Ensure 7 items per row */
+    gap: 20px; /* Space between items */
     padding: 20px;
 }
 
@@ -155,10 +148,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-sizing: border-box;
-    /* Include padding and border in width calculation */
-    margin-bottom: 20px;
-    /* Ensure there's spacing at the bottom */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin-bottom: 20px; /* Ensure there's spacing at the bottom */
 }
 
 .author-image {

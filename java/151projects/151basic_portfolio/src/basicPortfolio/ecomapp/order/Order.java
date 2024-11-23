@@ -12,10 +12,12 @@ public class Order {
         totalCost = 0.0;
     }
 
-    public void addItem(String item, int quantity, double cost) {
-        items.add(quantity + " x " + item + " at $" + cost + " each");
+    public void addItem(String itemName, int quantity, double cost) {
+        String formattedCost = String.format("%.2f", cost);
+        items.add(quantity + " x " + itemName + " at $" + formattedCost + " each");
         totalCost += quantity * cost;
     }
+
 
     public List<String> getItems() {
         return items;
@@ -31,7 +33,7 @@ public class Order {
         for (String item : items) {
             orderDetails.append(item).append("\n");
         }
-        orderDetails.append("Total Cost: $").append(totalCost);
+        orderDetails.append(String.format("Total Cost: $%.2f", totalCost));
         return orderDetails.toString();
     }
 }
