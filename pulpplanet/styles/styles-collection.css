@@ -1,11 +1,18 @@
 :root {
-    --color-dark: #2A2A2A; /* A dark, charcoal tone for text */
-    --color-mid: #1F5F5B; /* A medium, muted emerald for accents */
-    --color-light: #E8F5E9; /* A light, emerald-tinted background */
-    --color-primary: #0D5C63; /* A rich, deep emerald green */
-    --color-secondary: #2B7A78; /* A softer, oceanic green */
-    --color-tertiary: #61C0BF; /* A bright, refreshing teal */
-    --color-overlay: rgba(13, 92, 99, 0.7); /* A semi-transparent overlay for an emerald effect */
+    --color-dark: #2A2A2A;
+    /* A dark, charcoal tone for text */
+    --color-mid: #1F5F5B;
+    /* A medium, muted emerald for accents */
+    --color-light: #E8F5E9;
+    /* A light, emerald-tinted background */
+    --color-primary: #0D5C63;
+    /* A rich, deep emerald green */
+    --color-secondary: #2B7A78;
+    /* A softer, oceanic green */
+    --color-tertiary: #61C0BF;
+    /* A bright, refreshing teal */
+    --color-overlay: rgba(13, 92, 99, 0.7);
+    /* A semi-transparent overlay for an emerald effect */
 }
 
 body {
@@ -15,13 +22,20 @@ body {
     background-color: var(--color-light);
     color: var(--color-dark);
     line-height: 1.6;
-    height: 100vh;
-    overflow: hidden; /* Prevent vertical scrolling */
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
 }
 
 .navbar-container {
     background-color: var(--color-primary);
-    padding: 5px; /* Reduced padding */
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ensure it stays on top */
 }
 
 .navbar-main {
@@ -40,7 +54,7 @@ body {
     color: var(--color-light);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px; /* Reduced padding */
+    padding: 5px;
 }
 
 .navbar-main a:hover {
@@ -50,21 +64,22 @@ body {
 #pulpplanet-h1 {
     text-align: center;
     color: var(--color-primary);
-    padding-top: 10px; /* Reduced padding */
-    font-size: 2rem; /* Reduced font size */
+    padding-top: 50px;
+    /* Add padding to account for fixed navbar */
+    font-size: 2rem;
 }
 
 #pulpplanet-sub {
     text-align: center;
     color: var(--color-secondary);
     font-style: italic;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px;
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px;
 }
 
 .pulpplanet-logo {
@@ -81,79 +96,72 @@ body {
     text-align: center;
     color: var(--color-dark);
     padding-top: 10px;
-    padding-bottom: 10px; /* Reduced padding */
+    padding-bottom: 10px;
     font-size: 1.2rem;
     background-color: var(--color-overlay);
-    margin-bottom: 10px; /* Reduced margin */
+    margin-bottom: 10px;
 }
 
 .featured-author-banner {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--color-mid);
-    padding: 10px; /* Reduced padding */
-    margin: 10px; /* Reduced margin */
+    padding: 10px;
+    margin: 10px;
     border-radius: 10px;
     color: var(--color-light);
     box-shadow: 0 0 10px var(--color-dark);
-    background-image: url('https://via.placeholder.com/800x200'); /* Placeholder image */
-    background-size: cover;
+    background-image: url("../lamour/img/firstfastdraw.jpg");
+    /* Ensure the entire image is contained */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
 }
 
 .featured-author-image {
-    width: 150px;
-    height: 150px;
-    background-image: url('https://via.placeholder.com/150'); /* Placeholder image */
+    width: 250px;
+    height: 250px;
+    background-image: url("../lamour/img/Louis_L\'Amour_1970_\(cropped\).jpg");
     background-size: cover;
     border: 5px solid var(--color-primary);
     border-radius: 10%;
     box-shadow: 0 0 10px var(--color-dark);
+    margin-left: 5%;
 }
 
 .featured-author-blurb {
+    text-align: justify;
     max-width: 600px;
     padding: 20px;
+    color: var(--color-light);
+    text-shadow: 2px 2px var(--color-dark);
+
 }
 
 .pulpplanet-collection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 250px; /* Increased height */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-.scroll-container {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    will-change: transform;
-    justify-content: center; /* Center the scroll container */
-    width: calc(500%); /* Make sure the container is wide enough for 5 authors */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* Ensure 7 items per row */
+    gap: 20px;
+    /* Space between items */
+    padding: 20px;
 }
 
 .author-column {
-    flex: 0 0 20%; /* Ensure 5 authors per row */
-    max-width: 20%; /* Ensure 5 authors per row */
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
-    box-sizing: border-box; /* Ensure padding is included in the total width and height */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    margin-bottom: 20px;
+    /* Ensure there's spacing at the bottom */
 }
 
-.author-column.centered {
-    transform: scale(1.25); /* Scale up centered author slightly to avoid clipping */
-    z-index: 1; /* Bring the centered author to the front */
-}
-
-.author-column img {
+.author-image {
     width: 115px;
     height: 115px;
     border: 10px solid goldenrod;
@@ -161,52 +169,13 @@ body {
     margin-bottom: 10px;
 }
 
-.author-column.centered img {
-    width: 115px; /* Maintain original width */
-    height: 115px; /* Maintain original height */
-}
-
 .author-column a {
-    display: block;
     color: var(--color-primary);
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;
 }
 
-.author-column.centered a {
-    font-size: 1.2rem; /* Increase font size for centered author */
-}
-
 .author-column a:hover {
     color: var(--color-secondary);
-}
-
-.author-column {
-    transition: transform 0.3s ease;
-}
-
-.current {
-    transform: scale(1.2); /* Slightly larger */
-}
-
-.nav-buttons {
-    position: absolute;
-    bottom: 20px; /* Adjusted position */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-buttons button {
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.nav-buttons button:hover {
-    background-color: var(--color-secondary);
 }

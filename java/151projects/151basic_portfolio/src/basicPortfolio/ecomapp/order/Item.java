@@ -5,6 +5,7 @@ public class Item {
     private double basicCost;
     private double premiumCost;
 
+    // Constructor to initialize name and basicCost
     public Item(String name, double basicCost) {
         this.name = name;
         this.basicCost = basicCost;

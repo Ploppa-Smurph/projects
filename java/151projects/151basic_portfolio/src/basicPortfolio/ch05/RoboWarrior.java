@@ -45,9 +45,7 @@ public class RoboWarrior {
         System.out.println(type + " launches a normal attack.");
     }
 
-    // Overload a method by using different parameters at different locations.
-    // Here I use a String to specify which type of attack,
-    // as opposed to a 'normal' attack
+    // Overloaded method with a different parameter
     public void attack(String technique) {
         switch (technique.toLowerCase()) {
             case "punch":

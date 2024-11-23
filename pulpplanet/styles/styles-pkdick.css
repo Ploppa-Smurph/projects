@@ -1,18 +1,44 @@
 :root {
-    --color-dark: #3B3B3B;       /* A dark, charcoal tone for text */
-    --color-mid: #A67C52;        /* A medium, sepia tone for accents */
-    --color-light: #F4ECD8;      /* A light, parchment-like background */
-    --color-primary: #D4A373;    /* A warm, vintage tan color */
-    --color-secondary: #C89F74;  /* A soft, aged brown */
-    --color-tertiary: #8C6A48;   /* A rich, deep brown */
-    --color-overlay: rgba(245, 244, 233, 0.7);   /* A semi-transparent overlay for a yellowed effect */
-    --color-emerald: #053B44;    /* A rich emerald green accent color */ 
+    --color-dark: #1A1A1D;
+    /* Dark Charcoal */
+    --color-electric-blue: #0A84FF;
+    /* Electric Blue */
+    --color-neon-green: #39FF14;
+    /* Neon Green */
+    --color-cyborg-silver: #BFC9CA;
+    /* Cyborg Silver */
+    --color-data-stream-teal: #17A2B8;
+    /* Data Stream Teal */
+    --color-hologram-violet: #8A2BE2;
+    /* Hologram Violet */
+    --color-neon-pink: #FF007F;
+    /* Neon Pink */
+    --color-emerald: #053B44;
+    /* Rich Emerald */
 }
 
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-dark);
+    color: var(--color-cyborg-silver);
+    line-height: 1.6;
+    height: 100%;
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
+}
 
 .navbar-container {
-    background-color: var(--color-tertiary);
-    padding: 10px;
+    background-color: var(--color-electric-blue);
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ensure it stays on top */
 }
 
 .navbar-main {
@@ -28,52 +54,106 @@
 }
 
 .navbar-main a {
-    color: var(--color-light);
+    color: var(--color-cyborg-silver);
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
 }
 
 .navbar-main a:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-hologram-violet);
 }
 
 #pulpplanet-h1 {
     text-align: center;
-    color: var(--color-primary);
-    padding-top: 20px;
-    font-size: 2.5rem;
+    color: var(--color-electric-blue);
+    padding-top: 50px;
+    /* Add padding to account for fixed navbar */
+    font-size: 2rem;
 }
 
 #pulpplanet-sub {
     text-align: center;
-    color: var(--color-secondary);
+    color: var(--color-neon-green);
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .pulpplanet-logo {
     width: 150px;
     height: 150px;
-    background-image: url('../assets/img/pulpplanet.png'); 
+    background-image: url('../assets/img/pulpplanet.png');
     background-size: cover;
-    border: 5px solid var(--color-primary);
+    border: 5px solid var(--color-electric-blue);
     border-radius: 40%;
-    box-shadow: 0 0 15px var(--color-dark);
+    box-shadow: 0 0 15px var(--color-neon-pink);
 }
 
 #pulpplanet-tag {
     text-align: center;
-    color: var(--color-dark);
+    color: var(--color-cyborg-silver);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-size: 1.2rem;
-    background-color: var(--color-overlay);
+    background-color: rgba(0, 0, 0, 0.7);
+    /* A semi-transparent overlay */
+    margin-bottom: 10px;
+}
+
+#body-pkdick {
+    background-color: var(--color-dark);
+    color: var(--color-cyborg-silver);
+    padding: 20px;
+    padding-top: 70px;
+    /* Add padding to account for fixed navbar */
+}
+
+.container-pkdick {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* A semi-transparent overlay */
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-dark);
+}
+
+#h1-pkdick {
+    color: var(--color-neon-green);
+    text-align: center;
     margin-bottom: 20px;
+}
+
+.summary-pkdick {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #003300;
+    /* Dark green to simulate a monitor background */
+    background: linear-gradient(#003300, #001100);
+    /* Gradient for a more dynamic look */
+    color: #00FF00;
+    /* Bright green text to simulate an old CRT monitor */
+    font-family: 'Courier New', Courier, monospace;
+    /* Monospace font for authenticity */
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px var(--color-paper-shadow), 0 4px 8px var(--color-paper-shadow);
+    border: 1px solid #00FF00;
+    /* Matching border */
+    text-shadow: 0 0 5px #00FF00;
+    /* Glow effect for text */
+}
+
+#h2-pkdick {
+    color: var(--color-hologram-violet);
+    margin-bottom: 10px;
+}
+
+#p-pkdick {
+    margin-bottom: 10px;
 }

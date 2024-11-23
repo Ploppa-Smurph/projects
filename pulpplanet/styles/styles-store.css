@@ -1,13 +1,22 @@
 :root {
-    --color-dark: #2A2A2A;         /* A dark, charcoal tone for text */
-    --color-mid: #446D76;          /* A medium, muted blue for accents */
-    --color-light: #E8F5E9;        /* A light, emerald-tinted background */
-    --color-primary: #6F8FAF;      /* A warm, muted blue color */
-    --color-secondary: #A67C52;    /* A soft, aged brown */
-    --color-tertiary: #447761;     /* A rich, deep green */
-    --color-overlay: rgba(239, 232, 216, 0.7); /* A semi-transparent overlay */
-    --color-emerald: #053B44;      /* A rich emerald green accent color */
-    --color-dark-red: #602020;     /* A dark, rich burgundy for border */
+    --color-dark: #2A2A2A;
+    /* A dark, charcoal tone for text */
+    --color-mid: #446D76;
+    /* A medium, muted blue for accents */
+    --color-light: #E8F5E9;
+    /* A light, emerald-tinted background */
+    --color-primary: #6F8FAF;
+    /* A warm, muted blue color */
+    --color-secondary: #A67C52;
+    /* A soft, aged brown */
+    --color-tertiary: #447761;
+    /* A rich, deep green */
+    --color-overlay: rgba(239, 232, 216, 0.7);
+    /* A semi-transparent overlay */
+    --color-emerald: #053B44;
+    /* A rich emerald green accent color */
+    --color-dark-red: #602020;
+    /* A dark, rich burgundy for border */
 }
 
 body {
@@ -21,7 +30,8 @@ body {
 
 .navbar-container {
     background-color: var(--color-tertiary);
-    padding: 5px; /* Match about and collection padding */
+    padding: 5px;
+    /* Match about and collection padding */
 }
 
 .navbar-main {
@@ -40,7 +50,8 @@ body {
     color: var(--color-light);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px; /* Match about and collection padding */
+    padding: 5px;
+    /* Match about and collection padding */
 }
 
 .navbar-main a:hover {
@@ -50,21 +61,25 @@ body {
 #pulpplanet-h1 {
     text-align: center;
     color: var(--color-primary);
-    padding-top: 10px; /* Match about and collection padding */
-    font-size: 2rem; /* Match about and collection font size */
+    padding-top: 10px;
+    /* Match about and collection padding */
+    font-size: 2rem;
+    /* Match about and collection font size */
 }
 
 #pulpplanet-sub {
     text-align: center;
     color: var(--color-secondary);
     font-style: italic;
-    margin-bottom: 10px; /* Match about and collection margin */
+    margin-bottom: 10px;
+    /* Match about and collection margin */
 }
 
 .pulpplanet-logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Match about and collection margin */
+    margin-bottom: 10px;
+    /* Match about and collection margin */
 }
 
 .pulpplanet-logo {
@@ -72,8 +87,10 @@ body {
     height: 150px;
     background-image: url('../assets/img/pulpplanet.png');
     background-size: cover;
-    border: 5px solid var(--color-dark-red); /* Updated to darker red */
-    border-radius: 40%; /* Match about and collection border radius */
+    border: 5px solid var(--color-dark-red);
+    /* Updated to darker red */
+    border-radius: 40%;
+    /* Match about and collection border radius */
     box-shadow: 0 0 15px var(--color-dark);
 }
 
@@ -81,8 +98,50 @@ body {
     text-align: center;
     color: var(--color-dark);
     padding-top: 10px;
-    padding-bottom: 10px; /* Match about and collection padding */
+    padding-bottom: 10px;
+    /* Match about and collection padding */
     font-size: 1.2rem;
     background-color: var(--color-overlay);
-    margin-bottom: 10px; /* Match about and collection margin */
+    margin-bottom: 10px;
+    /* Match about and collection margin */
+}
+
+.store-front {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.store-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid var(--color-dark);
+    padding: 10px;
+    background-color: var(--color-light);
+    box-shadow: 0 0 10px var(--color-dark);
+    border-radius: 10px;
+}
+
+.store-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.store-item h4 {
+    margin: 10px 0 5px;
+}
+
+.store-item p {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.flavor-text {
+    color: var(--color-dark);
+    font-size: 0.7rem;
+    margin-top: 5px;
+    font-style: italic;
 }

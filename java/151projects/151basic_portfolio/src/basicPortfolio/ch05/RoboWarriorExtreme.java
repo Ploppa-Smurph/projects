@@ -32,16 +32,19 @@ public class RoboWarriorExtreme implements RoboWarriorType {
         System.out.println("Choose your RoboWarrior Class ('Ninja', 'Priest', 'Berserker', or 'Mystic'): ");
         String select = scanner.nextLine();
         chooseWarrior(select);
-        System.out.println("\nYou will now join the battle as a " + chosenWarrior.getType());
 
-        // Demo actions including all overloaded method actions
-        chosenWarrior.move();
-        chosenWarrior.attack();
-        chosenWarrior.attack("punch");
-        chosenWarrior.attack("kick");
-        chosenWarrior.attack("laser");
-        chosenWarrior.attack("plasmasword");
-        chosenWarrior.defend();
+        if (chosenWarrior != null) {
+            System.out.println("\nYou will now join the battle as a " + chosenWarrior.getType());
+
+            // Demo actions including all overloaded method actions
+            chosenWarrior.move();
+            chosenWarrior.attack();
+            chosenWarrior.attack("punch");
+            chosenWarrior.attack("kick");
+            chosenWarrior.attack("laser");
+            chosenWarrior.attack("plasmasword");
+            chosenWarrior.defend();
+        }
     }
 
     // Main method for testing the functionality

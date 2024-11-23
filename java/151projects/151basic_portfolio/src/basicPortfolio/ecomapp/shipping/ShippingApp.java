@@ -11,17 +11,42 @@ import java.util.Scanner;
 public class ShippingApp {
 
     public static void runShipping(boolean isInternational, Scanner scanner) {
+        System.out.println("\n");
+        System.out.println("***********************************");
+        System.out.println("*SHIPPING FACILITY INCOMING ORDERS*");
+        System.out.println("***********************************");
+        System.out.println("\n");
+
         ShipProcessing shipProcessing = new ShipProcessing();
-        List<Shipping> shippingOrders = new ArrayList<>();
+        List<Shipping> usOrders = new ArrayList<>();
+        List<Shipping> internationalOrders = new ArrayList<>();
+        double totalOrderValue = 0.0;
 
         try (BufferedReader br = new BufferedReader(new FileReader("orders.txt"))) {
             String line;
-            int orderId = 1; // Example order ID incrementer
+            int orderId = 0; // Order ID starts from 0
             List<String[]> orderDetailsList = new ArrayList<>();
 
             while ((line = br.readLine()) != null) {
                 // Check for line format to parse order details
-                if (line.contains(" x ") && line.contains(" at $")) {
+                if (line.startsWith("Order Number:")) {
+                    // When encountering a new order, process the previous one (if exists)
+                    if (!orderDetailsList.isEmpty()) {
+                        String[][] orderDetails = orderDetailsList.toArray(new String[0][]);
+                        Shipping shippingOrder;
+                        if (isInternational) {
+                            shippingOrder = new InternationalShipping(orderId, LocalDate.now(), orderDetails, 50.0); // Example shipping cost
+                            internationalOrders.add(shippingOrder);
+                        } else {
+                            shippingOrder = new Shipping(orderId, LocalDate.now(), orderDetails);
+                            usOrders.add(shippingOrder);
+                        }
+                        totalOrderValue += shippingOrder.calculateTotalAmount();
+                        orderDetailsList.clear();
+                    }
+                    // Update order ID
+                    orderId = Integer.parseInt(line.split(":")[1].trim());
+                } else if (line.contains(" x ") && line.contains(" at $")) {
                     String[] parts = line.split(" x | at \\$| each");
                     if (parts.length == 3) {
                         int quantity = Integer.parseInt(parts[0].trim());
@@ -34,17 +59,18 @@ public class ShippingApp {
                 }
             }
 
-            // Process the collected order details
+            // Process the last collected order details
             if (!orderDetailsList.isEmpty()) {
-                String[][] orderDetails = new String[orderDetailsList.size()][3];
-                orderDetails = orderDetailsList.toArray(orderDetails);
+                String[][] orderDetails = orderDetailsList.toArray(new String[0][]);
                 Shipping shippingOrder;
                 if (isInternational) {
                     shippingOrder = new InternationalShipping(orderId, LocalDate.now(), orderDetails, 50.0); // Example shipping cost
+                    internationalOrders.add(shippingOrder);
                 } else {
                     shippingOrder = new Shipping(orderId, LocalDate.now(), orderDetails);
+                    usOrders.add(shippingOrder);
                 }
-                shippingOrders.add(shippingOrder);
+                totalOrderValue += shippingOrder.calculateTotalAmount();
             }
 
         } catch (IOException e) {
@@ -52,30 +78,47 @@ public class ShippingApp {
         }
 
         try {
-            double totalValue = 0.0;
-            for (Shipping order : shippingOrders) {
+            for (Shipping order : usOrders) {
                 if (order.calculateTotalAmount() > 10000) { // Example condition to throw the exception
                     throw new ShipProcessingException("Order total exceeds limit: " + order.calculateTotalAmount());
                 }
                 shipProcessing.addOrder(order);
-                totalValue += order.calculateTotalAmount();
+            }
+            for (Shipping order : internationalOrders) {
+                if (order.calculateTotalAmount() > 10000) { // Example condition to throw the exception
+                    throw new ShipProcessingException("Order total exceeds limit: " + order.calculateTotalAmount());
+                }
+                shipProcessing.addOrder(order);
             }
 
-            // Display final shipping details and total value
-            shipProcessing.printOrders();
-            System.out.println("\nTotal value of orders: $" + totalValue);
+            // Save and load orders to and from a file without displaying the details
+            shipProcessing.saveOrdersToFile("shipping_orders.txt");
+            shipProcessing.loadOrdersFromFile("shipping_orders.txt");
 
-            System.out.println("\nDo you want to proceed with shipping? (yes/no)");
-            String response = scanner.nextLine();
-            if (!response.equalsIgnoreCase("yes")) {
-                return;
+            // Display orders broken into US and international categories
+            System.out.println("\n");
+            System.out.println("*********************");
+            System.out.println("  * US SHIPPING *");
+            System.out.println("*********************");
+            System.out.println("\n");
+            for (Shipping order : usOrders) {
+                System.out.println(order);
             }
 
-            // Save and load orders to and from a file
-            shipProcessing.saveOrdersToFile("orders.txt");
-            shipProcessing.loadOrdersFromFile("orders.txt");
-            System.out.println("\nOrders after loading from file:");
-            shipProcessing.printOrders();
+            System.out.println("\n");
+            System.out.println(" ************************");
+            System.out.println("* INTERNATIONAL SHIPPING *");
+            System.out.println(" ************************");
+            System.out.println("\n");
+            for (Shipping order : internationalOrders) {
+                System.out.println(order);
+            }
+
+            // Display total order value
+            System.out.println("\n");
+            System.out.println("**********************");
+            System.out.println("  - Total Order Amount $" + totalOrderValue);
+            System.out.println("**********************");
 
             // Do not close the scanner here to avoid affecting the BasicPortfolio app
         } catch (ShipProcessingException e) {
