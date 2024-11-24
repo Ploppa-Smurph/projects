@@ -105,6 +105,39 @@ body {
     /* A semi-transparent overlay */
     margin-bottom: 10px;
 }
+.author-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-emerald);
+    padding: 10px; /* Match collection padding */
+    margin: 10px; /* Match collection margin */
+    border-radius: 10px;
+    color: var(--color-light);
+    box-shadow: 0 0 10px var(--color-dark);
+    background-image: url("../pkdick/img/androidDream.jpg");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+.author-image {
+    width: 250px;
+    height: 250px;
+    background-image: url("../pkdick/img/PKDick\(photo_by_Arthur_Knight\).jpg");
+    background-size: cover;
+    border: 5px solid var(--color-primary);
+    border-radius: 10%;
+    box-shadow: 0 0 10px var(--color-dark);
+    margin-left: 5%;
+}
+
+.author-blurb {
+    text-align: justify;
+    max-width: 600px;
+    padding: 20px;
+    color: var(--color-light);
+    text-shadow: 2px 2px var(--color-dark);
+}
 
 #body-pkdick {
     background-color: var(--color-dark);

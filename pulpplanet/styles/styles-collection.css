@@ -14,6 +14,7 @@
     --color-overlay: rgba(13, 92, 99, 0.7);
     /* A semi-transparent overlay for an emerald effect */
 }
+
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -21,7 +22,8 @@ body {
     background-color: var(--color-light);
     color: var(--color-dark);
     line-height: 1.6;
-    overflow-y: scroll; /* Allow vertical scrolling */
+    overflow-y: scroll;
+    /* Allow vertical scrolling */
 }
 
 .navbar-container {
@@ -106,14 +108,18 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-mid);
-    padding: 10px; /* Match collection padding */
-    margin: 10px; /* Match collection margin */
+    padding: 10px;
+    /* Match collection padding */
+    margin: 10px;
+    /* Match collection margin */
     border-radius: 10px;
     color: var(--color-light);
     box-shadow: 0 0 10px var(--color-dark);
     background-image: url("../lamour/img/firstfastdraw.jpg");
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image */
 }
 
 .featured-author-image {
@@ -137,8 +143,10 @@ body {
 
 .pulpplanet-collection {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Ensure 7 items per row */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(7, 1fr);
+    /* Ensure 7 items per row */
+    gap: 20px;
+    /* Space between items */
     padding: 20px;
 }
 
@@ -148,16 +156,29 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    margin-bottom: 20px; /* Ensure there's spacing at the bottom */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    margin-bottom: 20px;
+    /* Ensure there's spacing at the bottom */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth and slow transition */
 }
 
 .author-image {
     width: 115px;
     height: 115px;
-    border: 10px solid goldenrod;
     border-radius: 50%;
     margin-bottom: 10px;
+    transition: transform 0.4s ease-in-out;
+    /* Smooth and slow transition */
+    border: 10px solid transparent;
+    /* Transparent border to apply the gradient */
+    background: linear-gradient(white, white), linear-gradient(145deg, #d4af37, #ffd700, #b8860b);
+    /* Gradient for antique effect */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    /* Outer and inner shadow for depth */
 }
 
 .author-column a {
@@ -165,8 +186,12 @@ body {
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;
+    transition: transform 0.4s ease-in-out;
+    /* Smooth and slow transition */
 }
 
-.author-column a:hover {
-    color: var(--color-secondary);
+.author-column:hover .author-image,
+.author-column:hover a {
+    transform: scale(1.25);
+    /* Grow the image and link slightly */
 }
