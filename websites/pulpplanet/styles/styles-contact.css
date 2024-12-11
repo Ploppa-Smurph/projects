@@ -1,0 +1,148 @@
+:root {
+    --color-dark: #602020;         /* A dark, rich burgundy for text */
+    --color-mid: #A83D3D;          /* A medium, muted red for accents */
+    --color-light: #F8E8E8;        /* A light, parchment-like pinkish background */
+    --color-primary: #D45C5C;      /* A warm, vintage red color */
+    --color-secondary: #C47979;    /* A soft, aged red */
+    --color-tertiary: #8C4646;     /* A rich, deep crimson */
+    --color-overlay: rgba(244, 220, 220, 0.7);   /* A semi-transparent overlay for a pinkish effect */
+    --color-emerald: #053B44;      /* A rich emerald green accent color */
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.navbar-container {
+    background-color: var(--color-tertiary);
+    padding: 5px; /* Match collection padding */
+}
+
+.navbar-main {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-main li {
+    margin: 0;
+}
+
+.navbar-main a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px; /* Match collection padding */
+}
+
+.navbar-main a:hover {
+    background-color: var(--color-secondary);
+}
+
+#pulpplanet-h1 {
+    text-align: center;
+    color: var(--color-primary);
+    padding-top: 10px; /* Match collection padding */
+    font-size: 2rem; /* Match collection font size */
+}
+
+#pulpplanet-sub {
+    text-align: center;
+    color: var(--color-secondary);
+    font-style: italic;
+    margin-bottom: 10px; /* Match collection margin */
+}
+
+.pulpplanet-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Match collection margin */
+}
+
+.pulpplanet-logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('../assets/img/pulpplanet.png');
+    background-size: cover;
+    border: 5px solid var(--color-primary);
+    border-radius: 40%; /* Match collection border radius */
+    box-shadow: 0 0 15px var(--color-dark);
+}
+
+#pulpplanet-tag {
+    text-align: center;
+    color: var(--color-dark);
+    padding-top: 10px;
+    padding-bottom: 10px; /* Match collection padding */
+    font-size: 1.2rem;
+    background-color: var(--color-overlay);
+    margin-bottom: 10px; /* Match collection margin */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-map button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-map button:hover {
+    background-color: var(--color-secondary);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-tertiary);
+    color: var(--color-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid var(--color-primary);
+}
+
+.footer a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline wavy;
+}
+
+/* Mobile devices */ @media (max-width: 768px) { .navbar-main { flex-direction: column; align-items: center; } .navbar-main a { padding: 10px; } #pulpplanet-h1 { font-size: 2rem; padding-top: 40px; /* Adjust padding for fixed navbar */ } #pulpplanet-sub { font-size: 1.5rem; } .pulpplanet-logo { width: 200px; height: 200px; } #pulpplanet-tag { font-size: 1rem; } } @media (max-width: 480px) { .navbar-main { flex-direction: column; align-items: center; } .navbar-main a { padding: 15px; } #pulpplanet-h1 { font-size: 1.5rem; padding-top: 30px; /* Adjust padding for fixed navbar */ } #pulpplanet-sub { font-size: 1.2rem; } .pulpplanet-logo { width: 150px; height: 150px; } #pulpplanet-tag { font-size: 0.9rem; } }

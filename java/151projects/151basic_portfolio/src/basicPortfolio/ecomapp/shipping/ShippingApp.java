@@ -108,7 +108,8 @@ public class ShippingApp {
             System.out.println("\n");
             System.out.println(" ************************");
             System.out.println("* INTERNATIONAL SHIPPING *");
-            System.out.println(" ************************");;
+            System.out.println(" ************************");
+            ;
             for (Shipping order : internationalOrders) {
                 System.out.println(order);
             }
@@ -119,7 +120,16 @@ public class ShippingApp {
             System.out.printf(" * Total Order Amount *  =   $%.2f%n", totalOrderValue);
             System.out.println("**********************");
 
-            // Do not close the scanner here to avoid affecting the BasicPortfolio app
+            // Prompt user for date range
+            System.out.println("\nEnter start date (YYYY-MM-DD):");
+            LocalDate startDate = LocalDate.parse(scanner.nextLine());
+            System.out.println("Enter end date (YYYY-MM-DD):");
+            LocalDate endDate = LocalDate.parse(scanner.nextLine());
+
+            // Calculate and display total value of shipments within date range
+            double totalValueInRange = shipProcessing.calculateTotalValueWithinDateRange(startDate, endDate);
+            System.out.printf("Total value of shipments from %s to %s: $%.2f%n", startDate, endDate, totalValueInRange);
+
         } catch (ShipProcessingException e) {
             System.err.println(e.getMessage());
         }

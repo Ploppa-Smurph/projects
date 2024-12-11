@@ -1,6 +1,7 @@
 package basicPortfolio.catfinder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,13 +14,16 @@ public class RoomService {
         this.scanner = scanner;
     }
 
+    // Method to read room data from user input
     public void inputRoomData() throws CustomException {
         System.out.print("Enter the number of rooms: ");
         int numRooms = scanner.nextInt();
         scanner.nextLine(); // consume newline
+
         if (numRooms <= 0) {
             throw new CustomException("The number of rooms must be positive.");
         }
+
         for (int i = 0; i < numRooms; i++) {
             System.out.print("Enter the name of room " + (i + 1) + ": ");
             String roomName = scanner.nextLine();
@@ -38,6 +42,19 @@ public class RoomService {
                 customSpots.add(spot);
             }
             hidingSpots.addCustomRoom(roomName, customSpots);
+        }
+    }
+
+    // Overloaded method to read room data from file
+    public void inputRoomData(Scanner fileScanner) {
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine().trim();
+            if (!line.isEmpty()) {
+                String[] parts = line.split(", ");
+                String room = parts[0];
+                List<String> spots = Arrays.asList(parts).subList(1, parts.length);
+                hidingSpots.addCustomRoom(room, spots);
+            }
         }
     }
 
@@ -85,4 +102,4 @@ public class RoomService {
             System.out.println("Room not found.");
         }
     }
-    }
+}

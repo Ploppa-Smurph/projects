@@ -12,6 +12,7 @@ public class CatService {
         this.scanner = scanner;
     }
 
+    // Method to read cat data from user input
     public void inputCatData() throws CustomException {
         System.out.print("Enter the number of cats: ");
         int numCats = scanner.nextInt();
@@ -25,6 +26,17 @@ public class CatService {
             System.out.print("Enter the name of cat " + (i + 1) + ": ");
             String catName = scanner.nextLine();
             cats.add(new Cat(catName));
+        }
+    }
+
+    // Overloaded method to read cat data from file
+    public void inputCatData(Scanner fileScanner) {
+        while (fileScanner.hasNextLine()) {
+            String name = fileScanner.nextLine().trim();
+            if (name.isEmpty() || name.equals("rooms:")) {
+                break; // Stop reading when reaching rooms section
+            }
+            cats.add(new Cat(name));
         }
     }
 
@@ -69,4 +81,3 @@ public class CatService {
         cats.removeIf(cat -> cat.getName().equalsIgnoreCase(name));
     }
 }
-

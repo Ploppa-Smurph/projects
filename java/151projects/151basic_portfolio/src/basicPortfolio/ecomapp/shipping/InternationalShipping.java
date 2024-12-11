@@ -22,9 +22,9 @@ public class InternationalShipping extends Shipping {
                 "\n Shipping Number = " + getOrderId() +
                 "\n Date: " + getOrderDate() +
                 "\n Details: " + Arrays.deepToString(getOrderDetails()) +
-                "\n Shipping: "  + shippingCost +
-                "\n \n Amount: " + calculateTotalAmount() +
+                "\n Shipping: " + shippingCost +
+                "\n \n Amount: " + String.format("%.2f", calculateTotalAmount()) +
                 "\n";
-
     }
+
 }
