@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Jeffrey Walley's Hobby Site built with JinJa{% endblock %}</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('hobby01') }}">Bass Guitar</a></li>
+            <li><a href="{{ url_for('hobby02') }}">Front-End Web Design</a></li>
+            <li><a href="{{ url_for('hobby03') }}">Computer Networking</a></li>
+            <li><a href="{{ url_for('foods') }}">My Favorite Foods</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
