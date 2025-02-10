@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlib Generator</title>
+</head>
+<body>
+    <h1>Madlib Generator</h1>
+    {% if madlib %}
+        <p>{{ madlib }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('home') }}">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.noun1.label }}<br>
+            {{ form.noun1(size=32) }}
+        </p>
+        <p>
+            {{ form.noun2.label }}<br>
+            {{ form.noun2(size=32) }}
+        </p>
+        <p>
+            {{ form.adjective.label }}<br>
+            {{ form.adjective(size=32) }}
+        </p>
+        <p>
+            {{ form.number.label }}<br>
+            {{ form.number(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
