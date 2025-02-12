@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Buy a Jacques</h2>
+    <p>Introducing the latest innovation in brownie technology: the Jacques Buys Brownie Baking Boy! This state-of-the-art lifeform is designed to bake the perfect brownie every time, with no outside intervention required. Equipped with advanced sensors and precision temperature control, the Jacques Buys Brownie Baking Boy can whip up a batch of delicious brownies in minutes. And the best part? It's completely self-contained, so you can enjoy fresh-baked brownies anytime, anywhere. Whether you're at home, at the office, or on the go, the Jacques Buys Brownie Baking Boy is your personal brownie chef. So why wait? Inquire about yours today and experience the future of brownie baking!</p>
+
+    <form method="post" action="{{ url_for('buyJacques') }}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Inquire Now</button>
+    </form>
+{% endblock %}

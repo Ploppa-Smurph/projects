@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boyce's Big Brownies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="boyce_header">
+        <h1 class="header-title">Big Boyce's Big Brownies</h1>
+        <nav class="boyce_nav">
+            <ul class="boyce_navbar-container">
+                <li class="boyce_nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="boyce_nav-item"><a href="{{ url_for('story') }}">HisStory</a></li>
+                <li class="boyce_nav-item"><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li class="boyce_nav-item"><a href="{{ url_for('buyJacques') }}">Buy a Jacques</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Walley Works WebDesign</p>
+    </footer>
+</body>
+</html>
+

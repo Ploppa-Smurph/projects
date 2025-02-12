@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #8B4513; /* Saddle Brown */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin-bottom: 20px;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    background-color: #FAEBD7; /* Antique White */
+    color: #4B0082; /* Indigo */
+}
+
+h2 {
+    color: #8B4513; /* Saddle Brown */
+}
+
+footer {
+    background-color: #8B4513; /* Saddle Brown */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
