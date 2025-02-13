@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_wtf import CSRFProtect, FlaskForm
 from email_validator import validate_email, EmailNotValidError
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired, Email, ValidationError
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
+csrf = CSRFProtect(app)
+csrf.init_app(app)
 
 nav_items = [
     {"name": "Home", "url": "index"},
@@ -10,6 +15,12 @@ nav_items = [
     {"name": "Testimonials", "url": "testimonials"},
     {"name": "Buy a Jacques", "url": "buyJacques"}
 ]
+
+class OrderForm(FlaskForm):
+    name = StringField('Name', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    address = StringField('Address', validators=[DataRequired()])
+    submit = SubmitField('Submit')
 
 # Route for the homepage
 @app.route('/')
@@ -29,28 +40,17 @@ def testimonials():
 # Route for the buyJacques page
 @app.route('/buyJacques', methods=['GET', 'POST'])
 def buyJacques():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        address = request.form['address']
-
-        # Basic form validation
-        if not name or not email or not address:
-            flash('All fields are required!', 'danger')
-            return redirect(url_for('buyJacques'))
-
-        # Email validation
-        try:
-            validate_email(email)
-        except EmailNotValidError as e:
-            flash(str(e), 'danger')
-            return redirect(url_for('buyJacques'))
+    form = OrderForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        address = form.address.data
 
         # If validation is successful
         flash('Order placed successfully!', 'success')
         return redirect(url_for('buyJacques'))
 
-    return render_template('buyJacques.html', nav_items=nav_items)
+    return render_template('buyJacques.html', form=form, nav_items=nav_items)
 
 if __name__ == '__main__':
     app.run(debug=True)
