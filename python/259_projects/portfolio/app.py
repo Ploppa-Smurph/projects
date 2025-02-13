@@ -4,20 +4,27 @@ from email_validator import validate_email, EmailNotValidError
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
+nav_items = [
+    {"name": "Home", "url": "index"},
+    {"name": "HisStory", "url": "story"},
+    {"name": "Testimonials", "url": "testimonials"},
+    {"name": "Buy a Jacques", "url": "buyJacques"}
+]
+
 # Route for the homepage
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', nav_items=nav_items)
 
 # Route for the story page
 @app.route('/story')
 def story():
-    return render_template('story.html')
+    return render_template('story.html', nav_items=nav_items)
 
 # Route for the testimonials page
 @app.route('/testimonials')
 def testimonials():
-    return render_template('testimonials.html')
+    return render_template('testimonials.html', nav_items=nav_items)
 
 # Route for the buyJacques page
 @app.route('/buyJacques', methods=['GET', 'POST'])
@@ -43,7 +50,7 @@ def buyJacques():
         flash('Order placed successfully!', 'success')
         return redirect(url_for('buyJacques'))
 
-    return render_template('buyJacques.html')
+    return render_template('buyJacques.html', nav_items=nav_items)
 
 if __name__ == '__main__':
     app.run(debug=True)

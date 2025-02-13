@@ -11,15 +11,15 @@
         <h1 class="header-title">Big Boyce's Big Brownies</h1>
         <nav class="boyce_nav">
             <ul class="boyce_navbar-container">
-                <li class="boyce_nav-item"><a href="{{ url_for('index') }}">Home</a></li>
-                <li class="boyce_nav-item"><a href="{{ url_for('story') }}">HisStory</a></li>
-                <li class="boyce_nav-item"><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
-                <li class="boyce_nav-item"><a href="{{ url_for('buyJacques') }}">Buy a Jacques</a></li>
+                {% for item in nav_items %}
+                    <li class="boyce_nav-item"><a href="{{ url_for(item.url) }}">{{ item.name }}</a></li>
+                {% endfor %}
             </ul>
         </nav>
     </header>
     <main class="main">
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
     <footer>
         <p>&copy; 2025 Walley Works WebDesign</p>
