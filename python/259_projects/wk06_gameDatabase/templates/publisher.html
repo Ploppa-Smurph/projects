@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ publisher.name }}</title>
+</head>
+<body>
+    <h1>{{ publisher.name }}</h1>
+    <h2>Games Published:</h2>
+    <ul>
+    {% for game in publisher.games %}
+        <li>{{ game.title }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Publishers</a>
+</body>
+</html>

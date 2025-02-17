@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Game Publishers</title>
+</head>
+<body>
+    <h1>Video Game Publishers</h1>
+    <ul>
+    {% for publisher in publishers %}
+        <li><a href="{{ url_for('publisher', publisher_id=publisher.id) }}">{{ publisher.name }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
