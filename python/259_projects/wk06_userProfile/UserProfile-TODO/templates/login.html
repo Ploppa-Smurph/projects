@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <a href="{{url_for('index')}}">Back to Index</a>
+    {% for message in get_flashed_messages() %}
+        <p>{{message}}</p>
+    {% endfor %}
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div>
+            {{form.name.label}} {{form.name()}}
+            {% for error in form.name.errors %}
+            <span style="color: red;">{{error}}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{form.password.label}} {{form.password()}}
+            {% for error in form.password.errors %}
+            <span style="color: red;">{{error}}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{form.submit()}}
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if current_user.is_authenticated %}
+        <a href="{{url_for('logout')}}">Log Out</a>
+    {% else %}
+        <a href="{{url_for('login')}}">Log In</a>
+        <a href="{{url_for('register')}}">Register</a>
+    {% endif %}
+    <h1>Users</h1>
+    {% for user in users %}
+        <a href="{{url_for('profile', name=user.name)}}">{{user.name}}</a>
+    {% endfor %}
+    </body>
+</html>
