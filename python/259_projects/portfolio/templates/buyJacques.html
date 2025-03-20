@@ -4,36 +4,23 @@
     <h2>Buy a Jacques</h2>
     <p>Introducing the latest innovation in brownie technology: the Jacques Buys Brownie Baking Boy! This state-of-the-art lifeform is designed to bake the perfect brownie every time, with no outside intervention required. Equipped with advanced sensors and precision temperature control, the Jacques Buys Brownie Baking Boy can whip up a batch of delicious brownies in minutes. And the best part? It's completely self-contained, so you can enjoy fresh-baked brownies anytime, anywhere. Whether you're at home, at the office, or on the go, the Jacques Buys Brownie Baking Boy is your personal brownie chef. So why wait? Inquire about yours today and experience the future of brownie baking!</p>
 
-    <form method="POST">
+    <form method="post">
         {{ form.hidden_tag() }}
-        <div>
-            {{ form.name.label }} {{ form.name }}
-            {% for error in form.name.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.email.label }} {{ form.email }}
-            {% for error in form.email.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.address.label }} {{ form.address }}
-            {% for error in form.address.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.submit }}
-        </div>
+        <p>{{ form.name.label }} {{ form.name() }}</p>
+        <p>{{ form.email.label }} {{ form.email() }}</p>
+        <p>{{ form.address.label }} {{ form.address() }}</p>
+        <p>{{ form.submit() }}</p>
     </form>
-    {% for message in get_flashed_messages(with_categories=true) %}
-        <div class="alert alert-{{ message[0] }}">
-            {{ message[1] }}
-        </div>
-    {% endfor %}
-
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="flash-{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
     <script>
         // Hide flash messages after 3 seconds
         setTimeout(function() {

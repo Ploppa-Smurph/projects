@@ -1,0 +1,27 @@
+{% block content %}
+    <h2>Order List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Subtotal</th>
+                <th>Tax</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.name }}</td>
+                <td>{{ order.email }}</td>
+                <td>{{ order.address }}</td>
+                <td>${{ order.subtotal }}</td>
+                <td>${{ order.tax }}</td>
+                <td>${{ order.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
