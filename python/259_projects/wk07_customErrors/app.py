@@ -20,8 +20,12 @@ def index():
 # Error-generation route: deliberately divides by zero to cause an exception
 @app.route('/cause-error')
 def cause_error():
+    try:
+        result = 1 / 0
     # This will throw a ZeroDivisionError
-    result = 1 / 0  
+    except ZeroDivisionError as e:
+        logger.exception('Attempted to divide by zero')
+        return render_template('error_500.html'), 500
     return f"The result is {result}"
 
 # Custom 404 error page

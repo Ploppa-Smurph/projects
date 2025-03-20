@@ -1,0 +1,30 @@
+[2025-03-20 12:46:06,818] ERROR in app: Attempted to divide by zero
+Traceback (most recent call last):
+  File "D:\courses\projects\python\259_projects\wk07_customErrors\app.py", line 24, in cause_error
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+[2025-03-20 12:46:08,313] ERROR in app: Attempted to divide by zero
+Traceback (most recent call last):
+  File "D:\courses\projects\python\259_projects\wk07_customErrors\app.py", line 24, in cause_error
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+[2025-03-20 12:46:10,694] ERROR in app: Attempted to divide by zero
+Traceback (most recent call last):
+  File "D:\courses\projects\python\259_projects\wk07_customErrors\app.py", line 24, in cause_error
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+[2025-03-20 12:46:12,208] ERROR in app: Attempted to divide by zero
+Traceback (most recent call last):
+  File "D:\courses\projects\python\259_projects\wk07_customErrors\app.py", line 24, in cause_error
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+[2025-03-20 12:46:28,299] ERROR in app: Attempted to divide by zero
+Traceback (most recent call last):
+  File "D:\courses\projects\python\259_projects\wk07_customErrors\app.py", line 24, in cause_error
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
