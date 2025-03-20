@@ -1,0 +1,9 @@
+<h1>{{ book.title }}</h1>
+<p>Author: {{ book.author }}</p>
+
+<h2>Available in Libraries:</h2>
+<ul>
+  {% for library in book.libraries %}
+    <li><a href="{{ url_for('library_detail', library_id=library.id) }}">{{ library.name }}</a></li>
+  {% endfor %}
+</ul>
