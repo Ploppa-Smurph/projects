@@ -1,23 +1,16 @@
 {% extends 'base.html' %}
-{% block nav %}
-{% endblock %}
-
-{% block content %}
+{% block body %}
   <h1>Welcome to the Social App!</h1>
   
-  <form action='/' methods='post'>
-    <input placeholder='Name' name="name">
-    <input placeholder="Content" name="post">
+  <form action="/" method="post">
+    <input placeholder="Name" name="name" required>
+    <input placeholder="Content" name="post" required>
     <input type="submit" value="Submit">
-  </form>  
+  </form>
 
-{% for post in posts %}
-  <div>
-    {{ post[1] + ': ' post[2] }}
-  </div>
-{% endfor %}
-
-{% endblock %}
-
-{% block footer %}
+  {% for post in posts %}
+    <div>
+      {{ post.name }}: {{ post.content }}
+    </div>
+  {% endfor %}
 {% endblock %}

@@ -8,8 +8,19 @@
     {% endblock %}
 </head>
 <body>
+    {% block nav %}
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="navbar-item"><a href="{{ url_for('login') }}">Login</a></li>
+            <li class="navbar-item"><a href="{{ url_for('register') }}">Create Account</a></li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    <!-- Page Content -->
     {% block body %}
     {% endblock %}
-    
 </body>
 </html>
