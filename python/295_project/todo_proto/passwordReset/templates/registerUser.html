@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h5>Create Account</h5>
+{% endblock %}
+
+{% block body %}
+<section class="bodyContainer">
+    <h1>Register</h1>
+    <form id="register-form" action="{{ url_for('register') }}" method="POST">
+        <!-- Username field -->
+        <input type="text"
+               name="username"
+               placeholder="Username"
+               class="inputField"
+               required>
+    
+        <!-- Email field -->
+        <input type="email"
+               name="email"
+               placeholder="Email"
+               class="inputField"
+               required>
+    
+        <!-- Password field -->
+        <input type="password"
+               name="password"
+               placeholder="Password"
+               class="inputField"
+               required>
+    
+        <!-- Submit button -->
+        <input type="submit"
+               value="Register"
+               class="btn btnLogin">
+    </form>
+</section>
+{% endblock %}
