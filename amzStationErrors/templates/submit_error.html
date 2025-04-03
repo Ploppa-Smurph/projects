@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Submit New Error Report</h2>
+<form action="{{ url_for('reports.submit_error') }}" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="errorTitle" class="form-label">Title</label>
+    <input type="text" class="form-control" id="errorTitle" name="title" required>
+  </div>
+  <div class="mb-3">
+    <label for="errorDescription" class="form-label">Description</label>
+    <textarea class="form-control" id="errorDescription" name="description" rows="3" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="errorImage" class="form-label">Upload Photo</label>
+    <input type="file" class="form-control" id="errorImage" name="error_image" required>
+  </div>
+  <div class="mb-3">
+    <label for="errorDate" class="form-label">Date</label>
+    <input type="date" class="form-control" id="errorDate" name="date" required>
+  </div>
+  <button type="submit" class="btn btn-success">Submit Report</button>
+</form>
+{% endblock %}
