@@ -1,0 +1,194 @@
+/* Ensure full height for sticky footer */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+}
+
+/* Wrap your main content in a container that flexes to fill remaining space */
+.main-content {
+  flex: 1;
+}
+
+/* Layered global background for maximum impact */
+body {
+  background-color: #000;
+  background-image: 
+    url("../images/maximalist-layer1.png"),
+    url("../images/maximalist-layer2.png"),
+    linear-gradient(45deg, rgba(255,0,150,0.3), rgba(0,204,255,0.3));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, cover, cover;
+  background-blend-mode: overlay;
+}
+
+/* Header & Navigation */
+header, .navbar {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.7);
+}
+
+.navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #ffcc00 !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #ffcc00 !important;
+  padding: 0.8rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff3388 !important;
+}
+
+/* Jumbotron / Landing Page */
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  background-image: 
+    url("../images/neon-stripes.png"),
+    url("../images/pinup-texture.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+  background-blend-mode: screen, multiply;
+  padding: 120px 30px;
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+.jumbotron h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.jumbotron .lead {
+  font-size: 1.5rem;
+  color: #33ccff;
+  margin-bottom: 10px;
+}
+
+.jumbotron .sublead {
+  font-size: 1.2rem;
+  color: #ff3388;
+  margin-bottom: 30px;
+}
+
+/* Button Styling for Bold Impact */
+.btn-primary {
+  background-color: #ff0066;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0 0 15px #ff0066;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff3388;
+  box-shadow: 0 0 25px #ff3388;
+}
+
+/* Cards & Content Blocks */
+.card {
+  background: rgba(0, 0, 0, 0.85);
+  border: 3px solid #ff0066;
+  box-shadow: 0 0 10px #ff0066;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card img {
+  filter: contrast(150%) saturate(150%);
+  transition: transform 0.3s;
+  image-rendering: pixelated;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* Headings & Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff0066;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+}
+
+/* Sticky Footer Styling */
+footer {
+  background: linear-gradient(45deg, #ff0066, #ffcc00, #33ccff);
+  color: #111;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Full Screen Overlay Background (Optional) */
+.full-screen-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../images/maximalist-background.png") repeat;
+  opacity: 0.2;
+}
+
+/* Utility: Glitch/Text Effects */
+.glitch {
+  position: relative;
+  color: #ffcc00;
+  font-size: 2rem;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  color: #ff0066;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::after {
+  color: #33ccff;
+  left: 2px;
+  text-shadow: -2px 0 black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 3.5rem;
+  }
+  .jumbotron .lead {
+    font-size: 1.2rem;
+  }
+  .navbar-brand {
+    font-size: 2rem;
+  }
+}

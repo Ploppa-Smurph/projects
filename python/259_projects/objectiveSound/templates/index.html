@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron text-center" id="landing">
+    <h1 class="display-3">ObjectiveSound</h1>
+    <p class="lead">Where objects speak and sounds reveal their hidden identity.</p>
+    <p>Discover amazing object–sound collages, or create your own custom interactive soundboard.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('categories.overview') }}" role="button">Explore Now</a>
+</div>
+{% endblock %}

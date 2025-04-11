@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Projects</h2>
+{% if projects.items %}
+    <ul class="list-group">
+    {% for project in projects.items %}
+        <li class="list-group-item">
+            <h4><a href="{{ url_for('project_detail', project_id=project.id) }}">{{ project.title }}</a></h4>
+            <p>{{ project.description[:150] }}{% if project.description|length > 150 %}...{% endif %}</p>
+            <small>Posted by {{ project.author.name }}</small>
+        </li>
+    {% endfor %}
+    </ul>
+    
+    <!-- Pagination -->
+    <nav aria-label="Project pagination" class="mt-3">
+      <ul class="pagination justify-content-center">
+        {% if projects.has_prev %}
+          <li class="page-item">
+            <a class="page-link" href="{{ url_for('projects', page=projects.prev_num) }}">Previous</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+          </li>
+        {% endif %}
+        
+        {% for page_num in projects.iter_pages() %}
+          {% if page_num %}
+            {% if page_num == projects.page %}
+              <li class="page-item active"><span class="page-link">{{ page_num }}</span></li>
+            {% else %}
+              <li class="page-item"><a class="page-link" href="{{ url_for('projects', page=page_num) }}">{{ page_num }}</a></li>
+            {% endif %}
+          {% else %}
+              <li class="page-item disabled"><span class="page-link">…</span></li>
+          {% endif %}
+        {% endfor %}
+        
+        {% if projects.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="{{ url_for('projects', page=projects.next_num) }}">Next</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <span class="page-link">Next</span>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+{% else %}
+    <p>No projects found.</p>
+{% endif %}
+{% endblock %}

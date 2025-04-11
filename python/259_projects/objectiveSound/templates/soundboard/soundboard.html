@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>My Soundboards</h2>
+{% if boards %}
+  <ul class="list-group">
+    {% for board in boards %}
+      <li class="list-group-item">
+        {{ board.title }} – created on {{ board.created_on.strftime('%Y-%m-%d %H:%M') }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>You have not created any soundboards yet.</p>
+{% endif %}
+<a class="btn btn-primary mt-3" href="{{ url_for('soundboard.create_soundboard') }}">Create New Soundboard</a>
+{% endblock %}

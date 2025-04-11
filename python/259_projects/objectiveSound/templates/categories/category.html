@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Category: {{ category.name }}</h2>
+<p>{{ category.description }}</p>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Artworks</h3>
+        {% if artworks %}
+          {% for art in artworks %}
+            <div class="card mb-3">
+              <img src="{{ url_for('static', filename='uploads/images/' ~ art.image_file) }}" class="card-img-top" alt="{{ art.title }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ art.title }}</h5>
+                <p class="card-text">{{ art.description }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>No artworks found in this category.</p>
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        <h3>Audio Works</h3>
+        {% if audio_works %}
+          {% for audio in audio_works %}
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">{{ audio.title }}</h5>
+                <p class="card-text">{{ audio.description }}</p>
+                <audio controls>
+                  <source src="{{ url_for('static', filename='uploads/audio/' ~ audio.audio_file) }}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>No audio works found in this category.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

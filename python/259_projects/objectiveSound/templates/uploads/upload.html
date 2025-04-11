@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Upload Your Media</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h3>Upload Artwork</h3>
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('uploads.upload') }}">
+            {{ artwork_form.hidden_tag() }}
+            <div class="form-group">
+                {{ artwork_form.title.label(class="form-control-label") }}
+                {{ artwork_form.title(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ artwork_form.description.label(class="form-control-label") }}
+                {{ artwork_form.description(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ artwork_form.image_file.label(class="form-control-label") }}
+                {{ artwork_form.image_file(class="form-control-file") }}
+            </div>
+            <div class="form-group">
+                {{ artwork_form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+    
+    <div class="col-md-6">
+        <h3>Upload Audio</h3>
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('uploads.upload') }}">
+            {{ audio_form.hidden_tag() }}
+            <div class="form-group">
+                {{ audio_form.title.label(class="form-control-label") }}
+                {{ audio_form.title(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ audio_form.description.label(class="form-control-label") }}
+                {{ audio_form.description(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ audio_form.audio_file.label(class="form-control-label") }}
+                {{ audio_form.audio_file(class="form-control-file") }}
+            </div>
+            <div class="form-group">
+                {{ audio_form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
