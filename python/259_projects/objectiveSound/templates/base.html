@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }} - ObjectiveSound</title>
+    <title>{{ title }} - Objective:Sound</title>
     <!-- External CSS: Bootstrap + custom stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -12,15 +12,15 @@
     <!-- Maximalist header with layered typography etc. -->
     <header id="main-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{{ url_for('index') }}">ObjectiveSound</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Objective:Sound</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('categories.category_page', category_name='Woods') }}">Woods</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('categories.category_page', category_name='Strings') }}">Strings</a></li>
+                    
+                    <!-- <li class="nav-item"><a class="nav-link" href="{{ url_for('categories.category_page', category_name='Woods') }}">Woods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('categories.category_page', category_name='Strings') }}">Strings</a></li> -->
                     <!-- Additional category links as desired -->
                     {% if current_user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('uploads.upload') }}">Upload</a></li>

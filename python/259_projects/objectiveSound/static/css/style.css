@@ -21,8 +21,8 @@ body {
 body {
   background-color: #000;
   background-image: 
-    url("../images/maximalist-layer1.png"),
-    url("../images/maximalist-layer2.png"),
+    url("../uploads/images/maximalist.png"),
+    url("../uploads/images/tronDestroyer.png"),
     linear-gradient(45deg, rgba(255,0,150,0.3), rgba(0,204,255,0.3));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, cover, cover;
@@ -59,12 +59,11 @@ header, .navbar {
   overflow: hidden;
   background-color: #000;
   background-image: 
-    url("../images/neon-stripes.png"),
-    url("../images/pinup-texture.jpg");
+    url("../uploads/images/maximalist_background.png");
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
   background-blend-mode: screen, multiply;
-  padding: 120px 30px;
+  padding: 800px 1200px;
   text-align: center;
   color: #ffcc00;
   text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
@@ -152,7 +151,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: url("../images/maximalist-background.png") repeat;
+  background: url("../uploads/images/daughterInRocker.png") repeat;
   opacity: 0.2;
 }
 
