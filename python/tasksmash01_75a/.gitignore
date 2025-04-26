@@ -1,0 +1,12 @@
+.\venv
+/venv
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+/instance
+venv/
+__pycache__/
+instance/
+cofig.py
+/config.py
