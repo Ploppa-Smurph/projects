@@ -477,8 +477,6 @@ ul li.error {
 
 /* Dashboard Layout Styles */
 
-/* Dashboard Layout Styles */
-
 .dashboard-container {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
@@ -538,3 +536,61 @@ ul li.error {
 .achievements {
     margin-top: 20px; /* Space above achievements */
 }
+
+/* About Page Section Styles */
+.about-section {
+    max-width: 800px;
+    margin: 50px auto;              /* Center the section with ample spacing */
+    padding: 2rem 3rem;             /* Provide generous padding for readability */
+    background-color: #ffffff;      /* White background for a clean look */
+    border-radius: 12px;            /* Rounded corners to match other elements */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    font-family: 'Inter', 'Arial', sans-serif;  /* Consistent typography */
+    color: #4a4a4a;                 /* Easy-to-read dark gray text */
+    line-height: 1.6;
+  }
+  
+  .about-section h1 {
+    font-size: 2.5rem;              /* Prominent title size */
+    color: #6b4f4f;                 /* Muted brown that’s seen in other headings */
+    margin-bottom: 1.2rem;          /* Space after the title */
+    text-align: center;             /* Center the main heading */
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;              /* Secondary headings are slightly smaller */
+    color: #8b7355;                 /* A warm, complementary brown */
+    margin-top: 2rem;               /* Space above each subheading */
+    margin-bottom: 1rem;            /* Space below each subheading */
+  }
+  
+  .about-section p {
+    font-size: 1rem;                /* Clear and legible body text */
+    margin-bottom: 1.5rem;          /* Space after each paragraph */
+    line-height: 1.6;
+  }
+  
+  .about-section ul {
+    margin: 1.5rem 0;               /* Vertical spacing around list blocks */
+    padding-left: 1.2rem;           /* Indent lists for clarity */
+  }
+  
+  .about-section ul li {
+    margin-bottom: 0.8rem;          /* Space between list items */
+    font-size: 1rem;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 1.5rem 2rem;
+    }
+    
+    .about-section h1 {
+      font-size: 2rem;
+    }
+    
+    .about-section h2 {
+      font-size: 1.5rem;
+    }
+  }
